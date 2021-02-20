@@ -1,2 +1,0 @@
-toorajtaraz
-rainfall
