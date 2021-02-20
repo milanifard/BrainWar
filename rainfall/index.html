@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> RAIN FALL </title>
-        <link rel="stylesheet" href="src/style/main.css">
-    </head>
-    <body>
-        <script src="src/logic/main.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RAIN FALL</title>
+    <link rel="stylesheet" href="src/style/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="timer">
+      <h1><span class="neon">RAIN</span> FALL</h1>
+      <div class="circle">
+        <span class="time" id="timepassed">00:00.00</span>
+      </div>
+
+      <div class="controls">
+        <button class="buttonPlay">
+          <img id="playButton" src="src/static/play-button.svg" />
+
+          <img id="pauseButton" src="src/static/pause-button.svg" />
+        </button>
+
+        <button class="buttonReset">
+          <img id="resetButton" src="src/static/reset-button.svg" />
+        </button>
+      </div>
+    </div>
+    <script src="src/logic/main.js"></script>
+  </body>
 </html>
