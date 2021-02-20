@@ -11,7 +11,7 @@ css javascript.
 Tooraj Taraz 
 ### Education 
 Studying Bachelor of CE at FUM 
-###Intrests 
+### Intrests 
 - System-Level programming 
 - Backend Development 
 - System Administration 
