@@ -13,7 +13,7 @@ h1 {
   margin: 0;
 }
 
-.stopwatch {
+.timer {
   display: grid;
   justify-items: center;
   grid-row-gap: 23px;
