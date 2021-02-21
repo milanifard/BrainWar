@@ -31,7 +31,7 @@ const update_time = (time) => {
 
 const start = () => {
   startTime = Date.now() - elapsedTime;
-  timerInterval = setInterval(function printTime() {
+  timerInterval = setInterval(() => {
     elapsedTime = Date.now() - startTime;
     update_time(timeToString(elapsedTime));
   }, 10);

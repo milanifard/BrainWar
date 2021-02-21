@@ -1,6 +1,8 @@
 body {
   background-color: #383e56;
   color: #ffffff;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -19,6 +21,8 @@ h1 {
   grid-row-gap: 23px;
   width: 100%;
   padding-top: 25px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .circle {
@@ -68,4 +72,21 @@ button {
 
 #pauseButton {
   display: none;
+}
+
+.gameboard {
+  border: 1px solid #fb743e ;
+  box-shadow: 0 0 0px #c5d7bd, 0 0 50px #fb743e;
+  margin-top: 10px;
+  height: 90vw;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.drops {
+
+}
+
+.lightnings {
+
 }
