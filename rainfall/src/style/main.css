@@ -83,10 +83,17 @@ button {
   margin: 0 auto;
 }
 
-.drops {
-
+.drop {
 }
+
 
 .lightnings {
 
 }
+
+canvas {
+    position: absolute;
+    width: 85vw;
+    height: 90vw;
+}
+

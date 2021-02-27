@@ -62,6 +62,62 @@ let playButton = document.getElementById('playButton');
 let pauseButton = document.getElementById('pauseButton');
 let resetButton = document.getElementById('resetButton');
 
+
+/**
+ * game logic
+ */
+
+ const p = [];
+
+const rainFallArea = {
+  canvas : document.createElement("canvas"),
+  start : () => {
+    rainFallArea.context = rainFallArea.canvas.getContext("2d");
+    document.getElementById('gameboard').appendChild(rainFallArea.canvas);
+    rainFallArea.interval = setInterval(updateRainFallArea, 20);
+  },
+  clear : () => {
+    rainFallArea.context.clearRect(0, 0, rainFallArea.canvas.width, rainFallArea.canvas.height);
+  },
+}
+
+const startGame = () => {
+  rainFallArea.start();
+  p.push(addDrop(5, 5, 10, 120, 'green'));
+}
+
+const addDrop = (width, height, posx, posy, color) => {
+  const temp = {};
+  temp.width = width;
+  temp.height = height;
+  temp.x = posx;
+  temp.y = posy;
+  temp.update = () => {
+    boardContext = rainFallArea.context;
+    boardContext.fillStyle = color;
+    if (temp.width < 25) {
+      temp.width += 1;
+    } else {
+      temp.width -= 20;
+    }
+    boardContext.fillRect(temp.x, temp.y, temp.width, temp.height); 
+  };
+  return temp;
+}
+
+const addLightning = () => {
+
+}
+
+const updateRainFallArea = () => {
+  rainFallArea.clear();
+  p[0].update();
+}
+
+startGame();
+/*
+ * listeners
+ */
 playButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
 resetButton.addEventListener('click', reset);
