@@ -1,1 +1,3 @@
-readme for simplicity Game
+readme for
+Masoud Chadorbaf
+Game : simplicity
