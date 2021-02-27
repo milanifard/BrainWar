@@ -1,2 +1,0 @@
-Amin Ghasempour
-Flappy Bird
