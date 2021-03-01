@@ -1,8 +1,8 @@
 var w3 = $("#aside").width()
 jQuery(document).ready(function($) {
     var WebsiteAddress = "http://localhost:8080/Litaxs.com/"
-    var background_Array = ["asset/img/wheat-slider1.jpg"]
-    background_Array.push("asset/img/benjamin-slider2.jpg")
+    var background_Array = ["image.jpg"]
+    background_Array.push("image.jpg")
     $("#product1").hide()
         // $("#product2").hide()
         // $("#product3").hide()
