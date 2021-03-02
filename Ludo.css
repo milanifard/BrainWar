@@ -1,0 +1,9 @@
+*{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h1,h2,h3 {
+    color:brown;
+}
+p.author{
+    font-style: italic;
+}
