@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.aside {
+    background-color: #ffffff;
+    padding: 15px;
+    color: #000000;
+    text-align: left;
+    font-size: 14px;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 50%;
+}
