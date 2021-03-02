@@ -44,6 +44,17 @@ button {
     top:350px;
     right:450px;
 }
+.linkedin{
+    position:absolute;
+    top:310px;
+    right:480px;
+}
+.github{
+    position:absolute;
+    top:310px;
+    right:530px;
+}
+
 a {
     text-decoration: none;
     font-size: 30px;
