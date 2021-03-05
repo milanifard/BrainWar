@@ -1,23 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&family=Oxygen&display=swap');
 
 body{
-    padding:10px;
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    padding: 5px;
     background-color:#dadfe1;
     font-family: 'Libre Franklin', sans-serif;
-
+    text-align: center;
+    border: 2px solid #95a5a6;
+  
 }
-h1,h3,h5{
+
+h1,h3{
     color: #67809f;
     font-family: 'Oxygen', sans-serif;            
 }
-div{
-    padding-bottom: 15px;
+img{
+    border-radius: 50%;
+    max-width: 20%;
 }
 .header{
-    padding-bottom: 7px;
+    padding: 10px;
     border-bottom: 1px solid #95a5a6;
     color: #34495e;
 }  
 .icon{
-    font-size: 34px;
+    font-size: 20px;
+    color: #34495e;
+}
+
+a:hover{
+    opacity: 0.6;
 }
