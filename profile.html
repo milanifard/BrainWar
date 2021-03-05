@@ -8,10 +8,13 @@
     <style>
         body {
             background-color: black;
+            color: aliceblue;
         }
         h1, h2, p, a {
-            color: aliceblue;
             text-align: center;
+        }
+        a {
+            color: aliceblue;
         }
         div {
             padding: 5px 0px 5px 0px;
@@ -19,17 +22,29 @@
         .centerWithBorder {
             margin: auto;
             width: 40%;
-            border: 3px solid #73AD21;
+            border: 3px solid #ffff00;
         }
         .center {
             text-align: center;
             margin: 24px 0;
             color: aliceblue;
         }
+        .divButt {
+            margin: 0 0 24px 24px;
+        }
+        .butt {
+            border: none;
+            outline: none;
+            padding: 4px 8px;
+            margin: 1px 1px;
+            cursor: pointer;
+            background-color: #ffff00;
+            border-radius: 15px;
+        }
     </style>
 </head>
 <body>
-    <div class="centerWithBorder">
+    <div class="centerWithBorder" id="mainDiv">
         <div>
             <h2>information</h2>
             <p>Ali Salehian</p>
@@ -40,8 +55,37 @@
             <p>java, Python</p>
         </div>
         <div class="center">
-            <a href="https://t.me/Ali_ss_h"><i class="fa fa-telegram"></i></a>
-            <a href="https://www.instagram.com/ali_ss_h/"><i class="fa fa-instagram"></i></a>
+            <a href="https://t.me/Ali_ss_h" id="link1"><i class="fa fa-telegram"></i></a>
+            <a href="https://www.instagram.com/ali_ss_h/" id="link2"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="divButt">
+            <button class="fa fa-sun-o butt" id="butt1" onclick="darkLightModeToggle()"></button>
+            <script>
+                function darkLightModeToggle(){
+                    const myButt = document.getElementById("butt1");
+                    const body = document.body
+                    if (myButt.classList.contains('fa-sun-o')){
+                        body.style.backgroundColor = "white";
+                        body.style.color = "black";
+                        document.getElementById('link1').style.color = "black";
+                        document.getElementById('link2').style.color = "black";
+                        myButt.classList.remove('fa-sun-o');
+                        myButt.classList.add('fa-moon-o');
+                        myButt.style.backgroundColor = "#944dff"
+                        document.getElementById('mainDiv').style.borderColor = "#944dff"
+                    }
+                    else if (myButt.classList.contains('fa-moon-o')){
+                        body.style.backgroundColor = "black";
+                        body.style.color = "white";
+                        document.getElementById('link1').style.color = "white";
+                        document.getElementById('link2').style.color = "white";
+                        myButt.classList.remove('fa-moon-o');
+                        myButt.classList.add('fa-sun-o');
+                        myButt.style.backgroundColor = "#ffff00"
+                        document.getElementById('mainDiv').style.borderColor = "#ffff00"
+                    }
+                }
+            </script>
         </div>
     </div>
 </body>
