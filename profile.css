@@ -3,7 +3,7 @@
 body{
     margin: auto;
     width: 600px;
-    height: 600px;
+    height: 650px;
     padding: 5px;
     background-color:#dadfe1;
     font-family: 'Libre Franklin', sans-serif;
@@ -20,6 +20,18 @@ img{
     border-radius: 50%;
     max-width: 20%;
 }
+button{
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: #95afcf;
+    border-radius: 7px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+}
+
 .header{
     padding: 10px;
     border-bottom: 1px solid #95a5a6;
@@ -29,7 +41,12 @@ img{
     font-size: 20px;
     color: #34495e;
 }
+.game{
+    font-size: 13px;
+    margin: 15px;
+}
 
 a:hover{
     opacity: 0.6;
+    border: none;
 }
