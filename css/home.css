@@ -10,25 +10,30 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
 }
 
-button {
-    border: none;
-    outline: none;
-    padding: 4px 8px;
-    margin: 1px 1px;
-    cursor: pointer;
-    font-size: 24px;
+/* start button */
+.vertical-menu {
+    width: 30%;
+}
+
+.vertical-menu a {
+    background-color: #ffff66;
+    color: black;
+    display: block;
+    padding: 12px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
     border-radius: 15px;
 }
 
-.butt1 {
-    background-color: #ffff99;
-    color: #000080;
+.vertical-menu a:hover {
+    background-color: #cce6ff;
 }
 
-.butt2 {
-    background-color: #99e6ff;
-    color: #000080;
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
 }
+/* end button */
