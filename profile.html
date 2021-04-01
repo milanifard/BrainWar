@@ -15,9 +15,15 @@
         h1, h3{
             color: #0B75AF;
         }
+        table, td, th{
+            border: darkgray 1px solid;
+            border-collapse: collapse;
+            padding: 5px;
+            color: darkcyan;
+        }
         .paragraph{
             color: white;
-            margin-left: 15px
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -26,26 +32,42 @@
         Weather Cast
     </h1>
 
-    <h3>
-        Description
-    </h3>
-
-    <p id="description" class="paragraph">
-        It's a speed game. You should select the same shape and color card. If none, a completely different one.
-    </p>
-
     <h3 id="name">
         Author
     </h3>
     <p class="paragraph">
         Amir Hossein Roshandel
     </p>
-    <a href="https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/"><img src="linkedin.png" width="50" height="50"></a>
-    <h3 id="education">
-        Education
-    </h3>
-    <p class="paragraph">
-        Studying bachelor of computer engineering at ferdowsi university
-    </p>
+    <table>
+        <title>Education</title>
+        <tr>
+            <td colspan="5" style="text-align: center; background-color: antiquewhite; font-size: x-large">
+                Education
+            </td>
+        </tr>
+        <tr>
+            <th> Degree </th>
+            <th> Field of Study </th>
+            <th> University/School </th>
+            <th> GPA </th>
+            <th> Duration </th>
+        </tr>
+        <tr>
+            <td> Diploma </td>
+            <td> Math </td>
+            <td> Hashemi Nejad 1 High School </td>
+            <td> 19.60 </td>
+            <td> 2014 - 2018 </td>
+        </tr>
+        <tr>
+            <td> Bachelor </td>
+            <td> Computer </td>
+            <td> Ferdowsi university </td>
+            <td> 17.76 </td>
+            <td> From 2018 </td>
+        </tr>
+    </table>
+
+    <a href="https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/"><img src="images/linkedin.png" width="190" height="50"></a>
 </body>
 </html>
