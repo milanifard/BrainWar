@@ -1,0 +1,321 @@
+
+.coverPhoto {
+    background-image: url('imgs/mask2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 21%;
+    background-color: rgb(223, 68, 119);
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.pictureProfile {
+    width: 250px;
+    height: 250px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10vw;
+    padding: 10px;
+}
+
+.pictureProfile:hover {
+    opacity: 0.5;
+}
+
+.position {
+    width: 50%;
+    margin-top: 11vh;
+    margin-bottom: auto;
+    margin-right: 10vw;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: wheat;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    white-space: nowrap;
+}
+
+.descirption {
+    padding: 10px;
+    margin-top: 5vh;
+    font-size: 14px;
+    color: white;
+    font-family: Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.socialMedia {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #125688;
+    color: white;
+}
+
+.historyEducation {
+    font-size: 25px;
+    font-weight: bold;
+    align-items: flex-start;
+    display: flex;
+    margin-top: 5vh;
+    border-bottom: 4px double #333;
+    padding: 10px 0;
+}
+
+br {
+    display: block;
+    /* makes it have a width */
+    content: "";
+    /* clears default height */
+    margin-top: 0;
+    /* change this to whatever height you want it */
+}
+
+.content {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 4%;
+    margin: 6vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+    height: 250px;
+    background-color: #292929;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width: 80px;
+    background: linear-gradient(90deg, #FF7E7E 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    height: 270px;
+}
+
+.card:hover .info {
+    height: 90%;
+}
+
+.card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 40px;
+}
+
+.card:hover .icon {
+    background-position: -120px;
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon i {
+    background: linear-gradient(90deg, #FF7E7E, #FF4848);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+#skill {
+    margin-left: 20px;
+    width: 500px;
+    position: relative;
+    margin-top: 5vh;
+    padding: 20px;
+}
+
+.skill-container {
+    width: 500px;
+    height: 50px;
+    background-color: #ddd;
+    margin: 10px 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.skill-container p {
+    font-weight: bold;
+    line-height: 50px;
+    position: absolute;
+    margin-top: 0px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.skill-container p:nth-child(2) {
+    width: 152px;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.skill-container p:nth-child(3) {
+    right: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.skill-graph {
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+table, th, td {
+    border: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+tr {
+    line-height: 40px;
+}
+
+.fa-star {
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+    height: 100%;
+}
+
+.checked {
+    color: orange;
+}
+
+/* details>summary {
+    outline:none;
+    padding: 10px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+} */
+
+details>p {
+    font-size: 20px;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-left: 20px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+}
