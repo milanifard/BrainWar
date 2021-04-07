@@ -24,7 +24,7 @@ ul.sdt_menu li > a{
     width:170px;
     height:85px;
     z-index:12;
-    background:transparent url(images/overlay.png) no-repeat bottom right;
+    background:transparent url(../images/overlay.png) no-repeat bottom right;
     -moz-box-shadow:0px 0px 2px #000 inset;
     -webkit-box-shadow:0px 0px 2px #000 inset;
     box-shadow:0px 0px 2px #000 inset;
