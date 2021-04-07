@@ -3,29 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Play</title>
-<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/playStyle.css">
     <style>
         body {
             font-family: Bahnschrift;
             font-size: 20px;
             background:linear-gradient(0deg, rgba(41,46,51,0.6), rgba(41,46,51,0.6)), url(images/playbg.jpg) repeat top left;
         }
-        h1, h3{
-            color: #0B75AF;
-        }
-        table, td, th{
-            border: darkgray 1px solid;
-            border-collapse: collapse;
-            padding: 5px;
-            color: darkcyan;
-        }
-        .paragraph{
-            color: white;
-            margin-left: 15px;
-        }
     </style>
 </head>
 <body>
-    <img src="">
+    <img id = "question" style="height: 300px; width: 250px" class="center">
+    <div class="row">
+        <div class="column">
+            <img id = "option1" style="height: 300px; width: 250px" class="center">
+        </div>
+        <div class="column">
+            <img id = "option2" style="height: 300px; width: 250px" class="center">
+        </div>
+        <div class="column">
+            <img id = "option3" style="height: 300px; width: 250px" class="center">
+        </div>
+    </div>
+    <script>
+        {
+            function show() {
+            var question = document.getElementById("question");
+            var pictures = makeObjectOfPictures();
+            var first = pictures[Math.floor(Math.random() * 9)];
+            question.src = first.sourceImage;
+            return first;
+        }
+            class Pictures {
+                constructor(name, color, sourceImage) {
+                    this.name = name;
+                    this.color = color;
+                    this.sourceImage = sourceImage;
+                }
+            }
+            function makeObjectOfPictures(){
+                var names = ["sunny", "cloudy", "rainy"];
+                var colors = ["blue", "red", "gray"];
+                var pictures = []
+                for(var i = 0; i < names.length; ++i){
+                    for (var j = 0; j < colors.length; ++j){
+                        pictures[i * names.length + j] = new Pictures(names[i], colors[j], "images/card"+colors[j]+names[i]+".png");
+                    }
+                }
+                return pictures;
+            }
+            var question = show();
+            showOption(question);
+            function showOption(question){
+                var pictures = makeObjectOfPictures();
+                var correctCount = 0;
+                var wrongCount = 0;
+                var corrects = []
+                var wrongs = []
+                for (var i=0; i<pictures.length; ++i){
+                    if((pictures[i].name == question.name && pictures[i].color == question.color)
+                        || (pictures[i].name != question.name && pictures[i].color != question.color)){
+                        corrects[correctCount] = pictures[i];
+                        correctCount ++;
+                    }else {
+                        wrongs[wrongCount] = pictures[i];
+                        wrongCount ++;
+                    }
+                }
+                var optionNum = [1, 2, 3];
+                var correctOption = Math.floor(Math.random()*3) + 1;
+                optionNum.splice(optionNum.indexOf(correctOption), 1);
+                document.getElementById("option" + correctOption).src = corrects[Math.floor(Math.random()*corrects.length)].sourceImage;
+                for(var i = 0; i < optionNum.length; ++i){
+                    var wrong = Math.floor(Math.random()*wrongs.length);
+                    document.getElementById("option" + optionNum[i]).src = wrongs[wrong].sourceImage;
+                    wrongs.splice(wrong, 1);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
