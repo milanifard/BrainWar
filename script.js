@@ -6,6 +6,8 @@ var player = 0;
 var tileId = 1;
 var player1Img = "1.png";
 var player2Img = "2.png";
+
+
 function createBoard(r, c){
     for(var i = 0; i < r ; i++){
         const row = $("<div>").addClass("row");
@@ -32,13 +34,21 @@ $(".col").click(function (){
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
         current.css("backgroundPosition", "center");
+        current.addClass('p1');
+        hasWin(current);
         player = 1;
     }else{
         current.css("backgroundImage", 'url(' + player2Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
         current.css("backgroundPosition", "center");
+        current.addClass('p2');
+        hasWin(current);
         player = 0;
     }
 
 });
+
+function hasWin(currentTile){
+    
+}
