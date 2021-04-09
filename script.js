@@ -24,7 +24,7 @@ $(".col").click(function (){
     if(player == 1){
         const img = $('<img>').addClass('p1');
         current.append(img);
-
+        $(".p1").attr("src","1.png")
     }
 
 });
