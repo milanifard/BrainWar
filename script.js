@@ -8,6 +8,11 @@ const board = $("#boardGame");
 
 $('.but').click(function (){
     var num = $(this).text();
+    $('.but').prop("disabled",true);
+    $('.but').css("backgroundColor", "#cccccc");
+    $('.but').css("border", "1px solid #999999");
+    $('.but').css("color", "#333");
+
     createBoard(num,num);
 });
 
@@ -27,7 +32,8 @@ function createBoard(r,c){
 //when a tile is clicked!
 board.on("click", ".col", function(){
     var current = $(this);
-    if(player == 0){
+    //var classN = current.attr("class");
+    if(player == 0 && !current.hasClass("p1") && !current.hasClass("p2")){
         /*const img = $('<img>').addClass('p1');
         current.append(img);
         $(".p1").attr("src","1.png");*/
@@ -38,12 +44,14 @@ board.on("click", ".col", function(){
         current.addClass('p1');
         //hasWin(current);
         player = 1;
-    }else{
+    }else if(player == 1 && !current.hasClass("p1") && !current.hasClass("p2")){
         current.css("backgroundImage", 'url(' + player2Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
         current.css("backgroundPosition", "center");
         current.addClass('p2');
+        current.addClass('selected');
+
         //hasWin(current);
         player = 0;
     }
