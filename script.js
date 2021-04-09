@@ -113,6 +113,29 @@ function hasWin(currentPlayer){
         }
     }
 
+    for(var m = 0 ; m<4 ; m++){
+        for(var n = 0 ; n<4 ; n++){
+
+            calc = (8*m) + (8*n) + 1;
+
+            if($("#"+calc).hasClass(currentPlayer)){
+                counterD++;
+                console.log(calc);
+
+            }
+            if(counterD==4){
+                alert("you winnnnn");
+                return true;
+            }
+
+
+
+        }
+        counterD = 0;
+    }
+
+
+
 
 
 }
