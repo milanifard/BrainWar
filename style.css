@@ -1,5 +1,26 @@
 body{
-    background-color: red;
     padding: 0px;
     margin: 0px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#boardGame{
+    cursor: pointer;
+}
+
+.row{
+    font-size: 0px;
+}
+
+.col{
+    display: inline-block;
+    background-color: #eee;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+}
+
+.p1{
+    
 }
