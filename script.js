@@ -1,14 +1,18 @@
-const board = $("#boardGame");
-
-var row = 7;
-var col = 7;
 var player = 0;
 var tileId = 1;
 var player1Img = "1.png";
 var player2Img = "2.png";
+var clicked = false;
 
+const board = $("#boardGame");
 
-function createBoard(r, c){
+$('.but').click(function (){
+    var num = $(this).text();
+    createBoard(num,num);
+});
+
+function createBoard(r,c){
+
     for(var i = 0; i < r ; i++){
         const row = $("<div>").addClass("row");
         for(var j = 0; j < c ; j++){
@@ -20,11 +24,8 @@ function createBoard(r, c){
         board.append(row);
     }
 }
-
-createBoard(7,7);
-
-
-$(".col").click(function (){
+//when a tile is clicked!
+board.on("click", ".col", function(){
     var current = $(this);
     if(player == 0){
         /*const img = $('<img>').addClass('p1');
@@ -35,7 +36,7 @@ $(".col").click(function (){
         current.css("backgroundRepeat", "no-repeat");
         current.css("backgroundPosition", "center");
         current.addClass('p1');
-        hasWin(current);
+        //hasWin(current);
         player = 1;
     }else{
         current.css("backgroundImage", 'url(' + player2Img + ')');
@@ -43,12 +44,13 @@ $(".col").click(function (){
         current.css("backgroundRepeat", "no-repeat");
         current.css("backgroundPosition", "center");
         current.addClass('p2');
-        hasWin(current);
+        //hasWin(current);
         player = 0;
     }
-
 });
 
-function hasWin(currentTile){
-    
-}
+    function hasWin(currentTile){
+    }
+
+
+

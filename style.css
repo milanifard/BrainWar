@@ -3,8 +3,11 @@ body{
     margin: 0px;
     margin-top: 40px;
     text-align: center;
+    font-family: sans-serif;
 }
-
+h1, h3{
+    color: #444;
+}
 #boardGame{
     cursor: pointer;
 }
@@ -23,6 +26,31 @@ body{
     padding: 0px;
 }
 
-.button{
+.col:hover{
+    background-color: #333;
+}
 
+.but{
+    width: 100px;
+    height: 40px;
+    font-size: 110%;
+    background-color: #26A844;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.med{
+    background-color: #ffc008;
+}
+
+.hard{
+    background-color: #DC3545;
+
+}
+
+.select{
+    width: 50px;
+    height: 40px;
 }
