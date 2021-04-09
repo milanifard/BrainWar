@@ -19,8 +19,14 @@ body{
     width: 60px;
     height: 60px;
     border: 1px solid #fff;
+    margin: 0px;
+    padding: 0px;
 }
 
 .p1{
-    
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    background-si
 }
