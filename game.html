@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition-Addication</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to Addition-Addiction Game</h1>
+        <div id="app"></div>
+        <div class="randomText">
+            <p class="numberInboxRandom" id="numberRandomText"></p>
+        </div>
+        <div class="row-box">
+
+            <div class="box" id="box1" onclick="removeElement('box1','p1')">
+                <p class="numberInBox" id="p1"></p>
+            </div>
+
+            <div class="box" onclick="removeElement('box2','p2')" id="box2">
+                <p class="numberInBox" id="p2"></p>
+            </div>
+            <div class="box" onclick="removeElement('box3','p3')" id="box3">
+                <p class="numberInBox" id="p3"></p>
+            </div>
+        </div>
+
+        <div class="row-box">
+            <div class="box" id="box4" onclick="removeElement('box4','p4')" id="box4">
+                <p class="numberInBox" id="p4"></p>
+            </div>
+            <div class="box" id="box5" onclick="removeElement('box5','p5')" id="box5">
+                <p class="numberInBox" id="p5"></p>
+            </div>
+            <div class="box" onclick="removeElement('box6','p6')" id="box6">
+                <p class="numberInBox" id="p6"></p>
+            </div>
+        </div>
+
+        <div class="row-box">
+            <div class="box" onclick="removeElement('box7','p7')" id="box7">
+                <p class="numberInBox" id="p7"></p>
+            </div>
+            <div class="box" onclick="removeElement('box8','p8')" id="box8">
+                <p class="numberInBox" id="p8"></p>
+            </div>
+            <div class="box" onclick="removeElement('box9','p9')" id="box9">
+                <p class="numberInBox" id="p9"></p>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+body {
+  font-family: sans-serif;
+  /* position: absolute; */
+  justify-content: center;
+  display: flex;
+  background-color: #E8E8E8;
+}
+
+.base-timer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* justify-content: center; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+
+.base-timer__label:hover {
+  color: #24B7B6;
+}
+
+h1 {
+  margin-right: auto;
+  margin-left: auto;
+  top: 12vh;
+  color: #24B7B6;
+}
+
+.box {
+  margin-top: 10px;
+  /* position: relative; */
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+
+}
+
+.numberInBox {
+  text-align: center;
+  color: #24B7B6;
+  font-size: xxx-large;
+  margin-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-box {
+  margin-left: 7vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 6vh;
+}
+
+.box:hover {
+  background-color: #24B7B6;
+}
+
+.box:hover .numberInBox {
+  color: white;
+}
+
+.randomText{
+  position: relative;
+  top: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  width: 60%;
+  height:60px;
+  background-color: rgb(32, 154, 170);
+  margin-left: auto;
+  margin-right: auto;
+}
+.numberInboxRandom{
+  padding: 12px;
+  margin-top: 5px;
+  text-align: center;
+  color: #ffffff;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

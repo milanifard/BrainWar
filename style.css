@@ -46,6 +46,11 @@
     font-family: Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 
 }
+.descirption::first-letter{
+    font-size: 20px;
+    color: #FF4848;
+    background-color: #FF4848;
+}
 
 .socialMedia {
     flex-direction: row;
