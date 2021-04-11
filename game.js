@@ -1,6 +1,4 @@
 
-// Credit: Mateusz Rybczonec
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -19,7 +17,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 50;
+const TIME_LIMIT = 5;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -27,8 +25,17 @@ let remainingPathColor = COLOR_CODES.info.color;
 let randomText = 0;
 let selectedBoxes = 0;
 let scores = 0;
-let falseSolution= 0;
+let falseSolution = 0;
 var random = [];
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -73,6 +80,10 @@ function startTimer() {
     setRemainingPathColor(timeLeft);
 
     if (timeLeft === 0) {
+      document.getElementById('id01').style.display = 'block';
+      document.getElementById('scoreText').innerText = scores;
+      document.getElementById('incorrectText').innerText = falseSolution;
+
       onTimesUp();
     }
   }, 1000);
@@ -123,7 +134,7 @@ function setCircleDasharray() {
 }
 
 
-
+// generate random number for complete boxes
 function generateRandomNumber() {
   var max = 9;
   var min = 1;
@@ -145,40 +156,44 @@ function generateRandomNumber() {
   document.getElementById("p7").innerText = random[6];
   document.getElementById("p8").innerText = random[7];
   document.getElementById("p9").innerText = random[8];
-  randomText = Math.floor(Math.floor(Math.random() * (20 - 1 + 1)) + 1);
+  randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
   document.getElementById("numberRandomText").innerText = randomText;
   selectedBoxes = 0;
 }
+
+// compute scores for player and warning if false solution selected gt 4
 function computeScores() {
 
   if (selectedBoxes === randomText) {
     scores++;
     selectedBoxes = 0;
-    falseSolution= 0;
-    randomText = Math.floor(Math.floor(Math.random() * (20 - 1 + 1)) + 1);
+    falseSolution = 0;
+    randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
     document.getElementById("numberRandomText").innerText = randomText;
   }
-  else{
+  else if (selectedBoxes > randomText) {
+    selectedBoxes = 0;
+    falseSolution ++;
+    randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
+    document.getElementById("numberRandomText").innerText = randomText;
+  }
 
-    falseSolution++;
-    console.log("falseSolution",falseSolution)
-  }
-  if(falseSolution > 4){
-    alert('دقت کن')
-  }
 }
 function removeElement(elementId, pId) {
   // Removes an element from the document.
   var element = document.getElementById(elementId);
   var text = document.getElementById(pId).textContent;
   var number = Number(text);
+  console.log("number", number)
   selectedBoxes += number;
-  element.style.display = 'none';
+  element.style.opacity = 0;
   setTimeout(function () {
-    //After the time is passed then I change the css display to block that appears the elements
-    element.style.display = 'flex';
-
+    //After the time is passed then I change the css flex to block that appears the elements
+    element.style.opacity = 1;
   }, 2000);
   computeScores()
 }
 
+function closeModal() {
+  document.getElementById('id01').style.display = 'none';
+}
