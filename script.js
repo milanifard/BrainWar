@@ -139,6 +139,40 @@ function hasWin(currentPlayer){
 
     }
 
+    x = 1;
+    r = 1;
+    while(r <= bs){
+        //console.log(x, (x + (bs - 1)), (x + (2*(bs-1))), (x + (3*(bs-1))));
+        if(x == ((r*bs)-2)){
+            x++;
+            //console.log(x);
+
+        }else if(x > ((r*bs)-2) &&
+            x <= bs*bs &&
+            (x + (bs - 1)) <= bs*bs &&
+            (x + (2*(bs-1))) <= bs*bs &&
+            (x + (3*(bs-1))) <= bs*bs){
+            //console.log(x, (x + (bs - 1)), (x + (2*(bs-1))), (x + (3*(bs-1))));
+            if($("#"+x).hasClass(currentPlayer) &&
+                $("#"+(x + (bs - 1))).hasClass(currentPlayer) &&
+                $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer) &&
+                $("#" + (x + (3*(bs-1)))).hasClass(currentPlayer)){
+                alert("You are the winner " + currentPlayer);
+            }
+            if(x == r*bs){
+                r++;
+            }
+            x++;
+
+        }else if(x < ((r*bs)-2)) {
+            x++;
+            //console.log(x);
+        }else{
+            return ;
+        }
+
+    }
+
 
 
 }
