@@ -13,34 +13,61 @@
     </style>
 </head>
 <body>
-    <img id = "question" style="height: 300px; width: 250px" class="center">
+    <p id="timer" class="paragraph"></p>
+    <img id = "question" style="height: 300px; width: 250px" class="center fade-in-image">
     <div class="row">
         <div class="column">
-            <img id = "option1" style="height: 300px; width: 250px" class="center">
+            <img id = "option1" style="height: 300px; width: 250px" class="center" onclick="selectOption(this.id)">
         </div>
         <div class="column">
-            <img id = "option2" style="height: 300px; width: 250px" class="center">
+            <img id = "option2" style="height: 300px; width: 250px" class="center" onclick="selectOption(this.id)">
         </div>
         <div class="column">
-            <img id = "option3" style="height: 300px; width: 250px" class="center">
+            <img id = "option3" style="height: 300px; width: 250px" class="center" onclick="selectOption(this.id)">
         </div>
     </div>
     <script>
         {
+            var countDown = 10;
+            var correctAns = 0;
+            var wrongAns = 0;
+
+            var timer = setInterval(function(){
+                if(countDown <= 0){
+                    alert("correct: " + correctAns+ "\n" + "wrong: " + wrongAns);
+                    clearInterval(timer)
+                }
+                document.getElementById("timer").innerHTML =  countDown;
+                countDown -= 1;
+            }, 1000);
+
+            
+
+
             function show() {
-            var question = document.getElementById("question");
-            var pictures = makeObjectOfPictures();
-            var first = pictures[Math.floor(Math.random() * 9)];
-            question.src = first.sourceImage;
-            return first;
-        }
+                var question = document.getElementById("question");
+                var pictures = makeObjectOfPictures();
+                var first = pictures[Math.floor(Math.random() * 9)];
+                question.src = first.sourceImage;
+                return first;
+            }
+
             class Pictures {
                 constructor(name, color, sourceImage) {
                     this.name = name;
                     this.color = color;
                     this.sourceImage = sourceImage;
+                    this.correct = false;
                 }
+                setCorrectNess(correct){
+                    this.correct = correct;
+                }
+                isCorrect(){
+                    return this.correct;
+                }
+
             }
+
             function makeObjectOfPictures(){
                 var names = ["sunny", "cloudy", "rainy"];
                 var colors = ["blue", "red", "gray"];
@@ -52,33 +79,60 @@
                 }
                 return pictures;
             }
-            var question = show();
-            showOption(question);
-            function showOption(question){
+
+            var flag = 0;
+            if(flag == 0){
+                var question = show();
+                flag ++;
+            }
+            var option = showOption();
+
+            function showOption(){
                 var pictures = makeObjectOfPictures();
-                var correctCount = 0;
-                var wrongCount = 0;
-                var corrects = []
-                var wrongs = []
-                for (var i=0; i<pictures.length; ++i){
-                    if((pictures[i].name == question.name && pictures[i].color == question.color)
-                        || (pictures[i].name != question.name && pictures[i].color != question.color)){
-                        corrects[correctCount] = pictures[i];
-                        correctCount ++;
-                    }else {
-                        wrongs[wrongCount] = pictures[i];
-                        wrongCount ++;
+                var option = [];
+                for(var i=0; i<pictures.length; ++i){
+                    if(pictures[i].name === "sunny" && pictures[i].color === "red") {
+                        option[0] = pictures[i];
+                        document.getElementById("option1").src = option[0].sourceImage;
+                    }
+                    else if(pictures[i].name === "cloudy" && pictures[i].color === "gray") {
+                        option[1] = pictures[i]
+                        document.getElementById("option2").src = option[1].sourceImage;
+                    }
+                    if(pictures[i].name === "rainy" && pictures[i].color === "blue") {
+                        option[2] = pictures[i]
+                        document.getElementById("option3").src = option[2].sourceImage;
                     }
                 }
-                var optionNum = [1, 2, 3];
-                var correctOption = Math.floor(Math.random()*3) + 1;
-                optionNum.splice(optionNum.indexOf(correctOption), 1);
-                document.getElementById("option" + correctOption).src = corrects[Math.floor(Math.random()*corrects.length)].sourceImage;
-                for(var i = 0; i < optionNum.length; ++i){
-                    var wrong = Math.floor(Math.random()*wrongs.length);
-                    document.getElementById("option" + optionNum[i]).src = wrongs[wrong].sourceImage;
-                    wrongs.splice(wrong, 1);
+                return option;
+            }
+
+            function selectOption(clickedId){
+                var correct = -1;
+                for (var i=0; i<option.length; ++i) {
+                    if (option[i].name === question.name && option[i].color === question.color) {
+                        option[i].setCorrectNess(true);
+                        correct = i;
+                    }
                 }
+                if(correct == -1){
+                    for (var i=0; i<option.length; ++i) {
+                        if (option[i].name !== question.name && option[i].color !== question.color) {
+                            option[i].setCorrectNess(true);
+                            correct = i;
+                        }
+                    }
+                }
+                if("option" +(correct+1) == clickedId){
+                    correctAns += 1;
+                    console.log(true)
+                    question = show()
+                }else{
+                    wrongAns += 1;
+                    console.log(false)
+                    question = show()
+                }
+
             }
         }
     </script>
