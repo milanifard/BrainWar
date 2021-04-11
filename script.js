@@ -7,7 +7,8 @@ var tileId = 1;
 var currentP = null;
 var player1Img = "1.png";
 var player2Img = "2.png";
-var clicked = false;
+var x = 1;
+var r = 1;
 
 const board = $("#boardGame");
 
@@ -72,6 +73,8 @@ board.on("click", ".col", function(){
 
 function hasWin(currentPlayer){
     var calc = 0;
+    var bs = parseInt(num, 10);
+    //This is for horizontal
     for(var m = 0 ; m < 7; m++){
         for( var n = 1; n < 5; n++){
             for(var p=0 ; p<4 ; p++){
@@ -81,17 +84,17 @@ function hasWin(currentPlayer){
                     //console.log(calc);
                     //$("#"+calc).css("backgroundColor", "red");
                     counterH++;
-                    console.log(calc);
-
+                    //console.log(calc);
                 }
             }
             if(counterH==4){
-                alert("you winnnnn");
+                alert("You are the winner " + currentPlayer);
                 return true;
             }
             counterH = 0;
         }
     }
+    //this is for vertical
     for(var m = 1 ; m < 8; m++){
         for( var n = 0; n < 4; n++){
             for(var p=0 ; p<4 ; p++){
@@ -101,46 +104,45 @@ function hasWin(currentPlayer){
                     //console.log(calc);
                     //$("#"+calc).css("backgroundColor", "red");
                     counterV++;
-                    console.log(calc);
-
+                    //console.log(calc);
                 }
             }
             if(counterV==4){
-                alert("you winnnnn");
+                alert("You are the winner " + currentPlayer);
                 return true;
             }
             counterV = 0;
         }
     }
 
-    for(var m = 0 ; m<4 ; m++){
-        for(var n = 0 ; n<4 ; n++){
+    x = 1;
+    r = 1;
 
-            calc = (8*m) + (8*n) + 1;
+    while(r <= bs){
+        if(x < ((r*bs)-2) &&
+            x <= bs*bs &&
+            (x + (bs + 1)) <= bs*bs &&
+            (x + (2*(bs+1))) <= bs*bs &&
+            (x + (3*(bs+1))) <= bs*bs){
 
-            if($("#"+calc).hasClass(currentPlayer)){
-                counterD++;
-                console.log(calc);
-
+            if($("#"+x).hasClass(currentPlayer) &&
+                $("#"+(x + (bs + 1))).hasClass(currentPlayer) &&
+                $("#"+(x + (2*(bs+1)))).hasClass(currentPlayer) &&
+                $("#" + (x + (3*(bs+1)))).hasClass(currentPlayer)){
+                alert("You are the winner " + currentPlayer);
             }
-            if(counterD==4){
-                alert("you winnnnn");
-                return true;
-            }
-
-
-
+            x++;
+        }else{
+            r++;
+            x = x + 3;
         }
-        counterD = 0;
+
     }
-
-
 
 
 
 }
 
-//hasWin(p1);
 
 
 
