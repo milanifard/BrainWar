@@ -20,8 +20,8 @@ h1, h3{
 .col{
     display: inline-block;
     background-color: #eee;
-    width: 60px !important;
-    height: 60px !important;
+    width: 40px !important;
+    height: 40px !important;
     border: 1px solid #fff;
     margin: 0px;
     padding: 0px;
