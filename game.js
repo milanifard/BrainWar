@@ -17,7 +17,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -156,7 +156,7 @@ function generateRandomNumber() {
   document.getElementById("p7").innerText = random[6];
   document.getElementById("p8").innerText = random[7];
   document.getElementById("p9").innerText = random[8];
-  randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
+  randomText = Math.floor(Math.floor(Math.random() * (13 - 1 + 1)) + 1);
   document.getElementById("numberRandomText").innerText = randomText;
   selectedBoxes = 0;
 }
@@ -168,13 +168,13 @@ function computeScores() {
     scores++;
     selectedBoxes = 0;
     falseSolution = 0;
-    randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
+    randomText = Math.floor(Math.floor(Math.random() * (13 - 1 + 1)) + 1);
     document.getElementById("numberRandomText").innerText = randomText;
   }
   else if (selectedBoxes > randomText) {
     selectedBoxes = 0;
     falseSolution ++;
-    randomText = Math.floor(Math.floor(Math.random() * (12 - 1 + 1)) + 1);
+    randomText = Math.floor(Math.floor(Math.random() * (13 - 1 + 1)) + 1);
     document.getElementById("numberRandomText").innerText = randomText;
   }
 
@@ -197,3 +197,45 @@ function removeElement(elementId, pId) {
 function closeModal() {
   document.getElementById('id01').style.display = 'none';
 }
+
+// animation js
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
