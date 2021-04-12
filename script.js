@@ -23,8 +23,12 @@ $('.but').click(function (){
     createBoard(num,num);
 });
 
-function createBoard(r,c){
+$("#restart").click(function (){
+    location.reload(true);
+});
 
+function createBoard(r,c){
+    $("#restart").css("display","inline-block");
     for(var i = 0; i < r ; i++){
         const row = $("<div>").addClass("row");
         for(var j = 0; j < c ; j++){
