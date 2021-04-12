@@ -7,6 +7,7 @@ var tileId = 1;
 var currentP = null;
 var player1Img = "1.png";
 var player2Img = "2.png";
+var playerWinner = "3.png";
 var x = 1;
 var r = 1;
 var tmp = 0;
@@ -112,6 +113,14 @@ function checkHorizontal(bs, currentPlayer){
             }
             if(counterH==4){
                 //alert("You are the winner " + currentPlayer);
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc--;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc--;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc--;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+
                 whichPlayerWin(currentPlayer);
                 gameOn = false;
                 return true;
@@ -137,6 +146,13 @@ function checkVertical(bs, currentPlayer){
             }
             if(counterV==4){
                 //alert("You are the winner " + currentPlayer);
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc = calc - num;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc = calc - num;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
+                calc = calc - num;
+                $("#"+calc).css("backgroundImage", 'url(' + playerWinner + ')');
                 whichPlayerWin(currentPlayer);
                 gameOn = false;
                 return true;
@@ -160,6 +176,10 @@ function checkDiagonal(bs, currentPlayer){
                 $("#"+(x + (2*(bs+1)))).hasClass(currentPlayer) &&
                 $("#" + (x + (3*(bs+1)))).hasClass(currentPlayer)){
                 //alert("You are the winner " + currentPlayer);
+                $("#"+x).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (bs + 1))).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (2*(bs+1)))).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (3*(bs+1)))).css("backgroundImage", 'url(' + playerWinner + ')');
                 whichPlayerWin(currentPlayer);
                 gameOn = false;
             }
@@ -188,16 +208,16 @@ function checkDiagonal(bs, currentPlayer){
             (x + (bs - 1)) <= bs*bs &&
             (x + (2*(bs-1))) <= bs*bs &&
             (x + (3*(bs-1))) <= bs*bs){
-            if(currentPlayer == 'p1'){
-                console.log($("#"+x).hasClass(currentPlayer), $("#"+(x + (bs - 1))).hasClass(currentPlayer),
-                    $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer), $("#" + (x + (3*(bs-1)))).hasClass(currentPlayer));
-                console.log(x, (x + (bs - 1)), (x + (2*(bs-1))), (x + (3*(bs-1))));
-            }
+
             if($("#"+x).hasClass(currentPlayer) &&
                 $("#"+(x + (bs - 1))).hasClass(currentPlayer) &&
                 $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer) &&
                 $("#" + (x + (3*(bs-1)))).hasClass(currentPlayer)){
                 //alert("You are the winner " + currentPlayer);
+                $("#"+x).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (bs - 1))).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (2*(bs-1)))).css("backgroundImage", 'url(' + playerWinner + ')');
+                $("#"+(x + (3*(bs-1)))).css("backgroundImage", 'url(' + playerWinner + ')');
                 whichPlayerWin(currentPlayer);
                 gameOn = false;
             }
