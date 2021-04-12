@@ -30,6 +30,10 @@ $("#restart").click(function (){
     location.reload(true);
 });
 
+$("#homePage").click(function (){
+    window.location.href='index.html';
+});
+
 //Create tiels
 function createBoard(r,c){
     $("#restart").css("display","inline-block");
