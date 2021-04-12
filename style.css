@@ -82,3 +82,18 @@ h1, h3{
     font-size: 100%;
     margin-bottom: 40px;
 }
+
+#playerTurn{
+    display: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#image{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 1.5px;
+    right: 10px;
+    display: none;
+}

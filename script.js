@@ -28,8 +28,12 @@ $("#restart").click(function (){
     location.reload(true);
 });
 
+
+//Create tiels
 function createBoard(r,c){
     $("#restart").css("display","inline-block");
+    $("#playerTurn").css("display","inline-block");
+    $("#image").css("display","inline-block");
     for(var i = 0; i < r ; i++){
         const row = $("<div>").addClass("row");
         for(var j = 0; j < c ; j++){
@@ -43,14 +47,11 @@ function createBoard(r,c){
 }
 //when a tile is clicked!
 board.on("click", ".col", function(){
-
     var current = $(this);
-    //var classN = current.attr("class");
     if(player == 0 && !current.hasClass("p1") && !current.hasClass("p2")){
-        /*const img = $('<img>').addClass('p1');
-        current.append(img);
-        $(".p1").attr("src","1.png");*/
+
         $("#playerTurn").text("Player 2's turn!");
+        $("#image").attr("src","2.png");
         current.css("backgroundImage", 'url(' + player1Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
@@ -64,6 +65,7 @@ board.on("click", ".col", function(){
         player = 1;
     }else if(player == 1 && !current.hasClass("p1") && !current.hasClass("p2")){
         $("#playerTurn").text("Player 1's turn!");
+        $("#image").attr("src","1.png");
         current.css("backgroundImage", 'url(' + player2Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
@@ -74,7 +76,7 @@ board.on("click", ".col", function(){
         counterV = 0;
         counterD = 0;
         hasWin("p2");
-        console.log("///////");
+        //console.log("///////");
         currentP = current.attr("class");
         player = 0;
     }
@@ -88,7 +90,6 @@ function hasWin(currentPlayer){
     checkVertical(bs, currentPlayer);
     checkDiagonal(bs,currentPlayer);
 }
-
 
 function checkHorizontal(bs, currentPlayer){
     for(var m = 0 ; m < bs ; m++){
@@ -111,7 +112,6 @@ function checkHorizontal(bs, currentPlayer){
         }
     }
 }
-
 
 function checkVertical(bs, currentPlayer){
     //this is for vertical
@@ -166,7 +166,6 @@ function checkDiagonal(bs, currentPlayer){
         tmp = 4;
     else if(bs == 9)
         tmp = 6;
-
     while(r <= bs){
         //console.log(x, (x + (bs - 1)), (x + (2*(bs-1))), (x + (3*(bs-1))));
         if(x == ((r*bs)-tmp)){
@@ -182,7 +181,6 @@ function checkDiagonal(bs, currentPlayer){
                     $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer), $("#" + (x + (3*(bs-1)))).hasClass(currentPlayer));
                 console.log(x, (x + (bs - 1)), (x + (2*(bs-1))), (x + (3*(bs-1))));
             }
-
             if($("#"+x).hasClass(currentPlayer) &&
                 $("#"+(x + (bs - 1))).hasClass(currentPlayer) &&
                 $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer) &&
@@ -201,6 +199,4 @@ function checkDiagonal(bs, currentPlayer){
             return ;
         }
     }
-
-
 }
