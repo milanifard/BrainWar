@@ -1,6 +1,6 @@
 body{
     padding: 0px;
-    margin-top: 80px;
+    margin-top: 30px;
     text-align: center !important;
     font-family: sans-serif;
 }
@@ -28,6 +28,11 @@ h1, h3{
 
 .col:hover{
     background-color: #f5f5f5;
+}
+
+.smallCol{
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .but{
@@ -70,7 +75,7 @@ h1, h3{
     font-size: 90%;
 }
 
-#restart{
+#restart {
     display: none;
     width: 120px;
     height: 35px;
@@ -80,12 +85,10 @@ h1, h3{
     border-radius: 5px;
     transition: all 0.5s;
     font-size: 100%;
-    margin-bottom: 40px;
 }
-
 #playerTurn{
     display: none;
-    color: #333;
+    color: #666;
     font-weight: bold;
 }
 
@@ -96,4 +99,30 @@ h1, h3{
     top: 1.5px;
     right: 10px;
     display: none;
+}
+
+#container{
+    padding: 25px;
+    width: 500px;
+    margin: 0 auto;
+    border: 3px solid #343A3F;
+    border-radius: 10px;
+}
+
+.homeBtn{
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    background-color: #D03940;
+    cursor: pointer;
+}
+.homeBtn i{
+    font-size: 200%;
+    color: white;
+}
+#anGame{
+    border-radius: 0px 10px 10px 0px;
+    background-color: #4A4CA2;
 }

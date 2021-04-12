@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <title>Picture Puzzle</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Advance Tic-Tac-Toe</h1>
-    <h3>Number of rows and columns</h3>
-    <button id="guide">How to play</button>
-    <br>
-    <br>
-    <button id="but1" class="but">5</button>
-    <button id="but2" class="but med">7</button>
-    <button id="but3" class="but hard">9</button>
-    <br>
-    <br>
-    <div id="boardGame"></div>
-    <br>
-    <img src="1.png" id="image"><p id="playerTurn">Player 1's turn</p>
-    <br>
-    <button id="restart">Restart</button>
+    <button class="homeBtn"><i class="fa fa-home"></i></button>
+    <button class="homeBtn" id="anGame"><i class="fa fa-gamepad"></i></button>
+    <div id="container">
+        <h1>Advance Tic-Tac-Toe</h1>
+        <h3>Choose game difficulty :)</h3>
+        <button id="guide">How to play</button>
+        <br>
+        <br>
+        <button id="but1" class="but">5</button>
+        <button id="but2" class="but med">7</button>
+        <button id="but3" class="but hard">9</button>
+        <br>
+        <br>
+        <div id="boardGame"></div>
 
+        <img src="1.png" id="image"><p id="playerTurn">Player 1's turn</p>
+        <br>
+        <button id="restart">Restart</button>
+    </div>
 
     <script src="script.js"></script>
 </body>

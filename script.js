@@ -38,6 +38,9 @@ function createBoard(r,c){
         const row = $("<div>").addClass("row");
         for(var j = 0; j < c ; j++){
             const col = $("<div>").addClass("col");
+            if(num == 9){
+                col.addClass("smallCol");
+            }
             col.attr("id",tileId);
             tileId++;
             row.append(col);
