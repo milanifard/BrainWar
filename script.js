@@ -11,6 +11,7 @@ var x = 1;
 var r = 1;
 var tmp = 0;
 var calc = 0;
+var gameOn = true;
 
 const board = $("#boardGame");
 
@@ -27,7 +28,6 @@ $('.but').click(function (){
 $("#restart").click(function (){
     location.reload(true);
 });
-
 
 //Create tiels
 function createBoard(r,c){
@@ -50,6 +50,9 @@ function createBoard(r,c){
 }
 //when a tile is clicked!
 board.on("click", ".col", function(){
+    if(gameOn == false){
+        return;
+    }
     var current = $(this);
     if(player == 0 && !current.hasClass("p1") && !current.hasClass("p2")){
 
@@ -108,7 +111,9 @@ function checkHorizontal(bs, currentPlayer){
                 }
             }
             if(counterH==4){
-                alert("You are the winner " + currentPlayer);
+                //alert("You are the winner " + currentPlayer);
+                whichPlayerWin(currentPlayer);
+                gameOn = false;
                 return true;
             }
             counterH = 0;
@@ -131,7 +136,9 @@ function checkVertical(bs, currentPlayer){
                 }
             }
             if(counterV==4){
-                alert("You are the winner " + currentPlayer);
+                //alert("You are the winner " + currentPlayer);
+                whichPlayerWin(currentPlayer);
+                gameOn = false;
                 return true;
             }
             counterV = 0;
@@ -152,7 +159,9 @@ function checkDiagonal(bs, currentPlayer){
                 $("#"+(x + (bs + 1))).hasClass(currentPlayer) &&
                 $("#"+(x + (2*(bs+1)))).hasClass(currentPlayer) &&
                 $("#" + (x + (3*(bs+1)))).hasClass(currentPlayer)){
-                alert("You are the winner " + currentPlayer);
+                //alert("You are the winner " + currentPlayer);
+                whichPlayerWin(currentPlayer);
+                gameOn = false;
             }
             x++;
         }else{
@@ -188,7 +197,9 @@ function checkDiagonal(bs, currentPlayer){
                 $("#"+(x + (bs - 1))).hasClass(currentPlayer) &&
                 $("#"+(x + (2*(bs-1)))).hasClass(currentPlayer) &&
                 $("#" + (x + (3*(bs-1)))).hasClass(currentPlayer)){
-                alert("You are the winner " + currentPlayer);
+                //alert("You are the winner " + currentPlayer);
+                whichPlayerWin(currentPlayer);
+                gameOn = false;
             }
             if(x == r*bs){
                 r++;
@@ -201,5 +212,18 @@ function checkDiagonal(bs, currentPlayer){
         }else{
             return ;
         }
+    }
+}
+
+function whichPlayerWin(currentPlayer){
+    if(currentPlayer == "p1"){
+        $("#playerTurn").text("Player 1 won!");
+        $("#playerTurn").css("color","#F0144D");
+
+        $("#image").attr("src","1.png");
+    }else{
+        $("#playerTurn").text("Player 2 won!")
+        $("#playerTurn").css("color","#F0144D");
+        $("#image").attr("src","2.png");
     }
 }

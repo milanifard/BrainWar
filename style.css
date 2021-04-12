@@ -39,20 +39,36 @@ h1, h3{
     width: 100px;
     height: 40px;
     font-size: 110%;
-    background-color: #26A844;
     color: white;
     border-radius: 3px;
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
+.simp{
+    background-color: #26A844;
+}
+.simp:hover{
+    border: 1px solid #26A844;
+    background-color: white;
+    color: #26A844;
+}
 .med{
     background-color: #ffc008;
 }
-
+.med:hover{
+    border: 1px solid #ffc008;
+    background-color: white;
+    color: #ffc008;
+}
 .hard{
     background-color: #DC3545;
-
+}
+.hard:hover{
+    border: 1px solid #DC3545;
+    background-color: white;
+    color: #DC3545;
 }
 
 .select{
@@ -85,6 +101,13 @@ h1, h3{
     border-radius: 5px;
     transition: all 0.5s;
     font-size: 100%;
+    transition: all 0.5s;
+}
+
+#restart:hover{
+    border: none;
+    color: white;
+    background-color: #F0144D;
 }
 #playerTurn{
     display: none;
