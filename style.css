@@ -1,7 +1,6 @@
 body{
     padding: 0px;
-    margin: 0px;
-    margin-top: 40px;
+    margin-top: 80px;
     text-align: center !important;
     font-family: sans-serif;
 }
@@ -20,8 +19,8 @@ h1, h3{
 .col{
     display: inline-block;
     background-color: #eee;
-    width: 40px !important;
-    height: 40px !important;
+    width: 45px !important;
+    height: 45px !important;
     border: 1px solid #fff;
     margin: 0px;
     padding: 0px;

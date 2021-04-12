@@ -10,6 +10,7 @@ var player2Img = "2.png";
 var x = 1;
 var r = 1;
 var tmp = 0;
+var calc = 0;
 
 const board = $("#boardGame");
 
@@ -42,12 +43,14 @@ function createBoard(r,c){
 }
 //when a tile is clicked!
 board.on("click", ".col", function(){
+
     var current = $(this);
     //var classN = current.attr("class");
     if(player == 0 && !current.hasClass("p1") && !current.hasClass("p2")){
         /*const img = $('<img>').addClass('p1');
         current.append(img);
         $(".p1").attr("src","1.png");*/
+        $("#playerTurn").text("Player 2's turn!");
         current.css("backgroundImage", 'url(' + player1Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
@@ -60,6 +63,7 @@ board.on("click", ".col", function(){
         currentP = current.attr("class");
         player = 1;
     }else if(player == 1 && !current.hasClass("p1") && !current.hasClass("p2")){
+        $("#playerTurn").text("Player 1's turn!");
         current.css("backgroundImage", 'url(' + player2Img + ')');
         current.css("backgroundSize", "80%");
         current.css("backgroundRepeat", "no-repeat");
@@ -78,9 +82,15 @@ board.on("click", ".col", function(){
 });
 
 function hasWin(currentPlayer){
-    var calc = 0;
+    calc = 0;
     var bs = parseInt(num, 10);
-    //This is for horizontal
+    checkHorizontal(bs, currentPlayer);
+    checkVertical(bs, currentPlayer);
+    checkDiagonal(bs,currentPlayer);
+}
+
+
+function checkHorizontal(bs, currentPlayer){
     for(var m = 0 ; m < bs ; m++){
         for( var n = 1; n < bs-2 ; n++){
             for(var p=0 ; p<4 ; p++){
@@ -100,6 +110,10 @@ function hasWin(currentPlayer){
             counterH = 0;
         }
     }
+}
+
+
+function checkVertical(bs, currentPlayer){
     //this is for vertical
     for(var m = 1 ; m < bs+1; m++){
         for( var n = 0; n < bs-3; n++){
@@ -120,7 +134,9 @@ function hasWin(currentPlayer){
             counterV = 0;
         }
     }
+}
 
+function checkDiagonal(bs, currentPlayer){
     x = 1;
     r = 1;
     while(r <= bs){
@@ -141,7 +157,7 @@ function hasWin(currentPlayer){
             x = x + 3;
         }
     }
-    
+
     x = 1;
     r = 1;
     if(bs == 5)
@@ -188,7 +204,3 @@ function hasWin(currentPlayer){
 
 
 }
-
-
-
-
