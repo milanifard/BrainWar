@@ -1,8 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>RAIN FALL</title>
     <link rel="stylesheet" href="src/style/main.css" />
     <link
@@ -13,29 +18,56 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap"
       rel="stylesheet"
     />
+
+    <title>Hello, world!</title>
   </head>
+  <body class="d-flex justify-content-center">
+    <div class="everything align-items-center">
+      <div class="row align-items-center">
+        <div class="timer">
+          <h1><span class="neon">RAIN</span> FALL</h1>
+          <div class="circle d-flex justify-content-center">
+            <div class="col justify-content-center">
+              <div class="row align-items-center">
+                <!--<span class="time" >time:</span>-->
+                <span class="time" >time: <span class="time" id="timepassed">00:00</span><br></span>
+              </div>
+              <div class="row align-items-center">
+                <span class="time" >score: <span class="time">00</span><br></span>
+              </div>
+            </div>
+          </div>
 
-  <body>
-    <div class="timer">
-      <h1><span class="neon">RAIN</span> FALL</h1>
-      <div class="circle">
-        <span class="time" id="timepassed">00:00.00</span>
+          <div class="controls">
+            <button class="buttonPlay">
+              <img id="playButton" src="src/static/play-button.svg" />
+
+              <img id="pauseButton" src="src/static/pause-button.svg" />
+            </button>
+
+            <button class="buttonReset">
+              <img id="resetButton" src="src/static/reset-button.svg" />
+            </button>
+          </div>
+        </div>
       </div>
-
-      <div class="controls">
-        <button class="buttonPlay">
-          <img id="playButton" src="src/static/play-button.svg" />
-
-          <img id="pauseButton" src="src/static/pause-button.svg" />
-        </button>
-
-        <button class="buttonReset">
-          <img id="resetButton" src="src/static/reset-button.svg" />
-        </button>
+      <div class="row">
+        <div class="gameboard row" id="gameboard">
+          <div class="col">
+            <img class="drop img-fluid" src="src/static/drop.png" />
+          </div>
+          <div class="col">
+            <img class="drop img-fluid" src="src/static/drop.png" />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="gameboard" id="gameboard">
     </div>
     <script src="src/logic/main.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,3 +1,8 @@
+html { 
+	max-height: 80%; 
+	margin: 0 auto !important; 
+	float: none !important; 
+}
 body {
   background-color: #383e56;
   color: #ffffff;
@@ -15,6 +20,11 @@ h1 {
   margin: 0;
 }
 
+.everything {
+  border: 1px solid #fb743e ;
+  padding: 10px;
+  width: 500px;
+}
 .timer {
   display: grid;
   justify-items: center;
@@ -30,8 +40,8 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  height: 135px;
-  width: 135px;
+  height: 150px;
+  width: 150px;
 
   border: 2px solid;
   border-radius: 50%;
@@ -40,7 +50,8 @@ h1 {
 .time {
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
+  margin: auto;
 }
 
 .neon {
@@ -78,12 +89,20 @@ button {
   border: 1px solid #fb743e ;
   box-shadow: 0 0 0px #c5d7bd, 0 0 50px #fb743e;
   margin-top: 10px;
-  height: 90vw;
-  width: 85vw;
+  height: 600px;
+  width: 400px;
   margin: 0 auto;
+  /*display: inline-block;*/
+  /*display: block;*/
+  /*margin: auto;*/
 }
 
+
 .drop {
+  display: block;
+-moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
 
