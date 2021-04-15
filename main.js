@@ -2,7 +2,8 @@ const board = $('#board');
 let ROWS = 0;
 let COLS = 0;
 let level = null;
-
+var hover = false;
+var activeCell = null;
 $(".levelButton").click(function () {
 
     level = $(this).text();
@@ -12,10 +13,10 @@ $(".levelButton").click(function () {
     } else if (level == "Medium") {
         ROWS = 10;
         COLS = 10;
-    } else if(level === "Hard") {
+    } else if (level === "Hard") {
         ROWS = 15;
         COLS = 15;
-    }else{
+    } else {
         ROWS = 10;
         COLS = 10;
     }
@@ -31,7 +32,7 @@ function createBoard(rows, cols) {
                 .addClass('col hidden')
                 .attr('data-row', i)
                 .attr('data-col', j);
-            if(level === "Test")
+            if (level === "Test")
                 col.addClass("showBomb");
             if (Math.random() < 0.1)
                 col.addClass('mine');
@@ -144,3 +145,22 @@ board.on('click', '.col.hidden', function () {
         if (isGameOver) gameOver(true);
     }
 });
+
+board.on('mouseover', '.col.hidden', function () {
+    $(this).toggleClass("active");
+    activeCell = $(this);
+    hover = true;
+});
+board.on('mouseleave', '.col.hidden', function () {
+    $(this).toggleClass("active");
+    hover = false;
+});
+
+$(document).keypress(function (e) {
+    if (e.which == 102 && hover) {
+        activeCell.css("background-color","#DC3545");
+    }else if (e.which == 114 && hover) {
+        activeCell.css("background-color","#59aec7");
+    }
+});
+
