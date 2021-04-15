@@ -3,16 +3,16 @@ let ROWS = 0;
 let COLS = 0;
 let level = null;
 
-$(".levelButton").click(function(){
-    
+$(".levelButton").click(function () {
+
     level = $(this).text();
-    if(level == "Easy"){
+    if (level == "Easy") {
         ROWS = 5;
         COLS = 5;
-    }else if(level == "Medium"){
+    } else if (level == "Medium") {
         ROWS = 10;
         COLS = 10;
-    }else{
+    } else {
         ROWS = 15;
         COLS = 15;
     }
@@ -28,16 +28,10 @@ function createBoard(rows, cols) {
                 .addClass('col hidden')
                 .attr('data-row', i)
                 .attr('data-col', j);
-            if ( level === "Easy") {
-                if(Math.random() < 0.15)
-                    col.addClass('mine');
-            }else if(level === "Medium"){
-                if(Math.random() < 0.2)
-                    col.addClass('mine');
-            }else{
-                if(Math.random() < 0.2)
-                    col.addClass('mine');
-            }
+
+            if (Math.random() < 0.1)
+                col.addClass('mine');
+
             row.append(col);
         }
         board.append(row);
@@ -45,11 +39,11 @@ function createBoard(rows, cols) {
 }
 
 function restart() {
-    $("#status").css("display","none");
+    $("#status").css("display", "none");
     createBoard(ROWS, COLS);
 }
 
-$("#restartButton").click(function(){
+$("#restartButton").click(function () {
     restart();
 });
 
@@ -67,7 +61,7 @@ function gameOver(isWin) {
         $('<i>').addClass(icon)
     );
     $('.col:not(.mine)')
-        .html(function() {
+        .html(function () {
             const cell = $(this);
             const count = getMineCount(
                 cell.data('row'),
@@ -77,8 +71,8 @@ function gameOver(isWin) {
         });
     $('.col.hidden').removeClass('hidden');
     $("#status").text(message);
-    $("#status").css("display","block");
-    setTimeout(function() {
+    $("#status").css("display", "block");
+    setTimeout(function () {
         restart();
     }, 3000);
 }
@@ -93,8 +87,7 @@ function reveal(oi, oj) {
         if (seen[key]) return;
         const cell = $(`.col.hidden[data-row=${i}][data-col=${j}]`);
         const mineCount = getMineCount(i, j);
-        if (
-            !cell.hasClass('hidden') ||
+        if (!cell.hasClass('hidden') ||
             cell.hasClass('mine')
         ) {
             return;
@@ -133,7 +126,7 @@ function getMineCount(i, j) {
     return count;
 }
 
-board.on('click', '.col.hidden', function() {
+board.on('click', '.col.hidden', function () {
     const cell = $(this);
     const row = cell.data('row');
     const col = cell.data('col');
@@ -146,4 +139,3 @@ board.on('click', '.col.hidden', function() {
         if (isGameOver) gameOver(true);
     }
 });
-
