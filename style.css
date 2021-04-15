@@ -19,8 +19,8 @@ h1{
 
 .col {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background-color: #eee;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
@@ -49,14 +49,14 @@ h1{
 }
 
 #restartButton{
-    width: 150px;
-    height: 40px;
+    width: 130px;
+    height: 30px;
     background-color: #dc3545;
     color: white;
     border-radius: 8px;
     font-family: sans-serif;
     font-weight: lighter;
-    font-size: 120%; 
+    font-size: 100%; 
     border: none;
     transition: all 0.5s ;
     display: none;
@@ -117,4 +117,17 @@ h1{
     border: 1px solid #333333;
     background-color: white;
     color: #333333;
+}
+#warning i{
+    color: #FFC008;
+}
+#addFlag{
+    background-color: #DC3545;
+    padding: 10px;
+    color: white;
+}
+#removeFlag{
+    background-color: #59aec7;
+    padding: 10px;
+    color: white;
 }
