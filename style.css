@@ -3,6 +3,10 @@ body {
     text-align: center;
 }
 
+h1{
+    color: #444444;
+}
+
 #board {
     border: 1px solid #333;
     display: inline-block;
@@ -14,8 +18,8 @@ body {
 
 .col {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #eee;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
@@ -26,9 +30,9 @@ body {
     transition: all 1.0s;
 }
 
-/* .col.hidden.mine {
+ .col.hidden.mine {
   background-color: red;
-} */
+} 
 
 .col.hidden {
     background-color: #59aec7;
@@ -39,10 +43,76 @@ body {
     background-color: #eee;
 }
 
-.row:last-child .col {
-    border-bottom: none;
+.red{
+    background-color:red !important;
 }
 
-.row .col:last-child {
-    border-right: none;
+#restartButton{
+    width: 150px;
+    height: 40px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 120%; 
+    border: none;
+    transition: all 0.5s ;
+    
+}
+
+#restartButton:hover{
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    background-color: #ffffff
+}
+
+.effect{
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+#status{
+    display: none;
+}
+
+.levelButton{
+    width: 100px;
+    height: 40px;
+    font-size: 100%;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.8s;
+}
+
+#easyBut{
+    background-color: #26A844;
+    color: white;
+}
+
+#easyBut:hover{
+    border: 1px solid #26A844;
+    background-color: white;
+    color: #26A844;
+}
+
+#medBut{
+    background-color: #DC3545;
+    color: white;
+}
+
+#medBut:hover{
+    border: 1px solid #DC3545;
+    background-color: white;
+    color: #DC3545;
+}
+
+#hardBut{
+    background-color: #333333;
+    color: white;
+}
+
+#hardBut:hover{
+    border: 1px solid #333333;
+    background-color: white;
+    color: #333333;
 }
