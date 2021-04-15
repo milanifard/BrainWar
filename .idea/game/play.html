@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Concentration</title>
+    <link rel="stylesheet" href="playStyle.css">
+    <script src="play.js" charset="UTF-8"></script>
+    <script>
+        var bleep=new Audio();
+        bleep.src="sound/bleep.mp3"
+    </script>
+</head>
+<body>
+<div id="divCounter" class="divCounter"></div>
+<script>
+    if (sessionStorage.getItem("counter")) {
+        if (sessionStorage.getItem("counter") >= 30) {
+            var value = 0;
+        } else {
+            var value = sessionStorage.getItem("counter");
+        }
+    }
+    else {
+        var value = 0;
+    }
+    document.getElementById('divCounter').innerHTML = value;
+    var counter = function () {
+        if (value >= 30) {
+            document.body.innerHTML = '';
+            var mycorrect = document.createElement("correct");
+            var textc = document.createTextNode("CORRECT :" + score().text1);
+            var myincorrect = document.createElement("incorrect");
+            var textic = document.createTextNode("INCORRECT :" + score().text2);
+            var x = document.createElement("P");
+            var t = document.createTextNode("THE'S UP");
+            x.style.color="#001c63"
+            x.style.fontFamily="Showcard Gothic"
+            x.style.fontweight="bold"
+            x.style.position="absolute"
+            x.style.fontSize="200px";
+            x.style.top="0%"
+            x.style.left="22%"
+            mycorrect.style.color="#001c63"
+            mycorrect.style.fontFamily="Showcard Gothic"
+            mycorrect.style.fontweight="bold"
+            mycorrect.style.position="absolute"
+            mycorrect.style.fontSize="30px";
+            mycorrect.style.top="60%"
+            mycorrect.style.left="44%"
+            myincorrect.style.color="#ff001a"
+            myincorrect.style.fontFamily="Showcard Gothic"
+            myincorrect.style.fontweight="bold"
+            myincorrect.style.position="absolute"
+            myincorrect.style.fontSize="30px";
+            myincorrect.style.top="65%"
+            myincorrect.style.left="43%"
+            x.appendChild(t);
+            document.body.appendChild(x);
+            mycorrect.appendChild(textc);
+            document.body.appendChild(mycorrect);
+            myincorrect.appendChild(textic);
+            document.body.appendChild(myincorrect);
+        }
+        else {
+            value = parseInt(value) + 1;
+            sessionStorage.setItem("counter", value);
+        }
+        document.getElementById('divCounter').innerHTML = value;
+    };
+    var interval = setInterval(counter, 1000);
+</script>
+<div class="grid"></div>
+<div class="backgrid"></div>
+<input id="Button" type="button" name="Button" value="Memorized?" class="btn1" onmousedown="bleep.play()"/>
+</body>
+</html>

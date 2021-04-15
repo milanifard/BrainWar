@@ -1,0 +1,47 @@
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.backgrid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.divCounter{
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    font-size: 45px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    color: #001c63;
+}
+.btn1{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #001c63;
+    color: #ff001a;
+    font-size: 30px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.btn1:hover {
+    background-color: #344674;
+}
+body{
+    background-color: #328df0;;
+}

@@ -1,0 +1,36 @@
+ .btn {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 9%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #001c63;
+    color: #ff001a;
+    font-size: 30px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.btn:hover {
+    background-color: #344674;
+}
+body{
+    background-image: url("image/Brain1.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: center;
+}
+.name{
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    color:#001c63 ;
+    font-size: 60px;
+    position: absolute;
+    top: 0%;
+    left: 27%;
+}
+

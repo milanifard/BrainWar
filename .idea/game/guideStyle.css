@@ -1,0 +1,48 @@
+.card {
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    height: 695px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 30px;
+    background-image: url("image/Guide1.png");;
+}
+.gbtn{
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    width: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #001c63;
+    color: #ff001a;
+    font-size: 30px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.gbtn:hover {
+    background-color: #344674;
+}
+.title{
+    position: absolute;
+    top: -7%;
+    left: 38%;
+    font-size: 47px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    color: #001c63;
+}
+.title1{
+    position: absolute;
+    top: 80%;
+    left: 32%;
+    font-size: 25px;
+    font-family: "Showcard Gothic";
+    font-weight: bold;
+    color: #001c63;
+}
