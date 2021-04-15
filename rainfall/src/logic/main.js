@@ -25,11 +25,11 @@ const update_time = (time) => {
   document.getElementById('curscore').innerHTML = points;
   document.getElementById('timepassed').innerHTML = time;
   if(time === '00:10'){
+    pause();
     document.getElementById('scores').innerHTML = 'score: ' + points;
     document.getElementById('accuracy').innerHTML = 'accuracy: ' + (((all - missed) / all) * 100).toFixed(2) + '%';
-    reset();
-    clearGameBoard();
     document.getElementById('showpopup').click();
+    reset();
   }
 }
 
@@ -54,6 +54,8 @@ const pause = () => {
 }
 
 const reset = () => {
+  const temp = document.getElementById('curscore');
+  temp.innerHTML = '00';
   clearInterval(timerInterval);
   update_time("00:00");
   elapsedTime = 0;
@@ -123,8 +125,10 @@ const clearGameBoard = () => {
   gameboardCol1.innerHTML = '';
   position = null;
   for(let i = 0; i < 4; i += 1){
-    gameboardCol1Array.pop();
-    gameboardCol2Array.pop();
+    try{
+      gameboardCol1Array.pop();
+      gameboardCol2Array.pop();
+    } catch (e){}
   }
   missed = 0;
   all = 0;
@@ -292,6 +296,10 @@ const gameLoop = async () => {
     drawGameBoardCol1();
     gameboardCol2Array[0] = rand2;
     drawGameBoardCol2();
+    if(!state){
+      setTimeout(gameLoop, 200);
+      return;
+    }
   }
 }
 
