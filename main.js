@@ -12,9 +12,12 @@ $(".levelButton").click(function () {
     } else if (level == "Medium") {
         ROWS = 10;
         COLS = 10;
-    } else {
+    } else if(level === "Hard") {
         ROWS = 15;
         COLS = 15;
+    }else{
+        ROWS = 10;
+        COLS = 10;
     }
     restart();
 });
@@ -28,7 +31,8 @@ function createBoard(rows, cols) {
                 .addClass('col hidden')
                 .attr('data-row', i)
                 .attr('data-col', j);
-
+            if(level === "Test")
+                col.addClass("showBomb");
             if (Math.random() < 0.1)
                 col.addClass('mine');
 
@@ -40,6 +44,7 @@ function createBoard(rows, cols) {
 
 function restart() {
     $("#status").css("display", "none");
+    $("#restartButton").css("display", "inline-block");
     createBoard(ROWS, COLS);
 }
 
