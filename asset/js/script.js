@@ -26,12 +26,12 @@ jQuery(document).ready(function($) {
         }, 1000)
     })
 
-    $(".chooser div input").hover(function() {
-        var stralt = $(this).attr("alt")
-        $(".chooser").after('<p class="text-dark text-ylw2 ml-2" style="font-size:12px;margin-top: 60px;position: absolute;z-index: 66;">' + stralt + '</p>');
-    }, function() {
-        $(".chooser").next('p').remove();
-    })
+    // $(".chooser div input").hover(function() {
+    //     var stralt = $(this).attr("alt")
+    //     $(".chooser").after('<p class="text-dark text-ylw2 ml-2" style="font-size:12px;margin-top: 60px;position: absolute;z-index: 66;">' + stralt + '</p>');
+    // }, function() {
+    //     $(".chooser").next('p').remove();
+    // })
 
     $("#aside").css(
         "margin-left", -1.5 * w3

@@ -20,32 +20,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./asset/style/shop.css" rel="stylesheet">
     <link href="./asset/style/temp.css" rel="stylesheet">
+    <style>
+        .gamecontainer {
+            z-index: 2;
+            background-image: linear-gradient(to right bottom, rgba(243, 240, 69, 0.336), rgba(179, 176, 26, 0.3)), url('asset/img/round2.png');
+            padding-right: 75px;
+            padding-left: 75px;
+            padding-bottom: 150px;
+            padding-top: 150px;
+            margin-top: 100px;
+            box-shadow: 10px 10px 3px 3px rgba(59, 59, 59, 0.281);
+        }
+    </style>
 </head>
 
-<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
-    <header class="header">
+<body>
+    <header class="header" style="z-index: 1;">
         <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 5.25rem;z-index:5"></div>
         <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 4.5rem;z-index:5"></div>
         <div class="curve pt-2 " style="padding-bottom:3rem;z-index:5">
             <div class="pheader w-75 m-auto">
-                <div class="menu h-max m-auto">
-                    <a href="about.html"><i class="fas fa-info-circle mr-4 text-white" alt="درباره ما"></i>
-                    </a>
-                    <a href="play.html" class="btm"><i class="fas fa-play mr-4 text-white" alt="بازی"></i></a>
-                    <a href="index.html" class="btm"><i class="fas fa-home mr-4 text-white" alt="خانه"></i>
-                    </a>
-                </div>
+                <div class="menu h-max m-auto"><a href="about.html"><i class="fas fa-info-circle mr-4 text-white" alt="درباره ما"></i></a><a href="play.html" class="btm"><i class="fas fa-play mr-4 text-white" alt="بازی"></i></a><a href="index.html" class="btm"><i class="fas fa-home mr-4 text-white" alt="خانه"></i></a></div>
             </div>
         </div>
         <script src="./asset/js/header.js"></script>
-        <script src="./asset/js/script.js"></script>
-        <div class="text-box">
-            <h1 class="heading-primary font-weight-bold">
-                Swipe Master Game
-            </h1>
-            <a href="#" class="butn butn-white butn-animated">Created By Masoud Akhgar</a>
-        </div>
+
     </header>
+    <div class="text-box gamecontainer">
+        <h1 class="heading-primary font-weight-bold">Swipe Master Game </h1><a href="#" class="butn butn-white butn-animated">Created By Masoud Akhgar</a></div>
+
+    <br><br>
 </body>
 
 </html>

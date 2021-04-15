@@ -30,6 +30,11 @@ a:focus {
     -o-transition-duration: .2s;
 }
 
+@font-face {
+    font-family: myFirstFont;
+    src: url("../font/B-NAZANIN.TTF");
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -49,7 +54,20 @@ section {
 .sec-title {
     position: relative;
     z-index: 1;
+    font-style: myFirstFont;
     margin-bottom: 60px;
+}
+
+a,
+h,
+h3,
+h32,
+p {
+    font-style: myFirstFont;
+}
+
+.ready {
+    font-style: myFirstFont;
 }
 
 .sec-title .title {
@@ -217,7 +235,7 @@ section {
 
 .about-section .image-column .inner-column:before {
     position: absolute;
-    left: -75px;
+    left: 65px;
     top: 65px;
     height: 520px;
     width: 520px;

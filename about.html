@@ -20,9 +20,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./asset/style/about.css" rel="stylesheet">
     <link href="./asset/style/temp.css" rel="stylesheet">
+    <style>
+        .gamecontainer {
+            z-index: 2;
+            background-image: linear-gradient(to right bottom, rgba(69, 243, 98, 0.336), rgba(26, 179, 39, 0.3)), url('asset/img/round2.png');
+            padding-right: 20px;
+            padding-left: 7px;
+            padding-bottom: 15px;
+            padding-top: 25px;
+            margin-top: 10px;
+            box-shadow: 10px 10px 3px 3px rgba(59, 59, 59, 0.281);
+        }
+    </style>
 </head>
 
 <body>
+
     <!-- <?php include ("asset/subpages/top_header.php");include ("asset/inc/get_array_json.php");?> -->
     <header class="">
         <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 5.25rem;z-index:5"></div>
@@ -41,9 +54,9 @@
     </header>
     <section class="about-section">
         <div class="container">
-            <div class="row">
-                <div class="content-column col-lg-6 col-md-12 text-right col-sm-12 order-2">
-                    <div class="inner-column">
+            <div class="row gamecontainer">
+                <div class="content-column col-lg-6 col-md-12 text-right col-sm-12 order-2 ">
+                    <div class="inner-column ">
                         <div class="sec-title">
                             <span class="title">درباره من</span>
                             <h2>مسعود اخگر<br>دانشجوی کارشناسی مهندسی کامپیوتر<br>دانشگاه فردوسی مشهد</h2>
@@ -80,7 +93,6 @@
             </div>
         </div>
     </section>
-
 
 </body>
 <script>
