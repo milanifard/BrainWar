@@ -302,9 +302,15 @@ h3{
     padding: 5px;
 }
 
-.SM{
-    background-color: red;
+.sm{
     text-align: left;
     position: relative;
     top: 30vh;
+    float: left;
+    color: white;
+    border: 2px solid #e84545;
+    padding: 15px;
+    margin-left: 20px;
+    font-size: 150% !important;
 }
+
