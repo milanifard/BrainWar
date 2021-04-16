@@ -1,137 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Menu</title>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="menu, game, weatherCast,"/>
+
+    <!-- title of the page -->
+    <title>Menu</title>
+
+    <!-- load css file -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
-    <style>
-        body{
-            background:#333 url(images/background.jpg) repeat top left;
-            font-family:Arial;
-        }
-        ul  li {
-            padding: 2px 5px;
-        }
-        h1{
-            text-align: center;
-            color: #0B75AF;
-            font-size: xxx-large;
-        }
-        ul.sdt_menu{
-            margin-top:150px;
-        }
-    </style>
 </head>
 
 <body>
-<div class="content">
-    <h1 class="title">WeatherCast</h1>
-    <ul id="sdt_menu" class="sdt_menu">
-        <li>
-            <a href="#">
-                <img src="images/play.jpg" alt="play"/>
-                <span class="sdt_active"></span>
-                <span class="sdt_wrap">
-                    <span class="sdt_link">Play</span>
-                    <span class="sdt_descr">Are you ready?</span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="images/4.jpg" alt="hint"/>
-                <span class="sdt_active"></span>
-                <span class="sdt_wrap">
-                    <span class="sdt_link">Hint</span>
-                    <span class="sdt_descr">Description</span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img src="images/5.jpg" alt=""/>
-                <span class="sdt_active"></span>
-                <span class="sdt_wrap">
-                    <span class="sdt_link">Rank</span>
-                    <span class="sdt_descr">Can you find yourself?</span>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="About%20me.html">
-                <img src="images/2.jpg" alt="َAbout-me"/>
-                <span class="sdt_active"></span>
-                <span class="sdt_wrap">
-                    <span class="sdt_link">About me</span>
-                    <span class="sdt_descr">Get to know me</span>
-                </span>
-            </a>
-        </li>
-    </ul>
-</div>
+    <!-- header text-->
+    <h1 class="header">WeatherCast</h1>
 
-<!-- The JavaScript -->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.easing.1.3.js"></script>
-<script type="text/javascript">
-    $(function() {
-        /**
-         * for each menu element, on mouseenter,
-         * we enlarge the image, and show both sdt_active span and
-         * sdt_wrap span. If the element has a sub menu (sdt_box),
-         * then we slide it - if the element is the last one in the menu
-         * we slide it to the left, otherwise to the right
-         */
-        $('#sdt_menu > li').bind('mouseenter',function(){
-            var $elem = $(this);
-            $elem.find('img')
-                .stop(true)
-                .animate({
-                    'width':'170px',
-                    'height':'170px',
-                    'left':'0px'
-                },400,'easeOutBack')
-                .andSelf()
-                .find('.sdt_wrap')
-                .stop(true)
-                .animate({'top':'140px'},500,'easeOutBack')
-                .andSelf()
-                .find('.sdt_active')
-                .stop(true)
-                .animate({'height':'170px'},300,function(){
-                    var $sub_menu = $elem.find('.sdt_box');
-                    if($sub_menu.length){
-                        var left = '170px';
-                        if($elem.parent().children().length == $elem.index()+1)
-                            left = '-170px';
-                        $sub_menu.show().animate({'left':left},200);
-                    }
-                });
-        }).bind('mouseleave',function(){
-            var $elem = $(this);
-            var $sub_menu = $elem.find('.sdt_box');
-            if($sub_menu.length)
-                $sub_menu.hide().css('left','0px');
+    <!-- make a row with three columns for putting up three items of menu side by side -->
+    <div class="row">
 
-            $elem.find('.sdt_active')
-                .stop(true)
-                .animate({'height':'0px'},300)
-                .andSelf().find('img')
-                .stop(true)
-                .animate({
-                    'width':'0px',
-                    'height':'0px',
-                    'left':'85px'},400)
-                .andSelf()
-                .find('.sdt_wrap')
-                .stop(true)
-                .animate({'top':'25px'},500);
-        });
-    });
-</script>
+        <!-- play column -->
+        <div class="column">
+            <a href="play.html" >
+                <img src="images/play.jpg" class="img center" alt="Play">
+                <div class="division center">
+                    <span class="span1">Play</span><br>
+                    <span class="span2">Are you ready?</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- hint column -->
+        <div class="column">
+            <a href="hint.html" >
+                <img src="images/4.jpg" class="img center" alt="Hint">
+                <div class="division center">
+                    <span class="span1">Hint</span><br>
+                    <span class="span2">Description</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- about me column -->
+        <div class="column">
+            <a href="About%20me.html" >
+                <img src="images/2.jpg" class="img center" alt="About-me">
+                <div class="division center">
+                    <span class="span1">About me</span><br>
+                    <span class="span2">Get to know me</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
 </body>
 </html>
