@@ -1,10 +1,45 @@
-/* Three image containers (use 25% for four, and 50% for two, etc) */
+/*
+ give some style to body:
+      1. background image
+      2. font size and font family
+*/
+.bodyStyle {
+    font-family: Bahnschrift, serif;
+    font-size: 20px;
+    background:linear-gradient(0deg, rgba(41,46,51,0.6), rgba(41,46,51,0.6)), url(../images/playbg.jpg) repeat top left;
+}
+
+/* Three images side by side containers */
 .column {
     float: left;
     width: 33.33%;
-
 }
 
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 500px) {
+    .column {
+        max-width: 100%;
+    }
+}
+
+/* style img tag with image size */
+img.size{
+    height: 280px;
+    width: 200px;
+}
+
+/* red border for wrong answer */
+.image {
+    border: 2px solid #ff0000;
+}
+
+/* style of a paragraph */
 .paragraph{
     color: white;
     margin-top: 60px;
@@ -13,26 +48,17 @@
     font-size: 30px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-
-}
-@media screen and (max-width: 500px) {
-    .column {
-        width: 100%;
-    }
-}
+/* centering the image in page */
 .center {
-    padding-top: 30px;
+    margin-top: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
+
+/* a kind of effect for change picture */
 .fade-in-image {
     animation: fadeIn 1s;
     -webkit-animation: fadeIn 1s;
