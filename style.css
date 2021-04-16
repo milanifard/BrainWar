@@ -1,10 +1,12 @@
-body {
-    font-family: 'Inconsolata', monospace;
+/* index page css */
+
+#gameBody {
     text-align: center;
 }
 
-h1{
+#gameName {
     color: #444444;
+    font-family: 'Inconsolata', monospace;
 }
 
 #board {
@@ -19,8 +21,8 @@ h1{
 
 .col {
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-color: #eee;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
@@ -32,7 +34,7 @@ h1{
 }
 
 .col.hidden.mine.showBomb {
-  background-color: red;
+    background-color: red;
 }
 
 .col.hidden {
@@ -44,11 +46,11 @@ h1{
     background-color: #eee;
 }
 
-.red{
-    background-color:red !important;
+.red {
+    background-color: red !important;
 }
 
-#restartButton{
+#restartButton {
     width: 130px;
     height: 30px;
     background-color: #dc3545;
@@ -56,27 +58,27 @@ h1{
     border-radius: 8px;
     font-family: sans-serif;
     font-weight: lighter;
-    font-size: 100%; 
+    font-size: 100%;
     border: none;
-    transition: all 0.5s ;
+    transition: all 0.5s;
     display: none;
 }
 
-#restartButton:hover{
+#restartButton:hover {
     border: 1px solid #dc3545;
     color: #dc3545;
     background-color: #ffffff
 }
 
-.effect{
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+.effect {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-#status{
+#status {
     display: none;
 }
 
-.levelButton{
+.levelButton {
     width: 100px;
     height: 40px;
     font-size: 100%;
@@ -86,48 +88,566 @@ h1{
     cursor: pointer;
 }
 
-#easyBut{
+#easyBut {
     background-color: #26A844;
     color: white;
 }
 
-#easyBut:hover{
+#easyBut:hover {
     border: 1px solid #26A844;
     background-color: white;
     color: #26A844;
 }
 
-#medBut{
+#medBut {
     background-color: #DC3545;
     color: white;
 }
 
-#medBut:hover{
+#medBut:hover {
     border: 1px solid #DC3545;
     background-color: white;
     color: #DC3545;
 }
 
-#hardBut{
+#hardBut {
     background-color: #333333;
     color: white;
 }
 
-#hardBut:hover{
+#hardBut:hover {
     border: 1px solid #333333;
     background-color: white;
     color: #333333;
 }
-#warning i{
+
+#warning i {
     color: #FFC008;
 }
-#addFlag{
+
+#addFlag {
     background-color: #DC3545;
     padding: 10px;
     color: white;
 }
-#removeFlag{
+
+#removeFlag {
     background-color: #59aec7;
     padding: 10px;
     color: white;
+}
+
+
+.homeBut{
+    background-color: #455db6;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.homeBut i{
+    width: 80px;
+    font-size: 180%;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.homeBut a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Profile page css */
+
+#profileBody {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+
+#one {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(Img/home-bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#menu {
+    z-index: 2;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    margin: 0px auto;
+    vertical-align: top;
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+    position: relative;
+    top: 40px;
+    font-weight: bold;
+    font-size: 68%;
+    text-align: center;
+    padding: 0px;
+
+}
+
+#menu li {
+    display: inline;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #0C4A60;
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+#menu li a:hover {
+    color: #EF6C33;
+    font-size: 105%;
+}
+
+#menu li:first-child {
+    margin-left: 0px;
+}
+
+#name {
+    color: #455DB6;
+    margin: 30vh 0 0 10vw;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-weight: lighter;
+    border-left: 5px solid #455DB6;
+    padding-left: 5px;
+    font-size: 300%;
+}
+
+#name span {
+    font-size: 70%;
+    font-weight: bold;
+}
+
+#title {
+    margin: 3vh 0 0 10vw;
+    color: #0C4A60;
+    font-weight: lighter;
+    font-size: 150%;
+    padding-left: 5px;
+
+}
+
+#about {
+    width: 100vw;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+#aboutLeft {
+    width: 50vw;
+
+}
+
+#aboutRight {
+    width: 50vw;
+}
+
+.img1 {
+    width: 30vw;
+    height: 70vh;
+    margin-top: 5vh;
+    background-image: url(Img/Mahaa.jpg);
+    background-size: cover;
+    margin-left: 6vw;
+    opacity: 0;
+    will-change: opacity;
+    transition: all 1s;
+}
+
+.img1.is-visible {
+    opacity: 1;
+    will-change: opacity;
+}
+
+#design1 {
+    width: 1vw;
+    height: 300px;
+    border: 7px solid #EF6C33;
+    position: relative;
+    bottom: 300px;
+}
+
+.secNum {
+    margin: 10vh 0 0 13vw;
+    letter-spacing: 3px;
+    font-size: 200%;
+    font-weight: 400;
+    color: #455DB6;
+    border-left: 2px solid #455DB6;
+    padding-left: 10px;
+    font-family: monospace;
+}
+
+.title {
+    margin: 3vh 0 0 13vw;
+    font-size: 300%;
+    font-family: serif;
+    color: #0C4A60;
+}
+
+#game {
+    margin: 3vh 0 0 10vw;
+    background-color: #455DB6;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 120%;
+    outline: none;
+}
+#game a {
+    text-decoration: none;
+    color: white;
+}
+
+.text {
+    margin: 7vh 0 0 13vw;
+    font-size: 90%;
+    line-height: 22px;
+    text-align: justify;
+    font-weight: 400;
+    color: #555555;
+    padding-right: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+#exp {
+    width: 100vw;
+    background-color: #e9e9e9;
+    padding-top: 7vh;
+    padding-bottom: 20vh;
+
+}
+
+.experience {
+    opacity: 0;
+    transition: opacity 1s .25s ease-out;
+}
+
+.experience.is-visible {
+    opacity: 1;
+}
+
+.expList {
+    width: 72vw;
+    margin: 8vh 0 0 13vw;
+    border-left: 2px solid #455DB6;
+    padding-bottom: 50px;
+}
+
+.expDivs {
+    width: 72vw;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.iconWhite {
+    color: #455DB6;
+    font-size: 150%;
+    background-color: #ffffff;
+    position: relative;
+    left: -8px;
+}
+
+.iconGray {
+    color: #455DB6;
+    font-size: 150%;
+    background-color: #e9e9e9;
+    position: relative;
+    left: -8px;
+}
+
+.date {
+    font-family: sans-serif;
+    font-size: 90%;
+    margin-left: 4vw;
+    padding: 7px 2px;
+    background-color: #333333;
+    color: white;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    top: -5px;
+    transition: all 0.6s;
+}
+
+.date:hover {
+    background-color: #455DB6;
+}
+
+.postionName {
+    color: #0C4A60;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 150%;
+    margin-left: 4vw;
+    width: 72vw;
+}
+
+.companyName {
+    color: #0C4A60;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    padding: 3px 0 3px 6px;
+    margin-left: 4vw;
+    width: 72vw;
+    color: #455DB6;
+    margin-top: -15px;
+    border-left: 2px solid #455DB6;
+    border-radius: 30px;
+}
+
+.JD {
+    color: #0C4A60;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 90%;
+    margin-left: 4vw;
+    width: 72vw;
+    margin-top: 30px;
+}
+
+.JobDetails {
+    color: #0C4A60;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 90%;
+    margin-left: 4vw;
+    width: 60vw;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+#education {
+    width: 100vw;
+    background-color: #ffffff;
+    padding-top: 7vh;
+    padding-bottom: 20vh;
+}
+
+#contact {
+    width: 100vw;
+    background-color: #e9e9e9;
+    padding-top: 7vh;
+    padding-bottom: 20vh;
+}
+
+#contactLeft {
+    width: 30vw;
+    margin-top: 40px;
+}
+
+#contactRight {
+    width: 70vw;
+    margin-top: 40px;
+
+}
+
+.contactTitle {
+    margin: 30px 0 0 13vw;
+    color: #333333;
+    font-size: 150%;
+    font-weight: normal;
+}
+
+.contactLists {
+    margin: 5px 0 0 13vw;
+    font-weight: lighter;
+    font-size: 90%;
+}
+
+#SN {
+    list-style: none;
+    margin-left: 13vw;
+    padding: 0;
+}
+
+#SN li {
+    color: #0C4A60;
+    margin-left: 15px;
+    float: left;
+    font-size: 180%;
+}
+
+#SN li a {
+    color: #0C4A60;
+    text-decoration: none;
+}
+
+#SN li:first-child {
+    margin-left: 0px;
+
+}
+
+#contactForm {
+    margin: 20px 0 0 10vw;
+}
+
+::placeholder {
+    font-size: 1em;
+    opacity: 0.7;
+
+}
+
+.formInputs {
+    font-family: sans-serif;
+    color: #455DB6;
+    font-weight: 400;
+    font-size: 90%;
+    padding: 15px 30px;
+    width: 42vw;
+    border: none;
+    outline-style: hidden;
+    border-radius: 4px;
+    outline-color: #EF6C33;
+    box-shadow: inset 0 0 2px rgb(0, 0, 0, 0.4);
+    margin-top: 10px;
+}
+
+.formInputs:first-child {
+    margin-top: 0px;
+}
+
+#textBox {
+    height: 70px;
+    resize: none;
+    outline: 1px;
+
+}
+
+#submitButton {
+    width: 46vw;
+    height: 40px;
+    font-size: 160%;
+    border: none;
+    background-color: #EF6C33;
+    color: white;
+    margin-top: 10px;
+    font-family: monospace;
+}
+
+#footer {
+    width: 100wv;
+    height: 60px;
+    background-color: #333;
+}
+
+#homeBtn {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 90vh;
+    left: 93vw;
+    border-radius: 100px;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.4);
+}
+
+#homeBtn i {
+    color: #333;
+    position: relative;
+    top: 13px;
+    font-size: 160%;
+}
+
+@media only screen and (max-width: 900px) {
+    #aboutLeft {
+        width: 90vw;
+    }
+    #aboutRight {
+        width: 100vw;
+
+    }
+    .img1 {
+        width: 75vw;
+        height: 70vh;
+        margin-top: 5vh;
+        background-image: url(Img/Mahaa.jpg);
+        background-size: cover;
+        margin-left: 13vw;
+        opacity: 0;
+        will-change: opacity;
+        transition: all 1s;
+    }
+
+    #contactLeft {
+        width: 100vw;
+        margin-top: 40px;
+    }
+    .contactTitle {
+        margin: 30px 0 0 13vw;
+        color: #333333;
+        font-size: 190%;
+        font-weight: normal;
+    }
+    .contactLists {
+        margin: 5px 0 0 13vw;
+        font-weight: lighster;
+        font-size: 100%;
+    }
+    #contactRight {
+        width: 100vw;
+    }
+    .formInputs {
+        font-family: sans-serif;
+        color: #455DB6;
+        font-weight: 400;
+        font-size: 90%;
+        padding: 15px 30px;
+        width: 68vw;
+        border: none;
+        outline-style: hidden;
+        border-radius: 4px;
+        outline-color: #EF6C33;
+        box-shadow: inset 0 0 2px rgb(0, 0, 0, 0.4);
+        margin-top: 10px;
+    }
+
+    #submitButton {
+        width: 74.5vw;
+        height: 40px;
+        font-size: 160%;
+        border: none;
+        background-color: #EF6C33;
+        color: white;
+        margin-top: 10px;
+        font-family: monospace;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    #submitButton {
+        width: 80vw;
+        height: 40px;
+        font-size: 160%;
+        border: none;
+        background-color: #EF6C33;
+        color: white;
+        margin-top: 10px;
+        font-family: monospace;
+    }
 }
