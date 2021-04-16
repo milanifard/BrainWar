@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            background-image: url(".idea/img/bacground (16).jpg");
+
+        }
+    </style>
+</head>
+<body style="margin-top: 0px" onload="setColor()">
+
+    <div id="container" class="divContainar" >
+        <div id="name" class="text , w3-animate-fading" style="font-size: 3.5vw; color: white"><b>Bird Watching</b></div>
+        <table id="sampleTable" class="c1" style="background:white">
+
+            <tbody>
+                <tr>
+                    <th id="htp" class="text">How To Play</th>
+                </tr>
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                </tr>
+
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                <tr>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                </tr>
+            <tr>
+                <th id="hint" class="text" style="font-size: 1.5vw">Tap the color that appears the most</th>
+            </tr>
+            <tr>
+                <th>
+                    <form>
+                        <input id="start" type="button" name="startButton" value="Start" onclick="location.href ='page2.html'">
+                    </form>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div id="enterGame">
+        <p id="timer"></p>
+
+    </div>
+
+
+    <script>
+        function $(id) {return document.getElementById(id); }
+        function setColor(){
+            var cells = document.getElementsByTagName("td");
+            var color = [randomColor(), randomColor(), randomColor()];
+            for(var i=0; i<9 ; i++){
+                cells[i].style.background = color[Math.floor(Math.random() * color.length)];
+            }
+        }
+        function randomColor(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+
+            return "rgb(" + x + "," + y + "," + z + ")";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            background-image: url(".idea/img/bacground (17).jpg");
+            background-repeat: repeat-x;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body  onload="createTable(1)">
+    <audio loop autoplay>
+        <source src=".idea/music/bensound-perception.mp3" type="audio/mp3" >
+    </audio>
+    <div id="timer"></div>
+    <div id="timeUp" class="w3-animate-opacity">Time is running out...</div>
+    <div id="incorrect" class="w3-animate-zoom">incorrect :(( </div>
+
+    <progress value="0" max="14.9" id="progressBar" class="progress"></progress>
+
+    <div id="gameTable"></div>
+    <script>
+
+
+        //timer
+        var timeLeft = 25;
+        var elem = document.getElementById('timer');
+        var timerId = setInterval(countdown, 1000);
+
+        function countdown() {
+            if (timeLeft === 8) {
+                document.getElementById("timeUp").style.display = "block";
+                //location.href = 'Page3.html';
+            }else if(timeLeft === 0){
+                clearTimeout(timerId);
+            }
+            else {
+                timeLeft--;
+            }
+        }
+        //progressbar
+        var timeleft = 14.9;
+        var downloadTimer = setInterval(function(){
+            if(timeleft>=0 && timeleft<=0.5){
+                sessionStorage.setItem("numOfQ",(25/numOfQ).toFixed(2).toString());
+                sessionStorage.setItem("correct",correct.toString());
+                sessionStorage.setItem("incorrect",incorrect.toString());
+                location.href = 'Page3.html';
+            }
+            if(timeleft <= 0){
+                clearInterval(downloadTimer);
+            }
+            document.getElementById("progressBar").value = 14.9 - timeleft;
+            timeleft -= 0.01;
+        }, 10);
+
+
+        function randomColor(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            return "rgb(" + x + ", " + y + ", " + z + ")";
+        }
+
+        var numOfQ = 1;
+        var color = [];
+        function createTable(numOfQ){
+            if(numOfQ>=1 && numOfQ<=5){
+                var index = 3;
+                color = [[randomColor()], [randomColor()]];
+                console.log(color);
+                creat(index);
+            }
+            else if (numOfQ>=6 && numOfQ<=13){
+                var index = 3;
+                color = [[randomColor()], [randomColor()],[randomColor()]];
+                creat(index);
+            }
+            else if(numOfQ>=14 && numOfQ<=25){
+                var index = 4;
+                color = [[randomColor()], [randomColor()],[randomColor()]];
+                creat(index);
+            }
+        }
+        function creat(index){
+            var rootDiv = document.getElementById("gameTable");
+
+            var tbl = document.createElement("table");
+            tbl.setAttribute("id","sTable");
+            var tblBody = document.createElement("tbody");
+            for (var i = 0; i < index; i++) {
+                var row = document.createElement("tr");
+                for (var j = 0; j < index; j++) {
+                    var cell = document.createElement("td");
+                    cell.setAttribute("class","cell , hoverTable");
+                    cell.style.background = color[Math.floor(Math.random() * color.length)][0];
+                    row.appendChild(cell);
+                }
+
+                tblBody.appendChild(row);
+            }
+            tbl.setAttribute("class","c1");
+
+            tbl.appendChild(tblBody);
+            rootDiv.appendChild(tbl);
+            var tds = document.getElementsByTagName("td");
+            for (var i=0; i<tds.length ; i++){
+                tds[i].setAttribute("onclick","checkSelection(this,color)");
+                //tds[i].setAttribute("class","hoverTable");
+            }
+            return color;
+        }
+
+        var correct = 0;
+        var incorrect = 0;
+        function checkSelection(element,color){
+            var tds = document.getElementsByTagName("td");
+
+            var numOfColor0 = 0;
+            var numOfColor1 = 0;
+            var numOfColor2 = 0;
+
+            for (var i=0; i<tds.length ; i++){
+
+                if(tds[i].style.backgroundColor === color[0][0]){
+                    numOfColor0++;
+                }
+                if(tds[i].style.backgroundColor === color[1][0])
+                    numOfColor1++;
+                if(color.length === 3){
+                    if(tds[i].style.backgroundColor === color[2][0])
+                        numOfColor2++;
+                }
+
+                }
+            color[0].push(numOfColor0);
+            color[1].push(numOfColor1);
+            if(color.length === 3)
+                color[2].push(numOfColor2);
+            //console.log(color);
+            var maxColor = findMax(color);
+            console.log(color);
+            console.log(maxColor);
+            i=0;
+            start:
+                //
+                while (i<maxColor.length){
+                    if(element.style.backgroundColor === maxColor[i]){
+                        document.getElementById("incorrect").style.display = "none";
+                        var x = document.getElementById("sTable");
+                        x.parentNode.removeChild(x);
+                        if(timeLeft >0){
+
+                            createTable(numOfQ++);
+                            correct++;
+                            console.log(correct);
+                        }
+                        break;
+                    }
+                    i++;
+                    if(i === maxColor.length){
+                        document.getElementById("incorrect").style.display = "block";
+                        console.log(false);
+                        correct--;
+                        incorrect++;
+                        console.log(incorrect);
+                        continue start;
+                    }
+                }
+            }
+
+            function findMax(color){
+                var max = 0;
+                var temp= [];
+                var temp2 = [];
+                for (var i=0; i<color.length; i++){
+                    temp.push(color[i][1]);
+                }
+                max = Math.max(...temp);
+
+                for (i=0; i<color.length; i++){
+                    if(color[i][1] === max){
+                        temp2.push(color[i][0]);
+                    }
+                }
+                return temp2;
+            }
+
+    </script>
+</body>
+</html>
