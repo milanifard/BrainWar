@@ -231,11 +231,11 @@ h3{
     opacity: 1;
 }
 #menu {
+
     width: 100vw;
     height: 100px;
     padding: 0px;
-    position: relative;
-    top: -100vh;
+    position: absolute;
     margin: 0px;
     border-bottom: 1px solid rgba(128, 128, 128, .5);
 }
@@ -313,8 +313,33 @@ h3{
     margin-left: 20px;
     font-size: 150% !important;
 }
+#intro{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
+.float{
+    float: left;
+}
+#leftInto{
+    width: 30vw;
+    height: 300px;
+    background-color: green;
+    margin-left: 10vw;
+}
 
-/* less than 800px */
+#rightIntro{
+    width: 50vw;
+    height: 300px;
+    background-color: pink;
+
+}
+
+
+
+/* less than 800px
+
+*/
 @media only screen and (max-width: 850px) {
     .position{
         position: relative;
