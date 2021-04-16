@@ -211,3 +211,61 @@ h3{
 .clear{
     clear: both;
 }
+
+/* index.html page css */
+
+#indexPage{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+#top{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("me.png");
+    background-size: cover;
+    background-position: 25% 75%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+#menu {
+    width: 100vw;
+    height: 100px;
+    padding: 0px;
+    position: relative;
+    top: -100vh;
+    margin: 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, .5);
+}
+#menu li{
+    margin-top: 40px;
+    list-style:none;
+    float: left;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+#menu li:first-child{
+    margin-left: 50px;
+}
+#menu li:last-child{
+    margin-top: 30px;
+    margin-left: 70px;
+    padding: 10px;
+    background-color: #e84545;
+    border-radius: 5px;
+    transition: all 0.7s;
+}
+#menu li:last-child:hover{
+    border: 1px solid #e84545;
+    background-color: transparent;
+    color: #e84545;
+}
+
+#menu a{
+    text-decoration: none;
+    color: white;
+}
