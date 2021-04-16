@@ -1,6 +1,7 @@
 body {
   background-color: #e5e5e5;
   font-family: sans-serif;
+  padding-bottom: 50px;
 }
 
 .ball {
@@ -29,7 +30,7 @@ h1
   width: 200px;
   height: 200px;
   border-radius: 30px;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  box-shadow: 5px 5px 30px 7px rgba(48, 47, 47, 0.25), -5px -5px 30px 7px rgba(83, 81, 81, 0.22);
   cursor: pointer;
   transition: 0.4s;
 }

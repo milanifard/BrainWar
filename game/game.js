@@ -27,6 +27,7 @@ let selectedBoxes = 0;
 let scores = 0;
 let falseSolution = 0;
 var random = [];
+var checkClicks = [false, false, false, false, false, false, false, false, false];
 
 var modal = document.getElementById('id01');
 
@@ -167,29 +168,35 @@ function computeScores() {
   if (selectedBoxes === randomText) {
     scores++;
     selectedBoxes = 0;
-    falseSolution = 0;
     randomText = Math.floor(Math.floor(Math.random() * (13 - 1 + 1)) + 1);
     document.getElementById("numberRandomText").innerText = randomText;
   }
   else if (selectedBoxes > randomText) {
     selectedBoxes = 0;
-    falseSolution ++;
+    falseSolution++;
     randomText = Math.floor(Math.floor(Math.random() * (13 - 1 + 1)) + 1);
     document.getElementById("numberRandomText").innerText = randomText;
   }
 
 }
-function removeElement(elementId, pId) {
+function removeElement(elementId, pId, boxId) {
   // Removes an element from the document.
   var element = document.getElementById(elementId);
   var text = document.getElementById(pId).textContent;
   var number = Number(text);
-  console.log("number", number)
-  selectedBoxes += number;
+
+  if (!checkClicks[boxId]) {
+    console.log("number", number)
+    selectedBoxes += number;
+    console.log("selectedBox: ",selectedBoxes)
+  }
+  
   element.style.opacity = 0;
+  checkClicks[boxId] = true;
   setTimeout(function () {
-    //After the time is passed then I change the css flex to block that appears the elements
+    //After the time is passed then I change the opacity to 1 that appears the elements
     element.style.opacity = 1;
+    checkClicks[boxId] = false;
   }, 2000);
   computeScores()
 }
@@ -199,7 +206,7 @@ function closeModal() {
 }
 
 // animation js
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36", "#E63484"];
 
 const numBalls = 50;
 const balls = [];
@@ -213,7 +220,7 @@ for (let i = 0; i < numBalls; i++) {
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
-  
+
   balls.push(ball);
   document.body.append(ball);
 }
