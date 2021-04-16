@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse RPS</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: aqua;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-family: Arial;
+            font-size: 50px;
+            padding: 20px;
+            background-clip: border-box;
+            border: black 1px solid;
+            border-radius: 10px;
+        }
+        #big-image{
+            position: fixed;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .outer{
+            /*width: 100%;*/
+            height: 0;
+            display: inline-block;
+            content: "";
+            position: fixed;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .img1:hover{
+            transform: scale(1.2);
+        }
+    </style>
+    <h1> Start </h1>
+</head>
+
+<body bgcolor="#d3d3d3">
+<div id="big-image">
+    <img src="images/blue-paper.png" class="big_img">
+</div>
+<div class="outer">
+    <img src="images/black-rock.png" style="width: 100px; padding-right: 10px" class="img1">
+    <img src="images/black-paper.png" style="width: 100px; padding-right: 10px" class="img1">
+    <img src="images/black-scissors.png" style="width: 100px" class="img1">
+    <span class="fix"></span>
+</div>
+</body>
+<script>
+
+</script>
+</html>
