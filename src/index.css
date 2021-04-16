@@ -1,0 +1,85 @@
+:root {
+	--disk-color: #8ad10a;
+	--dark-gray: #3a3a3a;
+	--hover-gray: #00000030;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main.content-container {
+	display: flex;
+	width: 325px;
+	justify-content: space-between;
+}
+
+.tower {
+	border-bottom: solid var(--dark-gray) 5px;
+	display: flex;
+	flex: 0.3;
+	flex-direction: column-reverse;
+	align-items: center;
+	padding: 7px 0;
+}
+
+.tower:hover {
+	background-color: var(--hover-gray);
+	cursor: pointer;
+}
+
+.disk {
+	height: 20px;
+	width: 100%;
+	margin-top: 1px;
+	background-color: var(--disk-color);
+	border-radius: 5px;
+	border: 2px solid var(--dark-gray);
+	padding: 3px;
+	font-size: 0.8em;
+	display: flex;
+	align-items: center;
+}
+
+.disk.show-text {
+	color: #ffff
+}
+
+.disk.selected {
+	border: dashed 2px var(--dark-gray);
+	box-shadow: none;
+}
+	
+.info-options {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.info-options section {
+	display: flex;
+	position: relative;
+}
+
+.icon {
+	background: center/60% no-repeat;
+	border-radius: 50%;
+	height: 36px;
+	width: 36px;
+}
+
+.icon:hover {
+	cursor: pointer;
+	background-color: var(--hover-gray);
+}
+
+.icon.reset {
+	background-image: url("./svg/reset-icon.svg");
+}
