@@ -17,19 +17,22 @@ const COLOR_CODES = {
   }
 };
 
+// timer variables
 const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+
+//game varibales
 let randomText = 0;
 let selectedBoxes = 0;
 let scores = 0;
 let falseSolution = 0;
-var random = [];
-var checkClicks = [false, false, false, false, false, false, false, false, false];
+let random = [];
+let checkClicks = [false, false, false, false, false, false, false, false, false];
 
-var modal = document.getElementById('id01');
+let modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -188,9 +191,9 @@ function removeElement(elementId, pId, boxId) {
   if (!checkClicks[boxId]) {
     console.log("number", number)
     selectedBoxes += number;
-    console.log("selectedBox: ",selectedBoxes)
+    console.log("selectedBox: ", selectedBoxes)
   }
-  
+
   element.style.opacity = 0;
   checkClicks[boxId] = true;
   setTimeout(function () {

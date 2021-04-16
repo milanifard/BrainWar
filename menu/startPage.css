@@ -21,8 +21,8 @@ h1
   z-index: 0;
   width: 100%;
   display: flex;
+  /* Items will have space before, between, and after them */
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -74,9 +74,3 @@ h1
   color: black;
 }
 
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: row;
-  }
-}

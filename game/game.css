@@ -150,7 +150,6 @@ h1 {
 }
 
 .popup-timesup {
-  font-family: Montserrat, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,9 +175,9 @@ h3 {
   text-align: center;
 }
 
-.card-container .pro {
+.card-container .closeModal {
   color: #231E39;
-  background-image: url('./imgs/close.svg');
+  background-image: url('../imgs/close.svg');
   border-radius: 3px;
   width: 24px;
   height: 24px;
