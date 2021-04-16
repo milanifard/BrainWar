@@ -102,7 +102,7 @@ button {
 
 .gameboard {
   border: 1px solid #fb743e ;
-  box-shadow: 0 0 0px #c5d7bd, 0 0 50px #fb743e;
+  box-shadow: inset 0 0 0px #c5d7bd, 0 0 50px #fb743e;
   margin-top: 10px;
   height: 650px;
   width: 400px;

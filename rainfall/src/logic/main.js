@@ -377,3 +377,6 @@ function simulateKeyPress() {
 
  clearGameBoard();
  initGameBoard();
+ window.onload = () => {
+   document.getElementById('showpopupinfo').click();
+ };

@@ -23,15 +23,17 @@
   </head>
   <body class="d-flex justify-content-center">
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" style="display: none;"  data-toggle="modal" data-target="#exampleModalCenter" id="showpopup">
+    <button type="button" class="btn btn-primary" style="display: none;"  data-toggle="modal" data-target="#gameDone" id="showpopup">
+    </button>
+    <button type="button" class="btn btn-primary" style="display: none;"  data-toggle="modal" data-target="#infoAboutGame" id="showpopupinfo">
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="gameDone" tabindex="-1" role="dialog" aria-labelledby="resultTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title popup-header" id="exampleModalLongTitle">RESULTS</h5>
+            <h5 class="modal-title popup-header" id="resultTitle">RESULTS</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -42,6 +44,31 @@
           </div>
           <div class="modal-footer popup-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="infoAboutGame" tabindex="-1" role="dialog" aria-labelledby="infoTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title popup-header" id="infoTitle">INFO</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body popup-body">
+            <div class="row" style="margin: auto;">
+              <p> 
+                You need to use arrow keys to indicate which coloumn you want to be on.
+                Each of two coloumns may have 3 types of elements, drops which you have to catch, lightnings which you have to miss and empty elements that doesn't matter!
+                <br>
+                Your accuracy is what matters in this game!
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer popup-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Understood!</button>
           </div>
         </div>
       </div>
