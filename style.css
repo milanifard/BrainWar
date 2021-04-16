@@ -314,3 +314,57 @@ h3{
     font-size: 150% !important;
 }
 
+/* less than 800px */
+@media only screen and (max-width: 850px) {
+    .position{
+        position: relative;
+        top: 20vh;
+        left: 10vw;
+    }
+    #header2{
+        position: relative;
+        top: 15vh;
+    }
+    .sm{
+        position: relative;
+        top: 14vh;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .position{
+        position: relative;
+        top: 15vh;
+        left: 10vw;
+    }
+
+    #header1{
+        font-size: 250%;
+    }
+    #header2{
+        position: relative;
+        top: 12vh;
+        font-size: 150%;
+    }
+    .sm{
+        position: relative;
+        top: 12vh;
+    }
+    #menu li{
+        margin-top: 40px;
+        list-style:none;
+        float: left;
+        margin-left: 15px;
+        letter-spacing: 2px;
+        font-size: 0.7em;
+        font-weight: lighter;
+    }
+    #menu li:last-child{
+        margin-top: 30px;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: #e84545;
+        border-radius: 5px;
+        transition: all 0.7s;
+    }
+}
