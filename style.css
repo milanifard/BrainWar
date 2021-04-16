@@ -269,3 +269,42 @@ h3{
     text-decoration: none;
     color: white;
 }
+.position {
+
+    position: relative;
+    top: 35vh;
+    left: 10vw;
+
+}
+#header1 span{
+    letter-spacing: 1px;
+    font-size: 250%;
+    font-weight: bold;
+
+}
+#header1{
+    font-weight: lighter;
+    text-align: left;
+    width: 500px;
+    color: #fff;
+    font-size: 300%;
+    margin: 0px;
+}
+#header2{
+    text-align: left;
+    width: 350px;
+    color: #fff;
+    font-size: 200%;
+    font-weight: lighter;
+    position: relative;
+    top: 30vh;
+    background-color: #e84545;
+    padding: 5px;
+}
+
+.SM{
+    background-color: red;
+    text-align: left;
+    position: relative;
+    top: 30vh;
+}
