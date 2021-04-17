@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    </head>
+
+
+    <body>
+
+
+       <nav id="navfirst" class="navbar navbar-toggleable-sm navbar-inverse pt-2 bg-inverse">
+            <div class="container d-block">
+                <div class="row w-100">
+                    <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="#" class="navbar-brand w-100 text-center"><p class="display-4">Color Of Deception</p></a>
+                </div>
+                <div class="bg-primary w-100 h-100" style="min-height: 2px;"></div>
+                <div class="row w-100 pt-2 mt-2">
+                    <div class="col-md-6">
+                        <form action="search" class="form-inline align-items-center justify-content-center">
+                            <div class="input-group">
+                                <span class="input-group-addon bg-primary btn text-white">Name : </span>
+                                <input type="text" id="enterusername" class="form-control" placeholder="Your Name ...">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-6">
+                        <form action="search" class="form-inline align-items-center justify-content-center">
+                            <div class="input-group">
+                                <span class="input-group-addon bg-primary btn text-white">Age : </span>
+                                <input type="text" id ="enterage" class="form-control" placeholder="Your Age ...">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <nav id="navsecond" class="navbar navbar-toggleable-sm navbar-inverse bg-warning" style="display: none;">
+            <div class="container d-block">
+                <div class="row w-100">
+                    <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="#" class="navbar-brand w-100 text-center"><p class="display-4">Color Of Deception</p></a>
+                </div>
+                <div class="bg-primary w-100 h-100" style="max-height: 2px;"></div>
+                <div class="row w-100 text-center">
+                    <div class="col-md-4">
+                        <p class="text-primary d-inline" style="font-size:40px;">Name : </p> <p id="name" class="d-inline text-white" style="font-size:30px;"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-primary d-inline" style="font-size:40px;">Score : </p> <p id="score" class="d-inline text-white" style="font-size:30px;"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-primary d-inline" style="font-size:40px;">Time Left : </p> <p id="timer" class="d-inline text-white" style="font-size:30px;"></p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div id="start" class="text-center p-5 mt-5"> 
+            <div class="container">
+                <p id="finish" class="text-center text-danger display-4"></p>
+                <div class="row">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4 my-4">
+                        <div class="card my-4">
+                           
+                            <div class="card-block" style="border: lawngreen 2px solid; border-radius: 10px;">
+                                <h3 class="card-title text-center">Let's Start The Game</h3>
+                                <p class="card-text text-center">Description : You Have <b class="text-danger">15</b> Second To Choose The <b class="text-danger">Color</b> That <b class="text-danger">Matches</b> The <b class="text-danger">Background Color</b> Of The Box</p>
+                                <p class="text-muted">Hint : Be Careful Colors Are So Precise</p>
+                                <button onclick="toggli()" class="btn btn-outline-success w-100">Start !</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="box" class="text-center p-5 mt-5" style="display: none;"> 
+            <div class="container">
+                <div class="row p-5">
+                    <div class="col-md-6 my-4" style="min-height: 150px;">
+                        <div class="card my-4 h-100" style="border-radius: 15px;">
+   
+                            <button id="btn1" onclick="checkcolor(1)" class="btn w-100 h-100" style="border-radius: 15px;font-size: 40px;">Start !</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-4" style="min-height: 150px;">
+                        <div class="card my-4 h-100" style="border-radius: 15px;">
+   
+                            <button id="btn2" onclick="checkcolor(2)" class="btn w-100 h-100" style="border-radius: 15px;font-size: 40px;">Start !</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer class="container w-100 bg-inverse fixed-bottom">
+            <div class="row w-100 text-center">
+                <div class="col text-center my-2">
+                    <p class="text-white">Created By <a href="https://github.com/TechBoyHero" target="blank" class="text-primary">Amir Mohammad Sharifian</a> April-2021</p>
+                </div>
+            </div>
+        </footer>
+
+
+    </body>
+
+
+
+    <script src="Color-Of-Deception.js"></script>
+
+
+
+
+
+
+</html>
