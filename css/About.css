@@ -4,8 +4,7 @@
       2. size of th image
       3. position of the image
 */
-
-body {
+.bodystyle1 {
   background-image: linear-gradient(0deg, rgba(41,46,51,0.6), rgba(41,46,51,0.6)), url(../images/bgAbout.jpg);
   height: 100%;
   background-position: center;
@@ -80,21 +79,14 @@ div.line{
   padding: 15px 100px;
   margin:10px 4px;
   color: #fff;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
   text-decoration: none;
   display:inline-block;
-}
-.btn10{
   top: 40px;
   font-family: "proxima-nova", sans-serif;
   font-weight: 500;
   font-size: 13px;
   text-transform: uppercase!important;
   letter-spacing: 2px;
-  color: #fff;
   cursor: hand;
   text-align: center;
   border: 1px solid #fff;
@@ -107,8 +99,8 @@ div.line{
   transition: all .3s ease-in-out;
   background: transparent!important;
   z-index:10;
-
 }
+
 .btn10:hover{
   border: 1px solid antiquewhite;
   color: black!important;
