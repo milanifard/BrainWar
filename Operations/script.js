@@ -104,7 +104,7 @@ function timer(){
         }else if(t<15){
             bar.style.backgroundColor="red"
         }else {
-            bar.style.backgroundColor="#1371C3";
+            bar.style.backgroundColor="#24B7B6";
         }
         bar.innerHTML="<span style='position: relative;top: -15px'>"+(t).toString()+"</span>";
     }
