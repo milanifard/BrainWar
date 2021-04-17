@@ -315,7 +315,6 @@ h3{
 }
 #intro{
     width: 100vw;
-    height: 100vh;
     padding-bottom: 100px;
 }
 .float{
@@ -362,6 +361,13 @@ h3{
 #cv a{
     text-decoration: none;
     color: #e84545;
+}
+#cv span{
+    font-size: 0.5em;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    top: -8px;
 }
 #introDesc{
     text-align: right;
@@ -483,9 +489,44 @@ h3{
 #spanish{
     width: 20%;
 }
-/* less than 800px
 
-*/
+#experience{
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+}
+
+#leftExp{
+    width: 30vw;
+    height: 100vh;
+    margin-left: 10vw;
+}
+
+#rightExp{
+    width: 50vw;
+    height: 100vh;
+}
+
+#expTitle{
+    text-align: right;
+    margin-top: 110px;
+    margin-right: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #2b2e4a;
+    opacity: 0.9;
+}
+#expDesc{
+    text-align: right;
+    margin-top: -30px;
+    margin-right: 100px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #2b2e4a;
+    opacity: 0.4;
+    padding: 0px;
+}
+/* less than 800px*/
 @media only screen and (max-width: 850px) {
     .position{
         position: relative;
