@@ -5,43 +5,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- load css of the page -->
+    <link rel="stylesheet" href="css/profileStyle.css">
+
+    <!-- load ccs of button -->
+    <link rel="stylesheet" href="css/About.css">
+
+    <!-- title of the page -->
     <title>Profile</title>
-    <style>
-        body {
-            font-family: Bahnschrift;
-            font-size: 20px;
-            background:#333 url(images/background.jpg) repeat top left;
-        }
-        h1, h3{
-            color: #0B75AF;
-        }
-        table, td, th{
-            border: darkgray 1px solid;
-            border-collapse: collapse;
-            padding: 5px;
-            color: darkcyan;
-        }
-        .paragraph{
-            color: white;
-            margin-left: 15px;
-        }
-    </style>
+
 </head>
 <body>
+    <!-- head title -->
     <h1 id="name-of-the-game" align="center">
         Weather Cast
     </h1>
 
+    <!-- author of the page -->
     <h3 id="name">
         Author
     </h3>
     <p class="paragraph">
         Amir Hossein Roshandel
     </p>
-    <table>
+
+    <!-- table that include education information -->
+    <table class="tableClass">
         <title>Education</title>
         <tr>
-            <td colspan="5" style="text-align: center; background-color: antiquewhite; font-size: x-large">
+            <td colspan="5" class="td-class">
                 Education
             </td>
         </tr>
@@ -68,6 +61,33 @@
         </tr>
     </table>
 
-    <a href="https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/"><img src="images/linkedin.png" width="190" height="50"></a>
+    <h3>
+        Skills
+    </h3>
+
+    <!-- list of the skills-->
+    <ul>
+        <title>Skills</title>
+        <li class="paragraph">Java developer</li>
+        <li class="paragraph">Python developer</li>
+        <li class="paragraph">Django developer</li>
+    </ul>
+
+    <!-- show some social media link -->
+    <div class="linkDiv center">
+        <a href="https://www.linkedin.com/in/amir-hossein-roshandel-0ab09a138/" >
+            <img src="images/linkedin.png" class="linkedIn">
+        </a>
+
+        <a href="https://www.instagram.com/amir.h_rsh/">
+            <img src="images/insta.png" class="instagram">
+        </a>
+        <br>
+
+        <!-- button that link to another pages -->
+        <a href="menu.html" class="btn10">Menu</a>
+    </div>
+
+
 </body>
 </html>
