@@ -112,12 +112,14 @@ function timer(){
 function clear(){
     s=0;
     clearInterval(timeout);
-    document.getElementById("start").innerHTML="<button class=\"start\" onclick=\"javascript: start()\">Start!</button>";
-    alert("Points :"+point);
+    document.getElementById('score').innerHTML=(point).toString();
+    document.getElementById('restart').style.display = 'block';
 }
 function start(){
     if(s==0){
-        document.getElementById("start").innerHTML="";
+        document.getElementById('run').style.display = 'none';
+        document.getElementById('restart').style.display = 'none';
+        document.getElementById('tim').style.display = 'block';
         document.getElementById("opticon").innerHTML="<div>\n" +
             "            <button class=\"start\" onclick=\"javascript: plus()\"><i class=\"fas fa-plus fa-2x\"></i></button>\n" +
             "            <button class=\"start\" onclick=\"javascript: minu()\"><i class=\"fas fa-minus fa-2x\"></i></button>\n" +
@@ -133,4 +135,8 @@ function start(){
         point=0;
         operator();
     }
+}
+function run(){
+    document.getElementById('tim').style.display = 'none';
+    document.getElementById('run').style.display = 'block';
 }

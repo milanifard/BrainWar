@@ -12,17 +12,31 @@
 </head>
 <body>
 <div>
-    <div id="timer">
-        <div id="bar"></div>
+    <div id="tim">
+        <div id="timer">
+            <div id="bar"></div>
+        </div>
     </div>
     <div>
         <span id="opt"></span>
         <span id="ans"></span>
     </div>
     <div id="opticon"></div>
-    <div id="start">
-        <button class="start" onclick="javascript: start()">Start!</button>
+    <div id="run" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top">
+            <div class="restart">
+                <h4>Welcome to<br>Operations</h4><button class="start" onclick="javascript: start()">Start!</button>
+            </div>
+        </div>
     </div>
+    <div id="restart" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top">
+            <div class="restart">
+                <h4>Score:<br><span id="score"></span></h4><button class="start" onclick="javascript: start()">Again!</button>
+            </div>
+        </div>
+    </div>
+    <script>run();</script>
 </div>
 </body>
 </html>
