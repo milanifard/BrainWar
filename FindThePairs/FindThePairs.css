@@ -7,3 +7,7 @@ h1,h2,h3 {
 p.author{
     font-style: italic;
 }
+input.slotButton{
+    width: 128px;
+    height: 128px;
+}

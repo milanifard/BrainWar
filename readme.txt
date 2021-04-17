@@ -1,3 +1,0 @@
-readme
-ali dorri
-ludo
