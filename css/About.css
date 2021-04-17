@@ -4,9 +4,8 @@
       2. size of th image
       3. position of the image
 */
-.bodystyle1 {
+.bodyStyle1 {
   background-image: linear-gradient(0deg, rgba(41,46,51,0.6), rgba(41,46,51,0.6)), url(../images/bgAbout.jpg);
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,7 +74,7 @@ div.line{
 }
 
 /* style for creating a button */
-.btn10{
+.btn{
   padding: 15px 100px;
   margin:10px 4px;
   color: #fff;
@@ -93,40 +92,30 @@ div.line{
   border-radius:50px;
   position: relative;
   overflow: hidden!important;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   background: transparent!important;
   z-index:10;
 }
-
-.btn10:hover{
+.btn:hover{
   border: 1px solid antiquewhite;
   color: black!important;
 }
-.btn10::before {
+.btn::before {
   content: '';
   width: 0%;
   height: 100%;
   display: block;
   background: whitesmoke;
   position: absolute;
-  -ms-transform: skewX(-20deg);
-  -webkit-transform: skewX(-20deg);
   transform: skewX(-20deg);
-
   left: -10%;
   opacity: 1;
   top: 0;
   z-index: -12;
-  -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
-  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
   box-shadow:2px 0px 14px rgba(0,0,0,.6);
 }
-.btn10:hover::before, .btn1O:hover::before{
+.btn:hover::before{
   opacity:1;
   width: 116%;
 }
