@@ -1,0 +1,25 @@
+p {
+    margin: 0 0 1rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 3px;
+    margin-inline-end: 0px;
+}
+
+body {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color: #d3d3d3;
+    color: #222;
+    -webkit-user-select: none;
+    user-select: none;
+}
+div {
+    text-align: center;
+}
