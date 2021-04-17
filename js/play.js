@@ -55,6 +55,11 @@
         return pictures;
     }
 
+    // go to sleep then do all the rest jobs
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     // make the question picture with choose a random picture of the all states
     function show() {
         var question = document.getElementById("question");
@@ -65,6 +70,8 @@
 
         // console.log("question")
         // console.log(first)
+        question.className='size center';
+        sleep(1).then(() => question.className='size center fade-in-image');
         question.src = first.sourceImage;
         return first;
     }

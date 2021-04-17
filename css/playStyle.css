@@ -57,8 +57,7 @@ img.size{
     width: 50%;
 }
 
-
-/* a kind of effect for change picture */
+/* a kind of effect for changing picture */
 .fade-in-image {
     animation: fadeIn 1s;
     -webkit-animation: fadeIn 1s;
@@ -66,6 +65,7 @@ img.size{
     -o-animation: fadeIn 1s;
     -ms-animation: fadeIn 1s;
 }
+
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
