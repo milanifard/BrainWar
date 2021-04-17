@@ -316,20 +316,18 @@ h3{
 #intro{
     width: 100vw;
     height: 100vh;
+    padding-bottom: 100px;
 }
 .float{
     float: left;
 }
 #leftInto{
     width: 30vw;
-    height: 300px;
     margin-left: 10vw;
 }
 
 #rightIntro{
     width: 50vw;
-    height: 300px;
-
 }
 
 #introTitle{
@@ -363,8 +361,19 @@ h3{
     font-weight: normal;
     width: 45vw;
 }
+
+.skillTitle{
+    text-align: left;
+    position: relative;;
+    top: 10px;
+    font-size: 1.9em;
+}
+
 .skill{
     width: 45vw;
+    margin-top: 30px;
+}
+.skill:first-child{
     margin-top: 50px;
 }
 .skill p{
@@ -381,16 +390,50 @@ h3{
     top: -45px;
 }
 .myProgress {
-
     width: 45vw;
     background-color: #cccccc;
     border-radius: 10px;
 }
-
+.progressHeight{
+    height: 3px;
+}
 #photoshop {
     border-radius: 10px;
-    width: 50%;
-    height: 5px;
+    width: 90%;
+    background-color: #2b2e4a;
+}
+
+#xd {
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2b2e4a;
+}
+#primiere{
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2b2e4a;
+}
+#afterEffects{
+    border-radius: 10px;
+    width: 40%;
+    background-color: #2b2e4a;
+}
+
+#html{
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2b2e4a;
+}
+
+#jqeury{
+    border-radius: 10px;
+    width: 80%;
+    background-color: #2b2e4a;
+}
+
+#java{
+    border-radius: 10px;
+    width: 60%;
     background-color: #2b2e4a;
 }
 
