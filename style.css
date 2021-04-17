@@ -491,20 +491,19 @@ h3{
 }
 
 #experience{
+    overflow: auto;
     width: 100vw;
-    height: 100vh;
+    padding-bottom: 100px;
     background-color: #eee;
 }
 
 #leftExp{
     width: 30vw;
-    height: 100vh;
     margin-left: 10vw;
 }
 
 #rightExp{
     width: 50vw;
-    height: 100vh;
 }
 
 #expTitle{
@@ -515,6 +514,7 @@ h3{
     font-weight: bold;
     color: #2b2e4a;
     opacity: 0.9;
+
 }
 #expDesc{
     text-align: right;
@@ -525,6 +525,68 @@ h3{
     color: #2b2e4a;
     opacity: 0.4;
     padding: 0px;
+}
+.jobCategory{
+    text-align: left;
+    font-size: 1.9em;
+    color: #e84545;
+    margin-bottom: 40px;
+}
+.jobCategory:first-child{
+    margin-top: 110px;
+}
+.period{
+    text-align: center;
+    position: relative;
+    top: -20px;
+    padding:5px;
+    color: #fff;
+    background-color: #2b2e4a;
+    width: 80px;
+}
+.jobDesc{
+
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.2em;
+    position: relative;
+    top: -40px;
+}
+.jobAddress{
+    text-align: left;
+    position: relative;;
+    top: -40px;
+}
+.jobAddress span{
+    position: relative;
+    left: 10px;
+}
+.jobName{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.2em;
+    position: relative;
+    top: -30px;
+    padding: 5px 0;
+}
+.jobName span{
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+    padding:5px;
+    color: #fff;
+    background-color: #2b2e4a;
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+.jobText{
+    text-align: left;
+    text-align: justify;
+    position: relative;
+    top: -45px;
+    left: 21px;
+    font-size: 1.09em;
+    opacity: 0.7;
 }
 /* less than 800px*/
 @media only screen and (max-width: 850px) {
