@@ -217,7 +217,7 @@ h3{
 #indexPage{
     padding: 0px;
     margin: 0px;
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 #top{
@@ -249,7 +249,7 @@ h3{
     font-weight: lighter;
 }
 #menu li:first-child{
-    margin-left: 50px;
+    margin-left: 150px;
 }
 #menu li:last-child{
     margin-top: 30px;
@@ -316,7 +316,6 @@ h3{
 #intro{
     width: 100vw;
     height: 100vh;
-    background-color: red;
 }
 .float{
     float: left;
@@ -324,18 +323,76 @@ h3{
 #leftInto{
     width: 30vw;
     height: 300px;
-    background-color: green;
     margin-left: 10vw;
 }
 
 #rightIntro{
     width: 50vw;
     height: 300px;
-    background-color: pink;
 
 }
 
+#introTitle{
+    text-align: right;
+    margin-top: 110px;
+    margin-right: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #2b2e4a;
+    opacity: 0.9;
 
+}
+#introDesc{
+    text-align: right;
+    margin-top: -30px;
+    margin-right: 100px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #2b2e4a;
+    opacity: 0.4;
+    padding: 0px;
+}
+
+#aboutMeText{
+    text-align: left;
+    text-align: justify;
+    margin-top: 120px;
+    font-size: 1em;
+    opacity: 0.4;
+    line-height: 23px;
+    font-weight: normal;
+    width: 45vw;
+}
+.skill{
+    width: 45vw;
+    margin-top: 50px;
+}
+.skill p{
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.percentage{
+    text-align: right;
+    float: right;
+    padding: 0px;
+    position: relative;
+    top: -45px;
+}
+.myProgress {
+
+    width: 45vw;
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+#photoshop {
+    border-radius: 10px;
+    width: 50%;
+    height: 5px;
+    background-color: #2b2e4a;
+}
 
 /* less than 800px
 
@@ -353,6 +410,9 @@ h3{
     .sm{
         position: relative;
         top: 14vh;
+    }
+    #menu li:first-child{
+        margin-left: 90px;
     }
 }
 
@@ -391,5 +451,8 @@ h3{
         background-color: #e84545;
         border-radius: 5px;
         transition: all 0.7s;
+    }
+    #menu li:first-child{
+        margin-left: 50px;
     }
 }
