@@ -340,6 +340,19 @@ h3{
     opacity: 0.9;
 
 }
+#cv{
+    text-decoration: none;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2b2e4a;
+    opacity: 0.9;
+    border: 2px solid #2b2e4a;
+    padding: 10px 30px;
+    position: relative;
+    left: 30px;
+    top: 15px;
+}
 #introDesc{
     text-align: right;
     margin-top: -30px;
@@ -363,6 +376,7 @@ h3{
 }
 
 .skillTitle{
+    width: 45vw;
     text-align: left;
     position: relative;;
     top: 10px;
@@ -396,47 +410,69 @@ h3{
 }
 .progressHeight{
     height: 3px;
+    background-color: #2b2e4a;
+    border-radius: 10px;
+
 }
 #photoshop {
-    border-radius: 10px;
     width: 90%;
-    background-color: #2b2e4a;
 }
 
 #xd {
-    border-radius: 10px;
     width: 90%;
-    background-color: #2b2e4a;
+}
+
+#typo {
+    width: 90%;
 }
 #primiere{
-    border-radius: 10px;
     width: 90%;
-    background-color: #2b2e4a;
 }
 #afterEffects{
-    border-radius: 10px;
     width: 40%;
-    background-color: #2b2e4a;
 }
 
 #html{
-    border-radius: 10px;
     width: 90%;
-    background-color: #2b2e4a;
 }
 
 #jqeury{
-    border-radius: 10px;
     width: 80%;
-    background-color: #2b2e4a;
 }
 
 #java{
-    border-radius: 10px;
     width: 60%;
-    background-color: #2b2e4a;
 }
 
+#communication{
+    width: 100%;
+}
+#d2d{
+    width: 100%;
+}
+
+#tMarketing{
+    width: 70%;
+}
+#teamwork{
+    width: 100%;
+}
+
+#time{
+    width: 100%;
+}
+#agile{
+    width: 100%;
+}
+#persian{
+    width: 100%;
+}
+#english{
+    width: 80%;
+}
+#spanish{
+    width: 20%;
+}
 /* less than 800px
 
 */
