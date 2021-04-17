@@ -1,33 +1,19 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
-
-a,
-a:hover,
-a:focus,
-a:active {
-    text-decoration: none;
-    outline: none;
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700italic,900italic);
+body {
+    /* background-image: linear-gradient(to right bottom, rgba(69, 243, 243, 0.336), rgba(26, 179, 39, 0.3)), url('asset/img/round2.png'); */
+    background-image: url("../img/round2.png");
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-a,
-a:active,
-a:focus {
-    color: #6f6f6f;
-    text-decoration: none;
-    transition-timing-function: ease-in-out;
-    -ms-transition-timing-function: ease-in-out;
-    -moz-transition-timing-function: ease-in-out;
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-duration: .2s;
-    -ms-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    -webkit-transition-duration: .2s;
-    -o-transition-duration: .2s;
+html {
+    overflow-y: scroll;
+    scrollbar-color: #0d113ab7 #5d71e4b7;
 }
 
 @font-face {
@@ -35,87 +21,114 @@ a:focus {
     src: url("../font/B-NAZANIN.TTF");
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-section {
-    padding: 60px 0;
-    /* min-height: 100vh;*/
-}
-
-.sec-title {
-    position: relative;
-    z-index: 1;
-    font-style: myFirstFont;
-    margin-bottom: 60px;
-}
-
-a,
-h,
-h3,
-h32,
 p {
-    font-style: myFirstFont;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {}
+
+h2 {
+    color: #444;
+}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+strong {
+    color: white;
+    font-size: 1vm;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    box-shadow: 1px 1px 12px 3px rgba(146, 4, 115, 0.5863);
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    background: radial-gradient(ellipse at center, #2a3953 25%, #2d333d 100%);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* transform: translateY(150%); */
+    border-radius: 150vw;
+    width: 300vw;
+    height: 300vw;
+    z-index: -1;
+}
+
+#curve-footer {
+    /* background-color: black; */
+    position: relative;
+    transform: rotate(180deg);
+    padding: 4.5rem;
+}
+
+#curve-footer::before {
+    background: radial-gradient(ellipse at center, #05235c 25%, #05235c 100%) !important;
+}
+
+.curve {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 3rem;
+    padding-top: 0px;
 }
 
 .ready {
     font-style: myFirstFont;
 }
 
-.sec-title .title {
+.font-icon {
+    font-size: 24;
+}
+
+.butn:link,
+.butn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
     position: relative;
-    display: block;
-    font-size: 18px;
-    line-height: 24px;
-    color: #239b57b7;
-    font-weight: 500;
-    margin-bottom: 15px;
 }
 
-.sec-title h2 {
-    position: relative;
-    display: block;
-    font-size: 40px;
-    line-height: 1.28em;
-    color: #222222;
-    font-weight: 600;
-    padding-bottom: 18px;
+.butn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.sec-title h2:before {
-    position: absolute;
-    content: '';
-    left: 0px;
-    bottom: 0px;
-    width: 50px;
-    height: 3px;
-    background-color: #d1d2d6;
+.butn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.sec-title .text {
-    position: relative;
-    font-size: 16px;
-    line-height: 26px;
-    color: #848484;
-    font-weight: 400;
-    margin-top: 35px;
-}
-
-.sec-title.light h2 {
-    color: #ffffff;
-}
-
-.sec-title.text-center h2:before {
-    left: 50%;
-    margin-left: -25px;
+.butn-white {
+    background-color: #fff;
+    color: #777;
+    font-size: 22px;
 }
 
 .list-style-one {
@@ -165,11 +178,11 @@ p {
     font-weight: 600;
     overflow: hidden;
     letter-spacing: 0.02em;
-    background-color: #239b57b7;
+    background-color: #25239bb7;
 }
 
 .btn-style-one:hover {
-    background-color: #0f743ab7;
+    background-color: #070a3ab7;
     color: #ffffff;
 }
 

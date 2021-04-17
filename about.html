@@ -3,103 +3,73 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./asset/style/style2.css">
-    <link rel="stylesheet" href="./asset/style/style2.css">
-    <link rel="stylesheet" href="./asset/style/style3.css">
+    <title>SWIPE MASTER</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="./asset/js/jquery-3.4.1.min.js.txt"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="style.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./asset/style/about.css" rel="stylesheet">
-    <link href="./asset/style/temp.css" rel="stylesheet">
-    <style>
-        .gamecontainer {
-            z-index: 2;
-            background-image: linear-gradient(to right bottom, rgba(69, 243, 98, 0.336), rgba(26, 179, 39, 0.3)), url('asset/img/round2.png');
-            padding-right: 20px;
-            padding-left: 7px;
-            padding-bottom: 15px;
-            padding-top: 25px;
-            margin-top: 10px;
-            box-shadow: 10px 10px 3px 3px rgba(59, 59, 59, 0.281);
-        }
-    </style>
+    <link rel="stylesheet" href="./asset/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-    <!-- <?php include ("asset/subpages/top_header.php");include ("asset/inc/get_array_json.php");?> -->
-    <header class="">
-        <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 5.25rem;z-index:5"></div>
-        <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 4.5rem;z-index:5"></div>
-        <div class="curve pt-2 " style="padding-bottom:3rem;z-index:5">
-            <div class="pheader w-75 m-auto">
-                <div class="menu h-max m-auto">
-                    <a href="about.html"><i class="fas fa-info-circle mr-4 text-white" alt="درباره ما"></i>
-                    </a>
-                    <a href="play.html" class="btm"><i class="fas fa-play mr-4 text-white" alt="بازی"></i></a>
-                    <a href="index.html" class="btm"><i class="fas fa-home mr-4 text-white" alt="خانه"></i>
-                    </a>
-                </div>
+    <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 25rem;z-index:1;font-size: 24;"></div>
+    <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 24rem;z-index:1;font-size: 24;"></div>
+    <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 23rem;z-index:3">
+    </div>
+    <canvas id="myCanvas2" width="200" style="position: absolute;opacity: 0.3;z-index:5;" height="100">
+        </canvas>
+    <div class="d-flex w-100 m-auto p-5 " style="z-index: 3;position: absolute; ">
+        <div class="h-max menu m-auto ">
+            <a href="about.html " class="m-auto px-4 "><i class="fas fa-info-circle text-white font-icon " alt="About "></i></a>
+            <a href="play.html " class="m-auto px-4 "><i class="fas fa-play text-white font-icon " alt="Let 's play"></i></a>
+            <a href="index.html" class="m-auto px-4"><i class="fas fa-home text-white font-icon" alt="Home"></i></a>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex" style="z-index: 4;position: absolute;">
+        <img src="./asset/img/image.jpg" class="m-4" style="max-width: 33%;">
+        <div class="m-auto">
+            <div class="text-white">
+                <span class="font-weight-bold">About:</span>
+                <br><br>
+                <h3>Masoud Akhgar<br>Computer Engineering Student<br>Ferdowsi University Of Mashhad</h3>
+                <br>
+                <p class="font-weight-light">Experienced Graphic designer and programmer . Skilled in QML, Graphic Design, web Developer , Network Engineer and Computer Programming from Ferdowsi University of Mashhad.</p>
             </div>
         </div>
-    </header>
-    <section class="about-section">
-        <div class="container">
-            <div class="row gamecontainer">
-                <div class="content-column col-lg-6 col-md-12 text-right col-sm-12 order-2 ">
-                    <div class="inner-column ">
-                        <div class="sec-title">
-                            <span class="title">درباره من</span>
-                            <h2>مسعود اخگر<br>دانشجوی کارشناسی مهندسی کامپیوتر<br>دانشگاه فردوسی مشهد</h2>
-                        </div>
-                        <div class="text">مهارت ها</div>
-                        <ul class="list-style-one">
-                            <li>برنامه نویسی</li>
-                            <li>طراحی</li>
-                            <li>طراحی وب</li>
-                        </ul>
-                        <div class="text">تجارت ها</div>
-                        <ul class="list-style-one">
-                            <li>تجربه 1</li>
-                        </ul>
-                        <div class="text">مدارک ها</div>
-                        <ul class="list-style-one">
-                            <li>مدرک 1</li>
-                            <li>مدرک 2</li>
-                        </ul>
-                        <div class="btn-box">
-                            <button href="#" class="theme-btn btn-style-one">دریافت رزومه</button>
-                        </div>
-                    </div>
-                </div>
+    </div>
 
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInLeft h-100">
-                        <figure class="image-1">
-                            <a href="#" class="lightbox-image" data-fancybox="images"><img src="./asset/img/image.jpg" class="w-100 h100" alt=""></a>
-                        </figure>
-                    </div>
+    <section class="about-section" style="top: 500px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text">Skills</div>
+                    <ul class="list-style-one">
+                        <li>C,C++,Python programming</li>
+                        <li>Design</li>
+                        <li>web Developer</li>
+                    </ul>
+                    <div class="text">Experiences</div>
+                    <ul class="list-style-one">
+                        <li>Working on Industorial-medical Exoskeleton Robot at FUM Robotic Lab As Software Developer and Graphist</li>
+                    </ul>
+                    <div class="text">CERTIFICATES & RECORDS:</div>
+                    <ul class="list-style-one">
+                        <li>English for Career Development</li>
+                    </ul>
+                    <button href="#" class="theme-btn btn-style-one">CV review</button>
                 </div>
+                <canvas id="myCanvas" width="200" style="position: absolute;opacity: 0.2;" height="100">
+                    </canvas>
             </div>
         </div>
     </section>
 
 </body>
-<script>
-</script>
-<!-- <script src="asset/js/script.js"></script> -->
+
 <script src="./asset/js/header.js"></script>
 <script src="./asset/js/script.js"></script>
-<!-- <script src="asset/js/script-nav.js"></script> -->
+<!-- <script src="./asset/js/header.js"></script> -->
 
 </html>

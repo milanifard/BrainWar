@@ -2,64 +2,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./asset/style/style2.css">
-    <link rel="stylesheet" href="./asset/style/style2.css">
-    <link rel="stylesheet" href="./asset/style/style3.css">
+    <!-- title -->
+    <title>SWIPE MASTER</title>
+    <link rel="stylesheet" href="./asset/style/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-    <script src="./asset/js/jquery-3.4.1.min.js.txt"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="style.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./asset/style/shop.css" rel="stylesheet">
-    <link href="./asset/style/temp.css" rel="stylesheet">
-    <style>
-        .gamecontainer {
-            z-index: 2;
-            background-image: linear-gradient(to right bottom, rgba(243, 240, 69, 0.336), rgba(179, 176, 26, 0.3)), url('asset/img/round2.png');
-            padding-right: 75px;
-            padding-left: 75px;
-            padding-bottom: 15px;
-            margin-top: 100px;
-            box-shadow: 10px 10px 3px 3px rgba(59, 59, 59, 0.281);
-        }
-        
-        .mt-6 {
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header class="header" style="z-index: 1;">
-        <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 5.25rem;z-index:5"></div>
-        <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 4.5rem;z-index:5"></div>
-        <div class="curve pt-2 " style="padding-bottom:3rem;z-index:5">
-            <div class="pheader w-75 m-auto">
-                <div class="menu h-max m-auto"><a href="about.html"><i class="fas fa-info-circle mr-4 text-white" alt="درباره ما"></i></a><a href="play.html" class="btm"><i class="fas fa-play mr-4 text-white" alt="بازی"></i></a><a href="index.html" class="btm"><i class="fas fa-home mr-4 text-white" alt="خانه"></i></a></div>
-            </div>
-        </div>
-        <script src="./asset/js/header.js"></script>
-        <h4 class="mt-6 text-center">if the background of arrow in the picture shown be blue, you must choose the correct side, otherwise, tap the another side. <br>Also, you can select by clicking on the right/left button on the keyboard. you must end up in 10 seconds.</h4>
-        <h4 class="mt-2 text-center score" style="visibility: hidden;">your score:0</h4>
-    </header>
-    <input type="text" style="visibility: hidden;">
-    <div class="text-box gamecontainer">
-        <h3 class="ready mt-4">are you ready?</h3>
-        <div class="row justify-content-between " id="questionaire">
-            <a href="#" id="yes" class="butn butn-white butn-animated">Yes</a><a href="#" id="no" class="butn butn-white butn-animated">No</a>
-        </div>
-        <div class="row justify-content-between "><a href="#" id="left" class="butn butn-white butn-animated" style="visibility: hidden;">left</a><a href="#" id="right" class="butn butn-white butn-animated" style="visibility: hidden;">right</a></div>
-
-
+    <div class="curve w-100 " style="position: absolute; opacity: 0.2;padding: 25rem;z-index:1"></div>
+    <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 24rem;z-index:1"></div>
+    <div class="curve w-100 " style="position: absolute; opacity: 0.5;padding: 23rem;z-index:3">
     </div>
-    <br><br><br>
+    <div class="d-flex w-100 m-auto p-5" style="z-index: 3;position: absolute;">
+        <div class="h-max menu m-auto">
+            <a href="about.html" class="m-auto px-4"><i class="fas fa-info-circle text-white font-icon" alt="About"></i></a>
+            <a href="play.html" class="m-auto px-4"><i class="fas fa-play text-white font-icon" alt="Let's play"></i></a>
+            <a href="index.html" class="m-auto px-4"><i class="fas fa-home text-white font-icon" alt="Home"></i></a>
+        </div>
+    </div>
+    <div class="text-box mt-5 w-50 p-5" style="z-index: 6;">
+        <p class="font-weight-normal ready">if the background of arrow in the picture shown be blue, you must choose the correct side, otherwise, tap the another side.Also, you should select by clicking on
+            <strong> the right / left button on the keyboard</strong>.you must end up in 10 seconds.</p>
+        <h3 class="ready text-white">are you ready?</h3>
+        <p class="score">your score:0</p>
+        <div class="row justify-content-between " id="questionaire">
+            <a href="#" id="yes" class="butn mx-2 butn-white">Yes</a><a href="#" id="no" class="butn mx-2 butn-white">No</a>
+        </div>
+        <div>
+            <!-- <a href="" id="left" class="butn butn-white" style="visibility: hidden;">left</a> -->
+            <!-- <a href="" id="right" class="butn butn-white" style="visibility: hidden;">right</a> -->
+        </div>
+    </div>
+    <!-- butn mx-2 butn-white -->
 </body>
 <script>
     jQuery(document).ready(function($) {
@@ -83,6 +61,8 @@
         function right_tap() {
             if (turn == 0 || turn == 1) {
                 score += 1
+            } else {
+                score -= 1
             }
             var rand = parseInt(Math.random() * 10);
             $(".vector").remove()
@@ -105,6 +85,8 @@
         function left_tap() {
             if (turn == 2 || turn == 3) {
                 score += 1
+            } else {
+                score -= 1
             }
             var rand = parseInt(Math.random() * 10);
             $(".vector").remove()
@@ -142,7 +124,7 @@
         }
 
         function alertFunc() {
-            alert("your time's up! your score:" + score.toString());
+            alert("your time's up! your score:" + score.toString() * 10);
             competition = 0;
             $("#left").css('visibility', 'hidden')
             $("#right").css('visibility', 'hidden')
@@ -169,7 +151,7 @@
             $(".score").text("your score:" + (score * 10).toString());
         });
         $("#no").click(function(e) {
-            $("#questionaire").after('<a href="index.html" id="" class="butn butn-white butn-animated">Go Home</a>')
+            $("#questionaire").after('<a href="index.html" id="" class="butn mx-2 butn-white">Go Home</a>')
         });
         $("#left").click(function(e) {
             left_tap()
@@ -179,7 +161,7 @@
         });
     });
 </script>
-
-</html>
+<script src="./asset/js/script.js"></script>
+<script src="./asset/js/about.js"></script>
 
 </html>
