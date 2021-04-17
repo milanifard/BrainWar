@@ -1,30 +1,10 @@
 var abox;
 var start = false;
-var index = 10;
-var randomNumbers = [];
-var score = 0;
+var index;
+var randomNumbers;
+var score;
 window.onload = function() {
-    var i;
-    for (i = 0; i < 11; i++) {
-        var randomNumber = randomIntFromInterval(1, 200)
-        randomNumbers.push(randomNumber);
-        document.getElementById("div1").innerHTML += `
-                <div class="aside layer" id="box">
-                    <h2 class="cardText">${randomNumber}</h2>
-                </div>
-  `;
-    }
-    document.getElementsByClassName("glow-on-hover")[0].style.visibility = "hidden";
-    document.getElementsByClassName("glow-on-hover")[1].style.visibility = "hidden";
-    setTimeout(function() {
-        abox = document.getElementsByClassName("aside layer")[index];
-        index--;
-        abox.classList.toggle("move-ttb");
-        abox.style.visibility = "hidden";
-        document.getElementsByClassName("glow-on-hover")[0].style.visibility = "visible";
-        document.getElementsByClassName("glow-on-hover")[1].style.visibility = "visible";
-        start = true;
-    }, 2000);
+    var fun = loadGame();
 };
 document.onkeydown = checkKey;
 
@@ -54,6 +34,7 @@ function ttb() {
         abox.style.visibility = "hidden";
         if (index == -1) {
             var fun = showScore();
+            start = false;
         }
     }
 }
@@ -67,6 +48,7 @@ function btt() {
         abox.style.visibility = "hidden";
         if (index == -1) {
             var fun = showScore();
+            start = false;
         }
     }
 }
@@ -88,8 +70,39 @@ function showScore() {
                 <div class="aside2 layer" id="box2">
                     <h2 class="cardText">Total Score</h2>
                     <h1 class="cardText">${score} / 10</h1>
-                    <div class="bottom cardText"><button class="glow-on-hover" type="button" onclick="ttb()">R E S T A R T</button></div>
+                    <div class="bottom cardText"><button class="glow-on-hover" type="button" onclick="reload()">R E S T A R T</button></div>
                 </div>
   `;
 
+}
+
+function reload() {
+    window.location.reload(false);
+}
+
+function loadGame() {
+    index = 10;
+    randomNumbers = [];
+    score = 0;
+    var i;
+    for (i = 0; i < 11; i++) {
+        var randomNumber = randomIntFromInterval(1, 200)
+        randomNumbers.push(randomNumber);
+        document.getElementById("div1").innerHTML += `
+                <div class="aside layer" id="box">
+                    <h2 class="cardText">${randomNumber}</h2>
+                </div>
+  `;
+    }
+    document.getElementsByClassName("glow-on-hover")[0].style.visibility = "hidden";
+    document.getElementsByClassName("glow-on-hover")[1].style.visibility = "hidden";
+    setTimeout(function() {
+        abox = document.getElementsByClassName("aside layer")[index];
+        index--;
+        abox.classList.toggle("move-ttb");
+        abox.style.visibility = "hidden";
+        document.getElementsByClassName("glow-on-hover")[0].style.visibility = "visible";
+        document.getElementsByClassName("glow-on-hover")[1].style.visibility = "visible";
+        start = true;
+    }, 2000);
 }
