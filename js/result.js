@@ -1,17 +1,17 @@
 // an array that include amount of the correct and wrong answer
-var queryString = [];
+let queryString = [];
 
 // a variable for changing amount of bar
-var r = document.querySelector(':root');
+let r = document.querySelector(':root');
 
 
 // calculate the percent of the result of the game
 function calculate(){
     // store amount correct answers
-    var a=parseInt(queryString['correct']);
+    let a=parseInt(queryString['correct']);
     
     // store amount wrong answers
-    var b=parseInt(queryString['wrong']);
+    let b=parseInt(queryString['wrong']);
     
     // calculate the percent
     const percent = 100 * (a / (a+b));
@@ -43,7 +43,7 @@ function calculate(){
     else {
         r.style.setProperty('--color', '#86e01e');
     }
-    var string = percent + "%";
+    let string = percent + "%";
     r.style.setProperty("--width", string);
     // console.log(string)
 }
@@ -53,16 +53,16 @@ window.onload = function () {
     if (queryString.length === 0) {
         // split the receive url
         if (window.location.search.split('?').length > 1) {
-            var string = window.location.search.split('?')[1].split('&');
-            for (var i = 0; i < string.length; i++) {
-                var key = string[i].split('=')[0];
-                var value = decodeURIComponent(string[i].split('=')[1]);
+            let string = window.location.search.split('?')[1].split('&');
+            for (let i = 0; i < string.length; i++) {
+                let key = string[i].split('=')[0];
+                let value = decodeURIComponent(string[i].split('=')[1]);
                 queryString[key] = value;
             }
         }
     }
     if (queryString["correct"] != null && queryString["wrong"] != null) {
-        var data = "<u>Result of your game</u><br /><br />";
+        let data = "<u>Result of your game</u><br /><br />";
         data += "<b>Correct:</b> " + queryString["correct"] + " <b>Wrong:</b> " + queryString["wrong"];
 
         // call the calculate function after finding amount of the correct and wrong answers
