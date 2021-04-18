@@ -1,9 +1,87 @@
-* {
-    padding: 0;
-    margin: 0;
+html {
     box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 body {
     height: 100vh;
-    background: mediumorchid;
+    background: linear-gradient(160deg, #80ffdb 0%, #4ea8de 100%);
 }
+
+.infobox {
+    width: 200px;
+    height: 150px;
+}
+
+.table {
+    width: 560px;
+    min-height: 560px;
+    background-color: #f2cc8f;
+    padding: 32px;
+    border-radius: 15px;
+    /*box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.table .card {
+    height: 100px;
+    width: 100px;
+    background: #9c89b8;
+    font-size: 0;
+    color: #cccccc;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);*/
+}
+
+
+.table .card.open {
+    transform: rotateY(180deg);
+    background: #fff;
+    cursor: default;
+}
+
+.table .card.show {
+    font-size: 33px;
+    background: #fff;
+}
+
+
+.card.show img {display:block;}
+.card.match img {display:block;}
+
+.card img {
+    width:85px;
+    display: none;
+}
+
+
+
+
+
+
