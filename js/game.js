@@ -67,6 +67,8 @@ function clicked(tag) {
             scoreValue.innerText = score
         }
     }
+    document.getElementById("numberOfWrongs").innerText = numberOfWrongMoves
+    document.getElementById("numberOfCorrects").innerText = numberOfCorrectMoves
 }
 
 function createBoard(numberOfNumbers){
