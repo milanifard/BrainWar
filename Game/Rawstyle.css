@@ -1,0 +1,30 @@
+body{
+  background-color: #bdc7c9;
+}
+
+.centerSqaur{
+  border:10px solid #5D4037;
+  height:190px;
+  width:190px;
+  background-color:#845460;
+  margin: 0 auto;
+  margin-top:100px;
+}
+
+.cell{
+  position:relative;
+  text-align:center;
+  line-height:59px;
+  border:1px solid gray;
+  height:60px;
+  width:60px;
+  margin:1.5px 0px 0px 0px;
+  background-color:#ead3cb;
+}
+
+#txt{
+  width:35px;
+  margin: 0 auto;
+  color:red;
+  font:bold;
+}

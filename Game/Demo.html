@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by anonymous (http://jsbin.com/cifojaroxa/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body{
+  background-color: #bdc7c9;
+}
+
+.centerSqaur{
+  border:10px solid #5D4037;
+  height:190px;
+  width:190px;
+  background-color:#845460;
+  margin: 0 auto;
+  margin-top:100px;
+}
+
+.cell{
+  position:relative;
+  text-align:center;
+  line-height:59px;
+  border:1px solid gray;
+  height:60px;
+  width:60px;
+  margin:1.5px 0px 0px 0px;
+  background-color:#ead3cb;
+}
+
+#txt{
+  width:35px;
+  margin: 0 auto;
+  color:red;
+  font:bold;
+}
+</style>
+</head>
+<body>
+ <div id="txt"></div>
+ <div class="centerSqaur">
+   <button type="button" id="1" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="2" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="3" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="4" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="5" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="6" class="cell" onClick="b_click(this.id)"> 
+   </button>
+   <button type="button" id="7" class="cell" onClick="b_click(this.id)">
+   </button>
+   <button type="button" id="8" class="cell" onClick="b_click(this.id)"> 
+   </button>
+  </div>
+<script id="jsbin-javascript">
+var Places=[];
+var Mounts=[];
+
+function start() {
+  Places[0]=9;
+  for (let i = 1; i < 9; i++) { 
+    var mount=Math.ceil(Math.random() * 8);
+    while(Mounts.includes(mount)){
+      if(mount==8){
+        mount =1;
+      }else{
+        mount++;
+      }
+    }
+    document.getElementById(i).innerHTML=mount;
+    Mounts[i] = mount;
+    Places[i]=i;
+  }
+}
+
+window.start(); 
+
+function win(){
+  for (let i = 1; i < 9; i++) { 
+    if(Places[i]!=Mounts[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
+function b_click(but_id)
+{
+  var x = Places[but_id];
+  var z = Places[0];
+  var oc= but_id %3;
+  var dc= Places[0] %3;
+  var or= Math.ceil(but_id /3);
+  var dr= Math.ceil(Places[0]/3);
+  if(x+3==z){//down
+    switch(or){
+        case 3:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "-62px";
+              break;
+            case 3:
+          document.getElementById(but_id).style.top = "0px";
+              break;              
+          }
+          break;
+        case 2:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "0px";
+              break;
+            case 3:
+          document.getElementById(but_id).style.top = "62px";
+              break;              
+          }  
+        break;
+        case 1:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "62px";
+              break;
+            case 3:
+          document.getElementById(but_id).style.top = "124px";
+              break;              
+          }    
+        break;
+    }
+    Places[0]=x;
+    Places[but_id]=z;
+  }else if(x-3==z){//up
+    switch(or){
+        case 3:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "-62px";
+              break;
+            case 1:
+          document.getElementById(but_id).style.top = "-124px";
+              break;              
+          }
+          break;
+        case 2:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "0px";
+              break;
+            case 1:
+          document.getElementById(but_id).style.top = "-62px";
+              break;              
+          }  
+        break;
+        case 1:
+          switch(dr){
+            case 2:
+          document.getElementById(but_id).style.top = "62px";
+              break;
+            case 1:
+          document.getElementById(but_id).style.top = "0px";
+              break;              
+          }    
+        break;
+    }
+    Places[0]=x;
+    Places[but_id]=z;
+  }else if(x+1==z){//right
+    switch(oc){
+      case 2:
+          switch(dc){
+            case 0:
+          document.getElementById(but_id).style.left = "64px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "0px";
+              break;              
+          }
+          break;
+        case 1:
+          switch(dc){
+            case 0:
+          document.getElementById(but_id).style.left = "128px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "64px";
+              break;              
+          }  
+        break;
+        case 0:
+          switch(dc){
+            case 0:
+          document.getElementById(but_id).style.left = "0px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "-64px";
+              break;              
+          }   
+        break;
+    }
+    Places[0]=x;
+    Places[but_id]=z;
+  }else if(x-1==z){//left
+    switch(oc){
+        case 2:
+          switch(dc){
+            case 1:
+          document.getElementById(but_id).style.left = "-64px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "0px";
+              break;              
+          }
+          break;
+        case 1:
+          switch(dc){
+            case 1:
+          document.getElementById(but_id).style.left = "0px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "64px";
+              break;              
+          }  
+        break;
+        case 0:
+          switch(dc){
+            case 1:
+          document.getElementById(but_id).style.left = "-128px";
+              break;
+            case 2:
+          document.getElementById(but_id).style.left = "-64px";
+              break;              
+          }    
+        break;
+    }
+    Places[0]=x;
+    Places[but_id]=z;
+  }
+  if(win()){
+    document.getElementById('txt').innerHTML="WIN";
+  }
+} 
+</script>
+</body>
+</html>
