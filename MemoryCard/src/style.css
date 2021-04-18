@@ -2,12 +2,6 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 html,
 body {
     margin: 0;
@@ -26,18 +20,12 @@ body {
     background: linear-gradient(160deg, #80ffdb 0%, #4ea8de 100%);
 }
 
-.infobox {
-    width: 200px;
-    height: 150px;
-}
-
 .table {
     width: 560px;
     min-height: 560px;
     background-color: #f2cc8f;
     padding: 32px;
     border-radius: 15px;
-    /*box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -56,14 +44,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);*/
-}
-
-
-.table .card.open {
-    transform: rotateY(180deg);
-    background: #fff;
-    cursor: default;
 }
 
 .table .card.show {
@@ -71,13 +51,47 @@ body {
     background: #fff;
 }
 
+.table .card.accepted {
+    background-color: #66ff99;
+}
+
+.table .card.wrong {
+    background-color: #e85a5a;
+}
 
 .card.show img {display:block;}
-.card.match img {display:block;}
 
 .card img {
-    width:85px;
+    width: 85px;
     display: none;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.heart {
+    color: red;
+}
+
+.infobox {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    font-family: 'Montserrat', 'sans-serif';
+    margin: 30px 30px ;
+}
+
+.infobox h1 {
+    font-size: 40px;
+}
+
+.infobox img {
+    width: 40px;
 }
 
 
