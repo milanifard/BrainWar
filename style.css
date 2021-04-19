@@ -636,6 +636,16 @@ footer{
     color: #e84545;
     text-decoration: underline;
 }
+
+.photo{
+    width: 20vw;
+    height: 20vw;
+    background-image: url("me2.JPG");
+    background-size: cover;
+    border-radius: 100px;
+    display: none;
+}
+
 ::selection {
     background: #ffb7b7; /* WebKit/Blink Browsers */
 }
@@ -708,9 +718,9 @@ footer{
         margin-top: 40px;
         list-style:none;
         float: left;
-        margin-left: 15px;
+        margin-left: 30px;
         letter-spacing: 2px;
-        font-size: 0.7em;
+        font-size: 0.8em;
         font-weight: lighter;
     }
     #menu li:last-child{
@@ -840,5 +850,8 @@ footer{
     #footer{
         margin-left: 5vw;
         width: 90vw;
+    }
+    .photo{
+        display: block;
     }
 }
