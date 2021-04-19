@@ -5,22 +5,29 @@ function display_random_image()
 {
     var theImages = [{
         src: "images/blue-paper.png",
+        value: "blue-paper"
     }, {
         src: "images/blue-rock.png",
+        value: "blue-rock"
     }, {
         src: "images/blue-scissors.png",
+        value: "blue-scissors"
     }, {
         src: "images/red-paper.png",
+        value: "red-paper"
     }, {
         src: "images/red-rock.png",
+        value: "red-rock"
     }, {
         src: "images/red-scissors.png",
+        value: "red-scissors"
     }];
 
     var preBuffer = [];
     for (var i = 0, j = theImages.length; i < j; i++) {
         preBuffer[i] = new Image();
         preBuffer[i].src = theImages[i].src;
+        preBuffer[i].value = theImages[i].value;
     }
 
 // create random image number
@@ -38,13 +45,14 @@ function display_random_image()
 // remove the previous images
     var obj = document.getElementById('bimg');
     obj.src = preBuffer[newImage].src ;
-    obj.style.width = "257px";
-    obj.style.height = "239px";
+    obj.name = preBuffer[newImage].value;
+    obj.style.width = "267px";
+    obj.style.height = "267px";
 // display the image
 }
 function test1() {
     var obj = document.getElementById("bimg");
-    if ((obj.src == "http://localhost:63342/untitled/images/blue-scissors.png") || (obj.src == "http://localhost:63342/untitled/images/red-paper.png")) {
+    if ((obj.name == "blue-scissors") || (obj.name == 'red-paper')) {
         correctAnswers++;
         display_random_image();
     }
@@ -52,7 +60,7 @@ function test1() {
 }
 function test2() {
     var obj = document.getElementById("bimg");
-    if ((obj.src == "http://localhost:63342/untitled/images/blue-rock.png") || (obj.src == "http://localhost:63342/untitled/images/red-scissors.png")) {
+    if ((obj.name == "blue-rock") || (obj.name == "red-scissors")) {
         correctAnswers++;
         display_random_image();
     }
@@ -60,7 +68,7 @@ function test2() {
 }
 function test3() {
     var obj = document.getElementById("bimg");
-    if ((obj.src == "http://localhost:63342/untitled/images/red-rock.png") || (obj.src == "http://localhost:63342/untitled/images/blue-paper.png")) {
+    if ((obj.name == "red-rock") || (obj.name == "blue-paper")) {
         correctAnswers++;
         display_random_image();
     }

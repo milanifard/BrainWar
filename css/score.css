@@ -1,0 +1,26 @@
+body{
+    alignment: center;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: #e7e7e7;
+}
+div{
+    background-color: #81d4fa;
+    border: white 1px solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+    color: white;
+}
+p{
+    font-size: 25px;
+}
+#p5{
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 70px;
+}
+img{
+    margin-top: 30px;
+}

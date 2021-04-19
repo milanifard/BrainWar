@@ -13,8 +13,8 @@
 }
 #big-image{
     position: absolute;
-    margin-top: 15px;
-    top: 38%;
+    margin-top: 20px;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -23,8 +23,8 @@
     height: 0;
     display: inline-block;
     content: "";
-    position: fixed;
-    top: 58%;
+    position: relative;
+    top: 310px;
     left: 50%;
     transform: translate(-50%, -50%);
 }

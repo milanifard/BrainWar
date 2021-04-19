@@ -9,7 +9,7 @@ function countdown() {
         clearTimeout(timer);
         var b = correctAnswers;
         var c = wrongAnswers;
-        url = 'http://localhost:63342/untitled/Score_Page.html?' + encodeURIComponent(b)+'?'+encodeURIComponent(c);
+        url = 'Score_Page.html?' + encodeURIComponent(b)+'?'+encodeURIComponent(c);
         document.location.href = url;
     } else {
         elem.innerHTML = remainingTime;
