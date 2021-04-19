@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="gamePage.css">
+
+</head>
+
+<body id = "page">
+<div class="header" id="header">
+    <h1 id="h1"></h1>
+</div>
+
+
+<div class="bigsqure" id="big">
+
+    <div style="position:relative" class="row1">
+        <div  class="square" style="float:left; margin-left: 30px ; margin-top: 20px;" id="0" onclick="checkAnswer(0)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 20px" id="1" onclick="checkAnswer(1)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 20px" id="2" onclick="checkAnswer(2)"></div>
+    </div>
+
+    <div style="position:relative" class="row2">
+        <div  class="square" style="float:left; margin-left: 30px ; margin-top: 10px;" id="3" onclick="checkAnswer(3)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 10px" id="4" onclick="checkAnswer(4)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 10px" id="5" onclick="checkAnswer(5)"></div>
+    </div>
+
+    <div style="position:relative" class="row3">
+        <div  class="square" style="float:left; margin-left: 30px ; margin-top: 10px;" id="6" onclick="checkAnswer(6)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 10px" id="7" onclick="checkAnswer(7)"></div>
+        <div  class="square" style="float:left; margin-left: 10px ; margin-top: 10px" id="8" onclick="checkAnswer(8)"></div>
+    </div>
+
+</div>
+
+<input  type="button" class="button" value="memorized!" onclick="rotate()">
+</body>
+
+<script src="gamePage.js"></script>
+</html>
+

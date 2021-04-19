@@ -1,0 +1,49 @@
+body{
+    background-color: grey;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    font-size: 15px;
+    height: 30px;
+    font-family: "Arial Narrow";
+    color: yellow;
+    border-radius: 4px;
+}
+
+.text{
+    color: black;
+    font-family: "Arial Narrow";
+    text-align: center;
+    font-size: 30px;
+    margin-top: 60px;
+}
+button{
+    width: 200px;
+    height: 40px;
+    background-color: darkorange;
+    color: black;
+    margin-top: 20px;
+    margin-left: 660px;
+    border-color: darkorange;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: "Arial Narrow";
+}
+
+button:hover {background-color: gold ;border-color: gold}
+
+button:active {
+    background-color: gold;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*img {*/
+/*    width: 400px;*/
+/*    height: 300px;*/
+/*    margin-left: 550px;*/
+/*    margin-top: 5px;*/
+/*}*/

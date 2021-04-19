@@ -1,0 +1,61 @@
+.square {
+    height: 75px;
+    width: 75px;
+    background-color: grey;
+    border-radius: 6px;
+}
+
+.bigsqure{
+    height: 300px;
+    width: 320px;
+    background-color: beige;
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 80px;
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    background-color: darkorange;
+    border-color: darkorange;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    margin-left: 660px;
+    margin-top: 80px;
+    font-family: "Arial Narrow";
+}
+
+.button:hover {background-color: gold ;border-color: gold}
+
+.button:active {
+    background-color: gold;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 4px;
+    font-family: "Arial Narrow";
+}
+
+body {
+    background-color: beige;
+}
+
+h1{
+    color: yellow;
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+

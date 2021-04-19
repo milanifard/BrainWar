@@ -1,0 +1,78 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    font-size: 40px;
+    height: 30px;
+    font-family: "Arial Narrow";
+    color: yellow;
+    border-radius: 4px;
+}
+
+body {
+    background-color: beige;
+}
+
+#timeup {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 200px;
+    text-align: center;
+    margin-top: 30px;
+    color: darkblue;
+}
+#wrong
+{
+    font-family: "Arial Narrow";
+    font-size: 50px;
+    color: maroon;
+    margin-top: 30px;
+    margin-left: 400px;
+}
+
+#right
+{
+    font-family: "Arial Narrow";
+    font-size: 50px;
+    color: darkgreen;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+#back{
+    background-color: blue;
+    border-color: blue;
+    color: black;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 600px;
+    width: 200px;
+    height: 60px;
+    border-radius: 6px;
+    font-family: "Arial Narrow";
+}
+
+#playgame{
+    color: black;
+    font-size: 30px;
+    margin-top: 100px;
+    width: 200px;
+    height: 60px;
+    background-color: darkorange;
+    border-color: darkorange;
+    border-radius: 6px;
+    font-family: "Arial Narrow";
+}
+
+#back:hover {background-color: darkblue ;border-color: darkblue}
+#back:active {
+    background-color: darkblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#playgame:hover {background-color: gold ;border-color: gold}
+#playgame:active {
+    background-color: gold;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
