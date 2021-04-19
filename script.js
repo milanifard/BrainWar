@@ -5,9 +5,9 @@ var counterD = 0;
 var player = 0;
 var tileId = 1;
 var currentP = null;
-var player1Img = "1.png";
-var player2Img = "2.png";
-var playerWinner = "3.png";
+const player1Img = "1.png";
+const player2Img = "2.png";
+const playerWinner = "3.png";
 var x = 1;
 var r = 1;
 var tmp = 0;
@@ -16,14 +16,12 @@ var gameOn = true;
 var percent = "";
 const board = $("#boardGame");
 
-
-
-
-
+//Both: this is for loading
 setTimeout(function (){
     $(".preloader").fadeOut();
 },2500);
 
+//Profile: progress bar dynamic change
 $(document).scroll(function() {
     var y = $(this).scrollTop();
     var height = $(window).height();
@@ -36,7 +34,7 @@ $(document).scroll(function() {
     }
 
 });
-
+//Game: when game level chosen it grayed out
 $('.but').click(function (){
     num = $(this).text();
     $('.but').prop("disabled",true);
@@ -47,15 +45,17 @@ $('.but').click(function (){
     createBoard(num,num);
 });
 
+//Game: it refresh the page
 $("#restart").click(function (){
     location.reload(true);
 });
 
+//Game: The is a link to the profile page
 $("#homePage").click(function (){
     window.location.href='index.html';
 });
 
-//Create tiels
+//Game: Create tiles
 function createBoard(r,c){
     $("#restart").css("display","inline-block");
     $("#playerTurn").css("display","inline-block");
@@ -74,7 +74,8 @@ function createBoard(r,c){
         board.append(row);
     }
 }
-//when a tile is clicked!
+
+//Game: when a tile is clicked!
 board.on("click", ".col", function(){
     if(gameOn == false){
         return;
@@ -112,9 +113,9 @@ board.on("click", ".col", function(){
         currentP = current.attr("class");
         player = 0;
     }
-    //alert(currentP);
 });
 
+//Game(Logic): checks the tiles to see the winner
 function hasWin(currentPlayer){
     calc = 0;
     var bs = parseInt(num, 10);
@@ -123,6 +124,7 @@ function hasWin(currentPlayer){
     checkDiagonal(bs,currentPlayer);
 }
 
+////Game(Logic): checkHorizontal
 function checkHorizontal(bs, currentPlayer){
     for(var m = 0 ; m < bs ; m++){
         for( var n = 1; n < bs-2 ; n++){
@@ -154,7 +156,7 @@ function checkHorizontal(bs, currentPlayer){
         }
     }
 }
-
+//Game(Logic): checkVertical
 function checkVertical(bs, currentPlayer){
     //this is for vertical
     for(var m = 1 ; m < bs+1; m++){
@@ -186,7 +188,7 @@ function checkVertical(bs, currentPlayer){
         }
     }
 }
-
+//Game(Logic): checkDiagonal
 function checkDiagonal(bs, currentPlayer){
     x = 1;
     r = 1;
@@ -215,6 +217,7 @@ function checkDiagonal(bs, currentPlayer){
         }
     }
 
+    //This is for right to left diagnol check
     x = 1;
     r = 1;
     if(bs == 5)
@@ -260,15 +263,18 @@ function checkDiagonal(bs, currentPlayer){
     }
 }
 
+//Game: shows which player has won
 function whichPlayerWin(currentPlayer){
     if(currentPlayer == "p1"){
         $("#playerTurn").text("Player 1 won!");
         $("#playerTurn").css("color","#F0144D");
+        $("#playerTurn").css("fontSize","140%");
 
         $("#image").attr("src","1.png");
     }else{
         $("#playerTurn").text("Player 2 won!")
         $("#playerTurn").css("color","#F0144D");
+        $("#playerTurn").css("fontSize","140%");
         $("#image").attr("src","2.png");
     }
 }
