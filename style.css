@@ -169,7 +169,7 @@
 #one {
     width: 100vw;
     height: 100vh;
-    background-image: url(Img/Mahaa.jpg);
+    background-image: url(Mahaa.jpg);
     background-size:auto;
     background-position: right;
     filter: blur(50px);
