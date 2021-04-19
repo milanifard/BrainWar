@@ -169,12 +169,19 @@
 #one {
     width: 100vw;
     height: 100vh;
-
-    background-image: url(Img/home-bg-2.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(Img/Mahaa.jpg);
+    background-size:auto;
+    background-position: right;
+    filter: blur(50px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
+#two {
+    width: 100vw;
+    height: 100vh;
 
+}
 #menu {
     z-index: 2;
     text-decoration: none;
@@ -202,13 +209,13 @@
 
 #menu li a {
     text-decoration: none;
-    color: #0C4A60;
+    color: #fff;
     transition: all 0.5s;
     padding: 10px;
 }
 
 #menu li a:hover {
-    color: #EF6C33;
+    color: #0C4A60;
     font-size: 105%;
 }
 
@@ -217,7 +224,7 @@
 }
 
 #name {
-    color: #455DB6;
+    color: #0C4A60;
     margin: 30vh 0 0 10vw;
     font-family: sans-serif;
     letter-spacing: 4px;
@@ -225,6 +232,9 @@
     border-left: 5px solid #455DB6;
     padding-left: 5px;
     font-size: 300%;
+    background: rgba(255, 255, 255, 1);
+    z-index: 100;
+    position: relative;
 }
 
 #name span {
@@ -238,10 +248,14 @@
     font-weight: lighter;
     font-size: 150%;
     padding-left: 5px;
-
+    z-index: 100;
+    position: relative;
+    background-color: white;
+    border-left: 5px solid #455DB6;
 }
 
 #about {
+    margin-top: 100px;
     width: 100vw;
     background-color: #fff;
     padding-bottom: 40px;
@@ -305,13 +319,16 @@
 
 #game {
     margin: 3vh 0 0 10vw;
-    background-color: #455DB6;
     border: none;
-    padding: 10px;
+    padding: 15px;
     color: white;
     border-radius: 5px;
     font-size: 120%;
     outline: none;
+    z-index: 100;
+    position: relative;
+    border: 2px solid #fff;
+    background: none;
 }
 #game a {
     text-decoration: none;
@@ -358,7 +375,6 @@
 
 .expDivs {
     width: 72vw;
-    height: 200px;
     margin-top: 70px;
 }
 
@@ -379,13 +395,13 @@
 }
 
 .date {
+    width: 160px;
     font-family: sans-serif;
     font-size: 90%;
     margin-left: 4vw;
     padding: 7px 2px;
     background-color: #333333;
     color: white;
-    width: 100px;
     text-align: center;
     position: relative;
     top: -5px;
@@ -423,7 +439,7 @@
     color: #0C4A60;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 90%;
+    font-size: 110%;
     margin-left: 4vw;
     width: 72vw;
     margin-top: 30px;
@@ -433,7 +449,7 @@
     color: #0C4A60;
     font-family: sans-serif;
     font-weight: lighter;
-    font-size: 90%;
+    font-size: 100%;
     margin-left: 4vw;
     width: 60vw;
     text-align: justify;
@@ -650,4 +666,26 @@
         margin-top: 10px;
         font-family: monospace;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    #menu{
+        font-size: 60%;
+    }
+    #menu li{
+        margin-left: 0px;
+    }
+    #homeBtn {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        position: fixed;
+        top: 90vh;
+        left: 83vw;
+        border-radius: 100px;
+        text-align: center;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.4);
+        z-index: 3;
+    
+}
 }
