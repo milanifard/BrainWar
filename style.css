@@ -555,8 +555,8 @@ h3{
 
 #contact{
     width: 100vw;
-    height: 200px;
-    padding-bottom: 100px;
+    overflow: auto;
+    padding-bottom: 50px;
 }
 
 #contactTitle{
@@ -606,6 +606,32 @@ h3{
     margin-top: -15px;
     opacity: 0.6;
     font-size: 0.9em;
+}
+
+footer{
+    width: 100vw;
+    height: 50px;
+    background-color: #2b2e4a;
+}
+#footer{
+    margin-left: 15vw;
+    width: 70vw;
+}
+#footer p{
+    position: relative;
+    top: 16px;
+    text-align: center;
+    color: #e84545;
+    float: none;
+}
+#footer i{
+    text-align: center;
+    color: #e84545;
+}
+
+#rights{
+    color: white;
+    text-decoration: underline;
 }
 ::selection {
     background: #ffb7b7; /* WebKit/Blink Browsers */
@@ -808,5 +834,8 @@ h3{
     #contactTitle{
         margin-top: 25px;
     }
-
+    #footer{
+        margin-left: 5vw;
+        width: 90vw;
+    }
 }
