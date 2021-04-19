@@ -16,11 +16,6 @@ var gameOn = true;
 var percent = "";
 const board = $("#boardGame");
 
-/*$('.progressHeight').delay(100).queue(function () {
-    percent = parseInt($(".percentage").text(), 10);
-    //console.log(percent);
-    $(this).css('width', percent + "%");
-});*/
 
 
 
