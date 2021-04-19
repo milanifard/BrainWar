@@ -1,0 +1,76 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e0e0e0;
+}
+
+body .cards{
+    padding: 2px;
+    margin: 10px;
+    height: 370px;
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: brown; */
+}
+
+body .cards .cardRow1{
+    margin: 5px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .cards .cardRow2{
+    margin: 5px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .cards .card{
+
+    margin: 5px;
+    height: 100%;
+    width: 33.3%;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+body .confirm{
+    background-color: rgb(255, 193, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: #f7f7f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    height: 70px;
+    width: 450px;
+}
+.confirm:hover{
+    background-color: rgb(241, 159, 34);
+    /* color: black; */
+}
+
+/* body .cards .cardRow2 .card{
+   
+    height:50vh;
+    width: 33vh;
+    background-color: darkblue;
+} */
