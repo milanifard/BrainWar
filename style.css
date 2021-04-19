@@ -214,7 +214,23 @@ h3{
 
 /* index.html page css */
 
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url('loading_gif_src.gif');
+    background-repeat: no-repeat;
+    background-size: 10vw 10vw;
+    background-color: #e84545;
+    background-position: center;
+}
+
 #indexPage{
+
     padding: 0px;
     margin: 0px;
     font-family: 'PT Sans Narrow', sans-serif;
@@ -270,11 +286,9 @@ h3{
     color: white;
 }
 .position {
-
     position: relative;
     top: 35vh;
     left: 10vw;
-
 }
 #header1 span{
     letter-spacing: 1px;
@@ -588,6 +602,10 @@ h3{
     font-size: 1.09em;
     opacity: 0.7;
 }
+
+.bullets{
+    margin-right: 5px;
+}
 /* less than 800px*/
 @media only screen and (max-width: 850px) {
     .position{
@@ -623,6 +641,7 @@ h3{
 
     #header1{
         font-size: 250%;
+        width: 80vw;
     }
     #header2{
         position: relative;
@@ -665,7 +684,6 @@ h3{
         font-weight: bold;
         color: #2b2e4a;
         opacity: 0.9;
-
     }
     #introDesc{
         text-align: center;
@@ -686,6 +704,7 @@ h3{
         opacity: 0.9;
         border: 1px solid #e84545;
         width: 200px;
+
     }
     #rightIntro{
         width: 100vw;
@@ -701,6 +720,7 @@ h3{
         font-weight: normal;
         width: 80vw;
         margin-left: 7vw;
+
     }
     .skillTitle{
         width: 80vw;
@@ -721,4 +741,39 @@ h3{
         background-color: #cccccc;
         border-radius: 10px;
     }
+
+    #leftExp{
+        width: 100vw;
+        margin: 0px;
+
+    }
+    #expTitle{
+        text-align: center;
+        margin-left: 70px;
+        margin-top: 110px;
+        font-size: 3em;
+        font-weight: bold;
+        color: #2b2e4a;
+        opacity: 0.9;
+
+    }
+    #expDesc{
+        text-align: center;
+        margin-left: 70px;
+        font-size: 1.5em;
+        font-weight: normal;
+        color: #2b2e4a;
+        opacity: 0.4;
+        padding: 0px;
+
+    }
+    #rightExp{
+        width: 100vw;
+        float: none;
+        margin-left: 5vw;
+    }
+    .jobText{
+        width: 80vw;
+    }
+
 }

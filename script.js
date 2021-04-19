@@ -16,6 +16,11 @@ var gameOn = true;
 
 const board = $("#boardGame");
 
+
+setTimeout(function (){
+    $(".preloader").fadeOut("1500");
+},1500);
+
 $('.but').click(function (){
     num = $(this).text();
     $('.but').prop("disabled",true);
@@ -251,3 +256,4 @@ function whichPlayerWin(currentPlayer){
         $("#image").attr("src","2.png");
     }
 }
+
