@@ -9,26 +9,26 @@
 <body id="bod">
     <div class="cards">
         <div class="cardRow1">
-            <div class="card">
-                <img src="./Shapes/circle.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(0)">
+<!--                <img src="./Shapes/circle.png" alt = 'no image'>-->
             </div>
-            <div class="card">
-                <img src="./Shapes/square.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(1)">
+<!--                <img src="./Shapes/square.png" alt = 'no image'>-->
             </div>
-            <div class="card">
-                <img src="./Shapes/circle.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(2)">
+<!--                <img src="./Shapes/circle.png" alt = 'no image'>-->
             </div>
             
         </div>
         <div class="cardRow2">
-            <div class="card">
-                <img src="./Shapes/triangle.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(3)">
+<!--                <img src="./Shapes/triangle.png" alt = 'no image'>-->
             </div>
-            <div class="card">
-                <img src="./Shapes/square.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(4)">
+<!--                <img src="./Shapes/square.png" alt = 'no image'>-->
             </div>
-            <div id="salam" class="card">
-                <img src="./Shapes/triangle.png" alt = 'no image'>
+            <div class="card" onclick="javascript : chooseCard(5)">
+<!--                <img src="./Shapes/triangle.png" alt = 'no image'>-->
             </div>
             
         </div>
@@ -48,8 +48,11 @@
         3 : './Shapes/diamond.png',
         4 : './Shapes/star.png',
         5 : './Shapes/rings.png',
-        6 : './Shapes/hearts.png',
+        6 : './Shapes/heart.png',
     }
+    let choice = 0;
+    let chosenCards = [null,null];
+    let cardssituation = [1,1,1,1,1,1];
     let randomNums = {};
     let randomNumsTemp = [0,1,2,3,4,5,6];
     let places = {};
@@ -61,12 +64,12 @@
 
     places = shuffle([0,1,2,3,4,5]);
     randomNums = shuffle(randomNumsTemp).splice(0,3);
-    console.log(places);
-    console.log(randomNums);
-    console.log(places[0]);
-    console.log(places[1]);
-    console.log(places[2]);
-    console.log(places[3]);
+    // console.log(places);
+    // console.log(randomNums);
+    // console.log(places[0]);
+    // console.log(places[1]);
+    // console.log(places[2]);
+    // console.log(places[3]);
 
     for(let i = 0 ; i<6;i++) {
         if (i < 2) {
@@ -83,6 +86,19 @@
         }
     }
     console.log(placeShapes);
+
+    function shuffleCards(){
+        let cards = document.getElementsByClassName("card");
+        for(let i = 0 ; i<6;i++){
+            var para = document.createElement("img")
+            var node = shapes[placeShapes[i]];
+            para.src = node;
+            cards.item(i).appendChild(para);
+            console.log(para.src);
+        }
+    }
+    shuffleCards();
+
     function $(id){
         return document.getElementById(id);
     }
@@ -93,16 +109,48 @@
         let obj = document.getElementsByClassName("card");
 
         for(let i = 0 ; i<obj.length ; i++){
-            obj.item(i).childNodes.item(0).remove();
-            obj.item(i).childNodes.item(0).remove();
+            while (obj.item(i).childNodes.item(0)){
+                obj.item(i).childNodes.item(0).remove();
+            }
             obj.item(i).style.backgroundColor="rgb(27,173,172)";
             console.log("clicked");
         }
+        cardssituation = [0,0,0,0,0,0];
         $("confirm").style.visibility = "hidden";
         // $("salam").style.backgroundColor="blue";
 
     }
 
+    function chooseCard(num){
+        if(cardssituation[num] === 0) {
+            if(choice === 0){
+                choice = 1;
+            }
+            else if(choice === 1){
+                choice = 2;
+            }
+            var el = document.getElementsByClassName("card");
+            var para = document.createElement("img");
+            var node = shapes[placeShapes[num]];
+            para.src = node;
+            el.item(num).style.backgroundColor = "#f7f7f7";
+            el.item(num).appendChild(para);
+            cardssituation[num] = 1;
+            if(choice === 1) {
+                chosenCards[0] = num;
+            }
+            else if(choice === 2){
+                chosenCards[1] = num;
+                cardChek();
+            }
+        }
+    }
+
+    function cardChek(){
+        // if(c)
+
+
+    }
 
 
 </script>
