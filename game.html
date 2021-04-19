@@ -6,29 +6,29 @@
     <title>Concentration</title>
 </head>
 <link rel="stylesheet" href="./gameStyle.css">
-<body>
+<body id="bod">
     <div class="cards">
         <div class="cardRow1">
             <div class="card">
-
+                <img src="./Shapes/circle.png" alt = 'no image'>
             </div>
             <div class="card">
-                
+                <img src="./Shapes/square.png" alt = 'no image'>
             </div>
             <div class="card">
-                
+                <img src="./Shapes/circle.png" alt = 'no image'>
             </div>
             
         </div>
         <div class="cardRow2">
             <div class="card">
-        
+                <img src="./Shapes/triangle.png" alt = 'no image'>
             </div>
             <div class="card">
-                    
+                <img src="./Shapes/square.png" alt = 'no image'>
             </div>
-            <div class="card">
-                    
+            <div id="salam" class="card">
+                <img src="./Shapes/triangle.png" alt = 'no image'>
             </div>
             
         </div>
@@ -36,14 +36,71 @@
 
 
     </div>
-    <div class="confirm">
-        <p>Memorized!</p>
-    </div>
+    <input type="button" id="confirm" class="confirm" value="Memorized!" onclick="javascript : confirm()">
+
 </body>
 
 <script language="JavaScript">
+    const shapes = {
+        0 : './Shapes/circle.png',
+        1 : './Shapes/square.png',
+        2 : './Shapes/triangle.png',
+        3 : './Shapes/diamond.png',
+        4 : './Shapes/star.png',
+        5 : './Shapes/rings.png',
+        6 : './Shapes/hearts.png',
+    }
+    let randomNums = {};
+    let randomNumsTemp = [0,1,2,3,4,5,6];
+    let places = {};
+    let placeShapes = {};
+    function shuffle(o) {
+        for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+    }
+
+    places = shuffle([0,1,2,3,4,5]);
+    randomNums = shuffle(randomNumsTemp).splice(0,3);
+    console.log(places);
+    console.log(randomNums);
+    console.log(places[0]);
+    console.log(places[1]);
+    console.log(places[2]);
+    console.log(places[3]);
+
+    for(let i = 0 ; i<6;i++) {
+        if (i < 2) {
+            placeShapes[places[i]] = randomNums[0] ;
+            console.log("first");
+        }
+        else if(i<4){
+            placeShapes[places[i]] = randomNums[1] ;
+            console.log("second");
+        }
+        else if(i<6){
+            placeShapes[places[i]] = randomNums[2] ;
+            console.log("third");
+        }
+    }
+    console.log(placeShapes);
     function $(id){
         return document.getElementById(id);
+    }
+
+
+    function confirm(){
+
+        let obj = document.getElementsByClassName("card");
+
+        for(let i = 0 ; i<obj.length ; i++){
+            obj.item(i).childNodes.item(0).remove();
+            obj.item(i).childNodes.item(0).remove();
+            obj.item(i).style.backgroundColor="rgb(27,173,172)";
+            console.log("clicked");
+        }
+        $("confirm").style.visibility = "hidden";
+        // $("salam").style.backgroundColor="blue";
+
     }
 
 
