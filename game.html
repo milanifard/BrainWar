@@ -186,15 +186,17 @@ function newPlaceShapes() {
          }
          else{
              console.log("nooooo");
+             setTimeout(() => {
+                 turnCard(chosenCards[0]);
+                 turnCard(chosenCards[1]);
+                 chooseNum -= 2;
+                 choice = 0;
+                 cardssituation[chosenCards[0]] = 0;
+                 cardssituation[chosenCards[1]] = 0;
+                 chosenCards[0] = null;
+                 chosenCards[1] = null;
+             }, 200);
 
-             turnCard(chosenCards[0]);
-             turnCard(chosenCards[1]);
-             chooseNum -= 2;
-             choice = 0;
-             cardssituation[chosenCards[0]] = 0;
-             cardssituation[chosenCards[1]] = 0;
-             chosenCards[0] = null;
-             chosenCards[1] = null;
          }
 
 
