@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+body {
+    margin: 0;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+a,
+a:visited {
+    color: inherit;
+}
+
+#score {
+    position: absolute;
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.9em;
+    color: white;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    max-width: 100px;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+#controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    display: none;
+}
+
+#controls #buttons {
+    width: 80px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#controls #instructions {
+    margin-left: 20px;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#controls button {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#results {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.75);
+    display: none;
+    z-index: 51;
+}
+
+#results .content {
+    max-width: 350px;
+    padding: 50px;
+    border-radius: 20px;
+    direction: rtl;
+    text-align: center;
+}
+
+@media (min-height: 425px) {
+    #score {
+        font-size: 1.5em;
+        max-width: 150px;
+    }
+
+    #controls {
+        display: flex;
+    }
+}
+
+.wrapper{
+    background-color: #282828;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+#block{
+    width: 50px;
+    height: 500px;
+    overflow: hidden;
+    background-color: #d034ea;
+    -webkit-box-shadow: inset 0 0 22px 3px rgba(172, 38, 255, 0.35), 0 0 28px 5px rgba(165, 38, 255, 0.45);
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: #282828;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: #d4eaff;
+    -webkit-box-shadow: inset 0 0 22px 3px rgba(38,149, 255, 0.35 ), 0 0 28px 5px rgba(38 ,149 ,255 , 0.45);
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+.gameWrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #282828;
+}
