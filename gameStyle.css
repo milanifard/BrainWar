@@ -26,6 +26,7 @@ body .cards{
 
 body .cards .cardRow1{
     margin: 5px;
+
     height: 50%;
     width: 100%;
     display: flex;
@@ -74,6 +75,7 @@ body .confirm{
 img {
     height: 100px;
 }
+
 
 /* body .cards .cardRow2 .card{
    

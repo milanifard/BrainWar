@@ -6,8 +6,10 @@
     <title>Concentration</title>
 </head>
 <link rel="stylesheet" href="./gameStyle.css">
+
 <body id="bod">
     <div class="cards">
+
         <div class="cardRow1">
             <div class="card" onclick="javascript : chooseCard(0)">
 <!--                <img src="./Shapes/circle.png" alt = 'no image'>-->
@@ -50,6 +52,7 @@
         5 : './Shapes/rings.png',
         6 : './Shapes/heart.png',
     }
+    let allChoices = 0;
     let chooseNum = 0;
     let point = 0;
     let choice = 0;
@@ -125,6 +128,15 @@ function newPlaceShapes() {
             console.log("clicked");
         }
         cardssituation = [0,0,0,0,0,0];
+        if(point === 0){
+            setTimeout(()=>{
+                var totalPoint = point;
+                sessionStorage.setItem("totalPoint", totalPoint);
+                var totalChoices = allChoices;
+                sessionStorage.setItem("totalChoices", totalChoices);
+                window.location = './finish.html';
+            },15000);
+        }
         $("confirm").style.visibility = "hidden";
         // $("salam").style.backgroundColor="blue";
 
@@ -165,9 +177,15 @@ function newPlaceShapes() {
         el.item(num).style.backgroundColor="rgb(27,173,172)";
     }
     function cardChek(){
+        allChoices++;
          if(placeShapes[chosenCards[0]] === placeShapes[chosenCards[1]]){
              console.log("yesssss");
              point++;
+
+
+             // document.getElementById('points').replaceChild(node,document.getElementById('points').childNodes[0]);
+
+
              choice = 0;
              chosenCards[0] = null;
              chosenCards[1] = null;
@@ -177,7 +195,7 @@ function newPlaceShapes() {
                      while (cards.item(i).childNodes.item(0)) {
                          cards.item(i).childNodes.item(0).remove();
                      }
-                     cardssituation[i] = 0;
+                     cardssituation[i] = 1;
                  }
                 newPlaceShapes();
                  $("confirm").style.visibility = "visible";
