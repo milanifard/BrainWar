@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css">
+        <link rel="stylesheet" href="/result.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    </head>
+    <body style="background-color: #e7e7e7;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <div id="icon">
+                <img class="topIcon" src="/0-9/colored/7.png" alt="7">
+                <br>
+                <img class="bottomIcon" src="/A-Z/colored/A.png" alt="A">
+                <img class="bottomIcon" src="/cardBack.png" alt="cardBack">
+                <img class="bottomIcon" src="/0-9/colored/7.png" alt="7">
+            </div>
+            <p class="title">Quick Eye</p>
+            <canvas id="chart" height="200px"></canvas>
+            <div class="incorrect">
+                <p class="incorrectText">Incorrect</p>
+                <p class="incorrectNumber" id="incorrectNumber">0</p>
+            </div>
+            <div class="correct">
+                <p class="correctText">Correct</p>
+                <p class="correctNumber" id="correctNumber">18</p>
+            </div>
+        </div>
+
+        <div class="center info">
+            <img class="clock" src="/clock.png">
+            <p class="meanTimeText">Mean Time</p>
+            <p class="meanTime" id="meanTime">1.10s</p>
+        </div>
+
+        <form class="center" action="How To Play.html">
+            <input id="retry" type="submit" value="Retry" />
+        </form>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+        <script src="result.js"></script>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+canvas{
+  width: 200px !important;
+  height: 200px !important;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+}
+
+.title {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    font-size: 1.4em;
+    margin-left: 7.3em;
+    margin-top: -2.3em;
+}
+
+.container {
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#icon {
+    margin-left: 5em;
+    text-align: center;
+    background-color: white;
+    height: 4em;
+    width: 4.3em;
+    border-radius: 5%;
+}
+
+.topIcon {
+    height: 2em;
+    border-radius: 10%;
+}
+
+.bottomIcon {
+    height: 1.5em;
+    border-radius: 10%;
+}
+
+.incorrect {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    display: inline;
+    text-align: center;
+    margin-top: -12em;
+    float: left;
+    margin-left: 25em;
+}
+
+.correct {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    display: inline;
+    margin-top: -12em;
+    text-align: center;
+    float: right;
+    margin-right: 25em;
+}
+
+.correctText {
+    color: #04bebd;
+    font-size: 1.4em;
+}
+
+.incorrectText {
+    color: #ff61a9;
+    font-size: 1.4em;
+}
+
+.correctNumber {
+    font-size: 2.6em;   
+}
+
+.incorrectNumber {
+    font-size: 2.6em;
+}
+
+.clock {
+    position: static;
+    height: 3em;
+    display: inline;
+    margin-bottom: -1em;
+
+}
+
+.meanTimeText {
+    position: static;
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    font-size: 1em;
+    color: #767575;
+    display: inline;
+}
+
+.meanTime {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    font-size: 2.5em;
+    color: #767575;
+    display: inline;
+}
+
+.info {
+    margin-top: 5em;
+}
+
+#retry {
+    font-family: 'M PLUS Rounded 1c', Arial, sans-serif;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    height: 2.5em;
+    width: 72%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #ffaa01;
+    cursor: pointer;
+    margin-top: 3em;
+}

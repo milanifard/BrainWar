@@ -1,0 +1,156 @@
+#slider {
+    position: relative;
+    width: 95px;
+    height: 129px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 20em;
+    transform-style: preserve-3d;
+    margin-top: 2em;
+  }
+  
+  input[type=radio] {
+    position: relative;
+    right: 450%;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+  }
+
+  /* Slider Functionality */
+  /* Active Slide */
+  #s1:checked ~ #slide1, 
+  #s2:checked ~ #slide2, 
+  #s3:checked ~ #slide3, 
+  #s4:checked ~ #slide4, 
+  #s5:checked ~ #slide5,
+  #s6:checked ~ #slide6 {
+    transform: translate3d(0%, 0%, 0px);
+  }
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, 
+  #s2:checked ~ #slide3, 
+  #s3:checked ~ #slide4, 
+  #s4:checked ~ #slide5,
+  #s5:checked ~ #slide6, 
+  #s6:checked ~ #slide1 {
+    transform: translate3d(190%, 54.7%, -350px);
+  }
+
+  /* 3rd Slide */
+  #s1:checked ~ #slide3, 
+  #s2:checked ~ #slide4, 
+  #s3:checked ~ #slide5, 
+  #s4:checked ~ #slide6, 
+  #s5:checked ~ #slide1,
+  #s6:checked ~ #slide2 {
+    transform: translate3d(320%, 54.7%, -350px);
+  }
+  
+  /* 4th Slide */
+  #s1:checked ~ #slide4, 
+  #s2:checked ~ #slide5, 
+  #s3:checked ~ #slide6, 
+  #s4:checked ~ #slide1, 
+  #s5:checked ~ #slide2,
+  #s6:checked ~ #slide3 {
+    transform: translate3d(0, 0, -500px);
+  }
+  
+  /* 5th Slide */
+  #s1:checked ~ #slide5, 
+  #s2:checked ~ #slide6, 
+  #s3:checked ~ #slide1, 
+  #s4:checked ~ #slide2, 
+  #s5:checked ~ #slide3,
+  #s6:checked ~ #slide4 {
+    transform: translate3d(0, 0, -500px);
+  }
+  
+  /* 6th slide */
+  #s1:checked ~ #slide6, 
+  #s2:checked ~ #slide1, 
+  #s3:checked ~ #slide2, 
+  #s4:checked ~ #slide3, 
+  #s5:checked ~ #slide4,
+  #s6:checked ~ #slide5 {
+    transform: translate3d(0, 0, -500px);
+  }
+  
+  .topCard {
+    border-radius: 5%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    height: 109px;
+    width: 80px;
+  }
+
+.upside-down {
+    height: 109px;
+}
+
+.card-value {
+    height: 109px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 25px;
+    margin-top: 40px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card-face {
+    height: 109px;
+    width: 80px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    transform: rotateY(0);
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+}
