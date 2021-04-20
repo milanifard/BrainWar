@@ -1,2 +1,0 @@
-Pariya Abadeh
-addition-addiction
