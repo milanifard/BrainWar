@@ -1,7 +1,7 @@
 // This commands for index.html menu.
 function startFunc (){
     /* When click (Start),Transfer from menu page to game page. */
-    document.getElementById('btn-start').onclick = location.href = 'game.html';
+    document.getElementById('btn-start').onclick = location.href = 'src/game.html';
 }
 function guideFunc (){
     /* When click (How To Play), Open 'How to Play' game image. */
@@ -170,34 +170,6 @@ function randomTable(){
                 j++;
             }
             break;
-        // case 2:
-        //     index =4;
-        //
-        //     // var b = document.getElementById('block4') .id ;
-        //     // document.getElementById('block4') .id = 'block3';
-        //     //document.getElementById('block5') .id = b;
-        //     var el1 = document.getElementById("block4"),
-        //         el2 = document.getElementById("block3");
-        //     el1.id = 'block3';
-        //     el2.id ="block4";
-        //     var el3 = document.getElementById("block4"),
-        //         el4 = document.getElementById("block5");
-        //     el3.id = 'block5';
-        //     el4.id ="block4";
-        //     el1.onclick ="getInput(4)";
-        //     el2.onclick ="getInput(5)";
-        //     // el3.onclick ="getInput(5)";
-        //     // el4.onclick ="getInput(4)";
-        //     // let k = index--;
-        //     // while(k!==max+1) {
-        //     //document.getElementById('block' + 5).style.display = " none";
-        //    // document.getElementById('block' + 6).style.display = " none";
-        //
-        //     // document.getElementById('block' + 6).style.display = " none";
-        //
-        //     //     k+=3;
-        //     // }
-        //     break;
          }
 }
 function startTimer() {

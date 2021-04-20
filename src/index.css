@@ -174,7 +174,6 @@ html:active, body:active {
 
 .score-text {
     align-items: center;
-    margin-top: 0px;
     font-size: xx-large;
     font-weight: bold;
     color: #24B7B6;
@@ -182,7 +181,6 @@ html:active, body:active {
 
 .incorrect-text {
     align-items: center;
-    margin-top: 0px;
     font-size: xx-large;
     font-weight: bold;
     color: #E2574C;
@@ -193,7 +191,7 @@ html:active, body:active {
     padding-bottom: 20px;
     background-color: #231E39;
     border-radius: 5px;
-    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 10px 20px -10px rgba(0, 0, 0, 0.75);
     color: #B3B8CD;
     padding-top: 30px;
     position: relative;
