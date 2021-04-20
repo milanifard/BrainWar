@@ -1,0 +1,87 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(8, 1, 39);
+    width: auto;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    flex-direction: column;
+    width: 100%;
+}
+
+.row1,.row2,.row3,.row4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    width: 20%;
+    margin: 5px;
+}
+
+.col1,.col2,.col3{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 25%;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgb(23, 87, 109);
+}
+
+.col1 button,.col2 button,.col3 button{
+    background-color:rgb(23, 87, 109);
+    color: white;
+    transition: 0.5s;
+}
+
+.col1 button:hover{
+    background-color: white;
+    color: rgb(23, 87, 109);;
+}
+.col2 button:hover{
+    background-color: white;
+    color: rgb(23, 87, 109);;
+}
+.col3 button:hover{
+    background-color: white;
+    color: rgb(23, 87, 109);;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: white;
+    width: 10vw;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.question .secondOperator input{
+    width: 20px;
+}
+
+.header{
+    display: flex;
+    width: 50%;
+    margin-top: 5vh;
+    margin-bottom: 2%;
+    justify-content: space-around;
+    align-items: baseline;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.underheader{
+    height: 1vh;
+    width: 40%;
+    background-color: rgb(65, 69, 104);
+    border-radius: 20px;
+    margin-bottom: 20%;
+}
