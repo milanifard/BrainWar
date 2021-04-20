@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="index.css" >
+<html lang="en">
+<head>
+    <title> Tap The Color !</title>
+    <meta charset="UTF-8">
+</head>
+<body class="game">
+<div id="app"></div>
+<div class="infos fadeIn animated" ></div>
+<div class="row" id = "circles" >
+    <div class='circle' id="circle1"></div>
+    <div class='circle' id="circle2"></div>
+    <div class='circle' id="circle3"></div>
+    <div class='circle' id="circle4"></div>
+    <div class='circle' id="circle5"></div>
+    <div class='circle' id="circle6"></div>
+</div>
+<div class="blocks fadeIn animated" id="blocks">
+    <div class="row">
+        <div class="block" id="block1" onclick="getInput(1)"></div>
+        <div class="block" id="block4" onclick="getInput(4)"> </div>
+    </div>
+    <div class="row">
+        <div class="block" id="block2" onclick="getInput(2)"> </div>
+        <div class="block" id="block5" onclick="getInput(5)"></div>
+    </div>
+    <div class="row" >
+        <div class="block" id="block3" onclick="getInput(3)"></div>
+        <div class="block" id="block6" onclick="getInput(6)"> </div>
+    </div>
+    <button class="btn" id="btn-start-game" onClick="startGame()">
+        Start
+    </button >
+    <button class="btn" id="btn-memorized" onClick="cleanBlocksColor()">
+        Memorized!
+    </button >
+</div>
+<div class="popup-timesup" >
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4" style="width: 400px;border-radius: 5px;">
+            <div class="card-container">
+                <img class="round" src="img/tapthecolor.png" alt="user" />
+                <h3>Times Up</h3>
+                <p class="scores-class">Correct Selected : <br />
+                <p class="score-text" id="scoreText"></p>
+                <p class="scores-class">Incorrect Selected : <br />
+                <p class="incorrect-text" id="incorrectText"></p>
+                    <button class="btn" onClick="window.location.reload();">
+                        retry
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
+
+

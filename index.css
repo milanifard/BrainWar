@@ -1,0 +1,212 @@
+/* Main page */
+body {
+    background-color: #232526;
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+    font-family: "Abel", sans-serif;
+    color: #FF5E5B;
+}
+
+.heading {
+    font-size: 60px;
+    font-family: "Lobster", cursive;
+    color: #FF5E5B;
+    margin: 50px;}
+.heading_img{
+  width:200px; height:200px;
+}
+/* Buttons */
+.btn {
+    display:  block;
+    margin: auto;
+    margin-block: 40px;;
+    background-color: #ffed66;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Abel", sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FF5E5B;
+    box-shadow: 0 5px 0 #FF5E5B;
+    cursor:pointer;
+    transition: all 100ms linear;
+    text-align: center;
+}
+
+.align-center {
+    text-align: center;
+}
+
+ #credit,#closeButton,#btn-memorized,#id01{
+    display: none;
+}
+
+/* Game page */
+.game{
+    background-color: #232526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    border: solid 30px rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+html:active, body:active {
+    transition: 0s;
+    border: solid 5px rgba(255, 255, 255, 0.1);
+}
+.circle {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    opacity: 0.5;
+    margin: 6px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.infos {
+    color: white;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 100;
+}
+
+.blocks .row {
+    margin-top: 26px;
+    display: inline-block;
+}
+.blocks .block {
+    width: 100px;
+    height: 100px;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 12px;
+    color: white;
+    background:white;
+    font-weight: 100;
+}
+
+/* Timer and end menu*/
+
+.base-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+}
+
+.base-timer__label:hover {
+    color: #24B7B6;
+}
+
+.popup-timesup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    margin: 0;
+}
+
+.scores-class {
+    font-size: large;
+    line-height: 21px;
+}
+
+.score-text {
+    align-items: center;
+    margin-top: 0px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #24B7B6;
+}
+
+.incorrect-text {
+    align-items: center;
+    margin-top: 0px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #E2574C;
+}
+
+
+.card-container {
+    padding-bottom: 20px;
+    background-color: #231E39;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    color: #B3B8CD;
+    padding-top: 30px;
+    position: relative;
+    width: 450px;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.card-container .round {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #03BFCB;
+    border-radius: 50%;
+    padding: 10px;
+}
