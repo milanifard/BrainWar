@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2048.css">
+    <script src="app.js" charset="UTF-8"> </script>
+</head>
+<body>
+    <div id="board">
+
+        <h1 id="title"><span class="two"></span>2<span class="zero">0</span><span class="four">4</span><span class="eight">8</span></h1>
+        <div class="score-box">
+            <div class="score title" > score : <span id="Score" >0</span></div>           
+        </div>
+
+        <div class="navbar">
+            <a href="#reset" onclick="buttomReset()" class="active">Reset</a>
+        </div>
+
+        <div class="game">
+
+        </div>
+        <div class="control">
+        <div class="navbar">
+            <a href="#up" onclick="buttonUp()" class="active">up</a>
+        </div>
+
+        <div class="navbar">
+
+            <a href="#left" onclick="buttonLeft()" class="active">Left</a>
+            <a href="#right" onclick="buttonRight()">Right</a>
+            <a href="#left" onclick="buttonDown()" >Down</a>
+
+        </div>
+
+        </div>
+    </div>    
+
+</body>
+</html>

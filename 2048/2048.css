@@ -1,0 +1,129 @@
+
+body{
+    background-image: url("sky.jpg");
+}
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 50vw;
+    min-width: 500px;
+    min-height: 500px;
+    background-color: rgb(148, 137, 137);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    
+
+}
+.score-box {
+    align-self: center;
+    width: 50%;
+    min-width: 500px;
+    align-self: center;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 50%;
+    min-width: 350px;
+    min-height: 250px;
+    max-width: 500px;
+    max-height: 500px;
+    background-color: white;
+
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.game div {
+    width: 25%;
+    height: 25%;
+    font-size: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#title{
+    margin-bottom: 40px;
+    height: 5%;
+    width: 100%;
+    min-width: 250px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 100px;
+}
+span.eight{
+    color:#964747;
+ }
+ span.four{
+    color:#580505;
+ }
+ span.zero{
+    color:#c2acac;
+ }
+ span.two{
+    color:#eeeeee;
+ }
+
+
+
+ .control {
+
+    width: 50%;
+    min-width: 250px;
+    max-width: 500px;
+    overflow: hidden;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    bottom: 0;
+    width: 100%;
+  }
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    min-width: 100px;
+    max-width: 200px;
+    overflow: hidden;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a  {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+
