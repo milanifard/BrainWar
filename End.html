@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="BrainWar.png" type="image/icon type">
+    <link rel="stylesheet" href="EndStyle.css">
+</head>
+<body >
+    
+    <p> Time's Up</p> 
+    <br>
+    <p id='correct'>  correct :  </p> 
+    <p id ='incorrect'> Incorrect : </p>
+    <p id ='acc'> Accurancy : </p>
+
+    <div id="myProgress">
+        <div id="myBar"></div>
+
+        
+    </div>
+
+    <button id="retry" onclick="javascript:Retry()"> Retry </button>
+
+
+
+    <script>
+        let accurancy ;
+        function $(id){return document.getElementById(id)}      
+
+        var  totalPoint = sessionStorage.getItem("totalPoint");
+        var  totalAttempt = sessionStorage.getItem("totalAttempt");
+        if( totalAttempt > 0) {
+            accurancy = ((totalPoint/totalAttempt)*100).toFixed(1)
+        }else{
+            accurancy =0;
+        }
+
+
+
+
+
+        console.log(totalPoint) 
+        console.log(totalAttempt)
+
+
+        $('correct').innerHTML += totalPoint;
+        $('incorrect').innerHTML += totalAttempt - totalPoint;
+        $('acc').innerHTML += `${accurancy}%`;
+
+
+        
+        var i = 0;
+    function move() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            
+
+            var width =0;
+            var id = setInterval(frame, 30);
+        
+
+            function frame() {
+            if (width >= accurancy) {
+                clearInterval(id);
+                i = 0;
+            } else {
+                width++;
+                elem.style.width = width + "%";
+                // elem.innerHTML = width  + "%";
+            }
+        }
+
+    }     
+}
+    function Retry(){
+        window.open( "Game1.html","_self");
+
+    }
+
+
+
+
+move();
+      
+        
+    </script>
+
+</body>
+</html>
