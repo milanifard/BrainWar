@@ -1,10 +1,69 @@
-h3{
-    background-color: coral;
+ /* body{
+    background-image:url(light.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 
+}  */
+
+
+h1,h2{
+    background-color:rgb(173, 173, 173);
+    border: 2px solid rgb(11, 11, 78);
+    padding: 10px;
+    text-align: center;
 }
 
 p{
 
     color: darkred;
     background-color: aqua;
+}
+
+table,td,th{
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    
+
+}
+
+
+th {
+    background-color:green;
+}
+
+tr:nth-child(odd){
+background-color:#f2f2f2;
+}
+
+tr:nth-child(even){
+background-color:silver;
+}
+
+.photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.skills {
+   
+    width: 50%  ;
+    margin-left: auto;  
+    margin-right: auto; 
+    font-size: 16px;
+  }
+  
+div.myDescription{
+    border: 1px solid black;
+    border-top: 0px;
+    width: 327px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+
 }
