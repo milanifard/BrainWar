@@ -1,0 +1,71 @@
+body{
+
+    background-color: #e7e7e7;
+}
+p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif   
+}
+
+
+
+#correct{
+    color: #00b9bb;
+    
+    }
+#incorrect{
+color: red;
+
+}
+
+#myProgress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: red;
+    
+  }
+  
+  #myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+   
+  }
+
+  #retry{
+
+    background-color: #fea900;
+    border: none;
+    color: #e7e7e7;
+
+    width: 30%;
+    padding: 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+    
+
+    text-align: center;
+    text-align: center;
+    font-size: 30px;
+
+    border-radius: 8px;
+   
+
+}
+
+#retry:hover{
+    cursor: pointer;
+    background-color: #00b9bb;
+    color: black;
+
+}
