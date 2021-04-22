@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5d3b59b-e32c-4134-a9c7-0f7ff215727e" name="Default Changelist" comment="End page final 1.0.0">
+      <change afterPath="$PROJECT_DIR$/End.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/Intro.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rWq8X8bCOjy5uRyeV8rEWbRmRE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="End.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Git/End.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.End.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5d3b59b-e32c-4134-a9c7-0f7ff215727e" name="Default Changelist" comment="" />
+      <created>1619102035151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619102035151</updated>
+      <workItem from="1619102036328" duration="1841000" />
+    </task>
+    <task id="LOCAL-00001" summary="title picture">
+      <created>1619102692178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619102692178</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ُStyle of End page final 1.0.0">
+      <created>1619103471064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619103471064</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Game page final 1.0.0">
+      <created>1619103541261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619103541261</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ُStyle of Game page final 1.0.0">
+      <created>1619103614140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619103614140</updated>
+    </task>
+    <task id="LOCAL-00005" summary="End page final 1.0.0">
+      <created>1619103647819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619103647819</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Style of Introdution page">
+      <created>1619103718532</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619103718532</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="title picture" />
+    <MESSAGE value="ُStyle of End page final 1.0.0" />
+    <MESSAGE value="Game page final 1.0.0" />
+    <MESSAGE value="ُStyle of Game page final 1.0.0" />
+    <MESSAGE value="End page final 1.0.0" />
+    <MESSAGE value="Style of Introdution page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style of Introdution page" />
+  </component>
+</project>
