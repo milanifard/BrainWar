@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GameStyle.css">
+    <title>Simplicity</title>
+    <link rel="icon" href="BrainWar.png" type="image/icon type">
+</head>
+<body>
+
+
+<div id = title> Simplicity </div>    
+
+<div id="Question"> </div>
+<div id="d"></div>
+
+<!-- <div id="options"> -->
+    <div> <button onclick="javascript:check(1)"  class="btn" id = 'btn1'></button > </div>
+    <div> <button onclick="javascript:check(2)"  class="btn" id = 'btn2'></button > </div>
+    <div> <button onclick="javascript:check(3)"  class="btn" id = 'btn3'></button > </div>
+    <div> <button onclick="javascript:check(4)"  class="btn" id = 'btn4'></button  > </div> 
+     
+<!-- </div> -->
+
+
+    <script> 
+        let number;
+        let numberNo;
+        let numbers = []
+        let Sign = ['+','-']
+        let num = [-4,-3,-2,-1,1,2,3,4];
+        let placeHolder=[];
+        let container =[];
+        let index;
+        let answer;
+        let point = 0;
+        let attempt = 0;
+        
+        
+      // document.getElementById("Question").innerText = ;
+        function $(id){ return document.getElementById(id)};
+        
+        function chooseNum(){
+            number,numbers = [];
+          //  for (let i = 0; i < 3 ; i++){
+                number = Math.floor((Math.random()*9)+1);
+                numbers.push(number)
+           // }
+           
+         //   for(key in numbers){
+               // document.getElementById("Question").innerText += numbers[key] ;
+               document.getElementById("Question").innerText += ` ${number} ` ;
+            //}
+   
+        }
+        function ChooseSign(){
+            index = [];
+           // for (let i = 0; i<2 ; i++){
+                //index.push(Math.floor((Math.random()*2)));
+                 let i = (Math.floor((Math.random()*2)));
+           // }
+         //   for(key in index){
+             //   document.getElementById("Question").innerHTML+= char[index[key]] ;
+             document.getElementById("Question").innerHTML+=` ${Sign[i]} `;
+
+           // }
+            
+            
+
+            }
+
+        function makeOptions(){ // answer +/- yek chizi .... sakhtan yek chizi 
+            container = []           
+            num = [-4,-3,-2,-1,1,2,3,4];
+            for (let i = 0; i<3 ; i++){
+                let index = Math.floor(Math.random()*num.length);
+                container.push(num[index])
+                num.splice(index,1)
+            }    
+            
+        }
+        
+        function randomNO(){
+            let quantity = [2,3]
+            let index = Math.floor((Math.random()*2)); 
+            numberNo = quantity[index];
+            
+        }
+        console.log(numberNo)
+   
+        function maker(j){
+            for (let i = 0 ; i< (2*j -1) ;i++){
+                i%2 === 0  ? chooseNum() : ChooseSign()
+            }
+
+        }
+        
+      
+        
+        function required(){
+        placeHolder =[];
+        answer = eval(document.getElementById("Question").innerHTML)
+        console.log(`Answer ${answer}`)
+        console.log(`container ${container}`)
+        placeHolder.push(answer)
+        placeHolder.push(answer + container.pop());
+        placeHolder.push(answer + container.pop());
+        placeHolder.push(answer + container.pop());
+        }      
+        
+
+
+        function randomPlace(){
+            let list = [0,1,2,3];
+            let temp = []
+            for (let i = 0; i<4 ; i++){
+                let index = Math.floor(Math.random()*list.length);
+                temp.push(list[index])
+                list.splice(index,1)
+            }
+
+            console.log(`temp: ${temp}`);
+            console.log(`placeHolder: ${placeHolder}`);
+
+            document.getElementById("btn1").innerHTML = placeHolder[temp.pop()] ;
+            document.getElementById("btn2").innerHTML = placeHolder[temp.pop()] ;
+            document.getElementById("btn3").innerHTML = placeHolder[temp.pop()] ;
+            document.getElementById("btn4").innerHTML = placeHolder[temp.pop()] ;
+            
+        }
+        
+       
+
+        function reNew(){
+            document.getElementById("Question").innerText ="";
+            randomNO();
+            maker(numberNo);
+            makeOptions();
+            required(); 
+            randomPlace();
+
+
+            setTimeout(() => {
+                var totalPoint = point;
+                var totalAttempt = attempt;
+                sessionStorage.setItem("totalPoint", totalPoint);
+                sessionStorage.setItem("totalAttempt", totalAttempt);
+                window.open( "End.html","_self");
+                attempt = 0;
+                point = 0;
+            }, 15000);
+
+         
+        }
+
+       
+        reNew();
+
+
+        function check(i){
+            attempt++;
+
+            if(i === 1){
+                  if((Number($("btn1").innerHTML) === answer)){
+                        
+                         point++;
+                         reNew()
+                  }else{
+                    $('btn1').style.backgroundColor = 'red'
+                    setTimeout(() => {
+                        $('btn1').style.backgroundColor = '#ffffff'
+                    }, 500);
+                  }
+                      
+            }
+            if(i===2){
+                if((Number($("btn2").innerHTML) === answer)){
+                      point++;
+                      reNew()
+                  }else{
+                    $('btn2').style.backgroundColor = 'red'
+                    setTimeout(() => {
+                        $('btn2').style.backgroundColor = '#ffffff'
+                    }, 500);
+                  }
+            }    
+            if(i === 3){
+                if((Number($("btn3").innerHTML) === answer)){
+                      point++;
+                      reNew()
+                  }else{
+                    $('btn3').style.backgroundColor = 'red'
+                    setTimeout(() => {
+                        $('btn3').style.backgroundColor = '#ffffff'
+                    }, 500);
+                  }
+            }
+            if(i===4 ){
+                if((Number($("btn4").innerHTML) === answer)){
+                      point++;
+                      reNew();
+                  }else{
+                    $('btn4').style.backgroundColor = 'red'
+                    setTimeout(() => {
+                        $('btn4').style.backgroundColor = '#ffffff'
+                    }, 500);
+                  }
+            } 
+        }
+        
+    </script>
+
+    
+    
+</body>
+</html>
