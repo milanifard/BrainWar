@@ -158,56 +158,59 @@
        
         reNew();
 
-
         function check(i){
             attempt++;
 
             if(i === 1){
-                  if((Number($("btn1").innerHTML) === answer)){
-                        
-                         point++;
-                         reNew()
-                  }else{
-                    $('btn1').style.backgroundColor = 'red'
+                if((Number($("btn1").innerHTML) === answer)){
+
+                    point++;
+                    reNew()
+                }else{
+
+                    $('title').style.backgroundColor = 'red';
                     setTimeout(() => {
-                        $('btn1').style.backgroundColor = '#ffffff'
+                        $('title').style.backgroundColor = '#00b9bb' ;
                     }, 500);
-                  }
-                      
+                }
+
             }
             if(i===2){
                 if((Number($("btn2").innerHTML) === answer)){
-                      point++;
-                      reNew()
-                  }else{
-                    $('btn2').style.backgroundColor = 'red'
+                    point++;
+                    reNew()
+                }else{
+                    $('title').style.backgroundColor = 'red';
                     setTimeout(() => {
-                        $('btn2').style.backgroundColor = '#ffffff'
+                        $('title').style.backgroundColor = '#00b9bb' ;
                     }, 500);
-                  }
-            }    
+                }
+                /**/
+            }
             if(i === 3){
                 if((Number($("btn3").innerHTML) === answer)){
-                      point++;
-                      reNew()
-                  }else{
-                    $('btn3').style.backgroundColor = 'red'
+                    point++;
+                    reNew()
+                }else{
+                    $('title').style.backgroundColor = 'red';
                     setTimeout(() => {
-                        $('btn3').style.backgroundColor = '#ffffff'
+                        $('title').style.backgroundColor = '#00b9bb' ;
                     }, 500);
-                  }
+                }
+
             }
             if(i===4 ){
                 if((Number($("btn4").innerHTML) === answer)){
-                      point++;
-                      reNew();
-                  }else{
-                    $('btn4').style.backgroundColor = 'red'
+                    point++;
+                    reNew();
+                }else{
+                    $('title').style.backgroundColor = 'red';
                     setTimeout(() => {
-                        $('btn4').style.backgroundColor = '#ffffff'
+                        $('title').style.backgroundColor = '#00b9bb' ;
                     }, 500);
-                  }
-            } 
+                }
+            }
+
         }
         
     </script>
